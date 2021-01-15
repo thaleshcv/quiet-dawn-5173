@@ -1,0 +1,17 @@
+<div class="signin-form">
+	<h2>Change your password</h2>
+	<%= render 'partials/flash_messages' %>
+	<%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+		<%= render "devise/shared/error_messages", resource: resource %>
+		<%= f.hidden_field :reset_password_token %>
+		<%= f.input :password, autofocus: true,
+      hint: "#{@minimum_password_length} characters minimum",
+      input_html: {autocomplete: "new-password"} %>
+		<%= f.input :password_confirmation, input_html: { autocomplete: "new-password" } %>
+		<%= f.button :submit, "Change my password", class: "btn btn-block btn-primary" %>
+	<% end %>
+
+	<div class="my-2">
+		<%= render "devise/shared/links" %>
+	</div>
+</div>

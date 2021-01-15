@@ -1,0 +1,28 @@
+<%= link_to asset_path(investment.asset_id), class: "list-group-item list-group-item-action" do %>
+	<div class="d-flex justify-content-between align-items-center">
+		<div class="flex-grow-1">
+			<p>
+				<strong class="mr-1"><%= investment.asset_abbreviation %></strong>
+				<%= investment.asset_name %>
+			</p>
+			<div class="d-flex w-100">
+				<span class="small">
+					<strong class="mb-1 d-block text-uppercase">Value invested</strong>
+					<%= number_to_currency(investment.value_invested) %>
+				</span>
+				<span class="mx-5"></span>
+				<span class="small">
+					<strong class="mb-1 d-block text-uppercase">Quantity</strong>
+					<%= investment.quantity %>
+				</span>
+			</div>
+		</div>
+		<div class="text-right">
+			<small class="font-weight-bold d-block text-uppercase">Current value</small>
+			<h3>
+				<%= number_to_currency(investment.current_value) %>
+				[<%= gain_loss(investment.value_invested, investment.current_value) %>]
+			</h3>
+		</div>
+	</div>
+<% end %>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>QuietDawn5173</title>
+		<%= csrf_meta_tags %>
+		<%= csp_meta_tag %>
+		<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+	</head>
+	<body class="bg-secondary">
+		<%= render 'partials/navbar' if user_signed_in? %>
+		<main id="root" class="pb-2 container bg-white">
+			<%= yield %>
+		</main>
+	</body>
+
+	<%= yield(:footer) if content_for?(:footer) %>
+</html>

@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: localhost
+  username: root
+  password: root
+
+development:
+  <<: *default
+  database: quiet_dawn_5173_development
+
+test:
+  <<: *default
+  database: quiet_dawn_5173_test
+
+production:
+  <<: *default
+  database: quiet_dawn_5173_production
+  username: quiet_dawn_5173
+  password: <%= ENV['QUIET_DAWN_5173_DATABASE_PASSWORD'] %>

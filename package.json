@@ -1,0 +1,17 @@
+{
+  "name": "quiet_dawn_5173",
+  "private": true,
+  "dependencies": {
+    "@rails/ujs": "^6.0.0",
+    "@rails/webpacker": "4.3.0",
+    "bootstrap": "^4.5.3",
+    "jquery": "^3.5.1",
+    "select2": "^4.0.13",
+    "select2-bootstrap-theme": "^0.1.0-beta.10",
+    "turbolinks": "^5.2.0"
+  },
+  "version": "0.1.0",
+  "devDependencies": {
+    "webpack-dev-server": "^3.11.1"
+  }
+}
