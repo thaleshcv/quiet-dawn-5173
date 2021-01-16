@@ -5,6 +5,8 @@ set :application, "quiet-dawn-5173"
 set :repo_url, "git@github.com:thaleshcv/quiet-dawn-5173.git"
 set :branch, "main"
 set :deploy_to, "/home/ubuntu/#{fetch :application}"
+set :rvm_type, :user
+set :rvm_ruby_version, "2.6.5p114"
 
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bundle", ".bundle", "public/system", "public/uploads"
 set :keep_releases, 2
