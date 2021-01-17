@@ -5,11 +5,17 @@ set :application, "quiet-dawn-5173"
 set :repo_url, "git@github.com:thaleshcv/quiet-dawn-5173.git"
 set :branch, "main"
 set :deploy_to, "/home/ubuntu/#{fetch :application}"
-set :rvm_type, :user
-set :rvm_ruby_version, "2.6.5p114"
+set :rvm_type, :auto
+set :rvm_ruby_version, "2.6.5"
+set :rvm_custom_path, "/usr/share/rvm"
 
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bundle", ".bundle", "public/system", "public/uploads"
 set :keep_releases, 2
+
+set :default_env, {
+  PATH: "$HOME/node-v10.23.1-linux-x64/bin:$PATH",
+  NODE_ENVIRONMENT: "production"
+}
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
