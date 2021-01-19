@@ -4,7 +4,12 @@ module ApplicationHelper
   end
 
   def gain_loss(initial, current)
-    difference = ((current / initial) - 1) * 100
+    difference = if current.to_i.positive? && initial.to_i.positive?
+      ((current / initial) - 1) * 100
+    else
+      0
+    end
+
     color = difference.negative? ? "danger" : "success"
     arrow = (difference.negative? ? "&#10136;" : "&#10138;").html_safe
 
