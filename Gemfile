@@ -40,3 +40,4 @@ gem "devise"
 gem "httparty"
 gem "pundit"
 gem "simple_form"
+gem "whenever", require: false
