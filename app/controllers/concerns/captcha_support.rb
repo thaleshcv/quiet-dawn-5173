@@ -23,7 +23,9 @@ module CaptchaSupport
     def verify_captcha!
       return if captcha_disabled? || CaptchaService.new(params["h-captcha-response"]).verify
 
-      redirect_back allow_other_host: false, alert: "Captcha verification failed."
+      redirect_back fallback_location: new_user_session_url,
+                    allow_other_host: false,
+                    alert: "Captcha verification failed."
     end
   end
 end
