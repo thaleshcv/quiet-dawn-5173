@@ -5,7 +5,7 @@ module CaptchaSupport
     helper_method :captcha_wrapper, :captcha_enabled?, :captcha_disabled?
 
     def captcha_wrapper
-      content_tag(:div, nil,
+      view_context.content_tag(:div, nil,
         class: "h-captcha",
         data: {
           sitekey: Rails.application.credentials.hcaptcha_sitekey
