@@ -21,11 +21,15 @@ module CaptchaSupport
     end
 
     def verify_captcha!
-      return if captcha_disabled? || CaptchaService.new(params["h-captcha-response"]).verify
+      return if captcha_disabled?
+
+      captcha_result = Captcha::Verifier.new(params["h-captcha-response"]).perform
+
+      return if captcha_result["success"]
 
       redirect_back fallback_location: new_user_session_url,
                     allow_other_host: false,
-                    alert: "Captcha verification failed."
+                    alert: "Captcha verification failed. #{captcha_result['error-codes']}"
     end
   end
 end
