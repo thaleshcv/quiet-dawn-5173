@@ -4,6 +4,6 @@ class Users::SessionsController < Devise::SessionsController
   rescue_from "Captcha::VerificationError" do |exception|
     redirect_back fallback_location: new_user_session_url,
                   allow_other_host: false,
-                  alert: "Captcha verification failed. #{exception.message}."
+                  alert: "Could not validate captcha. #{exception.message}."
   end
 end

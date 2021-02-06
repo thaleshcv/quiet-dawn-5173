@@ -5,38 +5,35 @@ require "json"
 module Captcha
   # Service Object to validate the hCaptcha response.
   class Verifier
-    def initialize(response)
-      @response = response
+    attr_reader :captcha_response
+
+    def initialize(captcha_response)
+      @captcha_response = captcha_response
     end
 
     def perform
-      header = { 'Content-Type': "application/x-www-form-urlencoded" }
-      data = {
-        response: @response,
-        secret: captcha_secret
-      }
+      url = URI("https://hcaptcha.com/siteverify")
 
-      http = Net::HTTP.new(verify_url.host, verify_url.port)
-      request = Net::HTTP::Post.new(verify_url.request_uri, header)
-      request.body = data.to_json
+      https = Net::HTTP.new(url.host, url.port)
+      https.use_ssl = true
 
-      proccess_response(http.request(request))
+      request = Net::HTTP::Post.new(url)
+      request["Content-Type"] = "application/x-www-form-urlencoded"
+      request.body = "secret=#{captcha_secret}&response=#{captcha_response}"
+
+      proccess_response(https.request(request))
     end
 
     private
 
     def proccess_response(response)
-      raise(VerificationError, response.message) unless response.code == 200
+      raise(VerificationError, response.message) unless response.code == "200"
 
       JSON.parse(response.body)
     end
 
     def captcha_secret
       "0x#{Rails.application.credentials.hcaptcha_secret}"
-    end
-
-    def verify_url
-      @verify_url ||= URI.parse("https://hcaptcha.com/siteverify")
     end
   end
 end
