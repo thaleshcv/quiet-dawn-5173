@@ -14,19 +14,30 @@ module Captcha
     def perform
       url = URI("https://hcaptcha.com/siteverify")
 
-      https = Net::HTTP.new(url.host, url.port)
-      https.use_ssl = true
+      client = create_client(url)
+      request = create_request(url, captcha_secret, captcha_response)
 
-      request = Net::HTTP::Post.new(url)
-      request["Content-Type"] = "application/x-www-form-urlencoded"
-      request.body = "secret=#{captcha_secret}&response=#{captcha_response}"
-
-      proccess_response(https.request(request))
+      process_response(client.request(request))
     end
 
     private
 
-    def proccess_response(response)
+    def create_client(url)
+      https = Net::HTTP.new(url.host, url.port)
+      https.use_ssl = true
+
+      https
+    end
+
+    def create_request(url, secret, response)
+      request = Net::HTTP::Post.new(url)
+      request["Content-Type"] = "application/x-www-form-urlencoded"
+      request.body = "secret=#{secret}&response=#{response}"
+
+      request
+    end
+
+    def process_response(response)
       raise(VerificationError, response.message) unless response.code == "200"
 
       JSON.parse(response.body)

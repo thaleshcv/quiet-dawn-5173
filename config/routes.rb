@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   resources :investments
-  devise_for :users, controllers: { sessions: "users/sessions" }
+
+  devise_for :users, controllers: {
+    sessions: "users/sessions",
+    registrations: "users/registrations"
+  }
 
   resources :assets, only: %i[index show]
 
