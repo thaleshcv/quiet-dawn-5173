@@ -3,14 +3,8 @@ class InvestmentsController < ApplicationController
 
   # GET /investments
   def index
-    @investments = policy_scope(Investment)
-      .joins(:asset)
-      .select("assets.id AS asset_id, assets.name AS asset_name, assets.abbreviation AS asset_abbreviation, SUM(investments.quantity) AS quantity, SUM(investments.value_invested) AS value_invested")
-      .group("assets.id, assets.abbreviation, assets.name")
-      .order("assets.abbreviation ASC")
-
+    @portfolio = policy_scope(Investment).for_portfolio
     @total_invested = policy_scope(Investment).sum(:value_invested)
-
     @total_accumulated = policy_scope(Investment).joins(asset: :current_price)
       .sum("investments.quantity * current_prices.value")
   end

@@ -22,10 +22,10 @@
 <%= link_to 'Add Investment', new_investment_path %>
 
 <div class="list-group">
-	<%= render partial: "investments/investment", collection: @investments %>
+	<%= render partial: "investments/portfolio", collection: @portfolio %>
 </div>
 
-<% if @investments.empty? %>
+<% if @portfolio.empty? %>
 	<div class="alert alert-info">
 		<strong>Info!</strong>
 		You have no investments yet.
