@@ -4,9 +4,7 @@ class InvestmentsController < ApplicationController
   # GET /investments
   def index
     @portfolio = policy_scope(Investment).for_portfolio
-    @total_invested = policy_scope(Investment).sum(:value_invested)
-    @total_accumulated = policy_scope(Investment).joins(asset: :current_price)
-      .sum("investments.quantity * current_prices.value")
+    @investment_totals = InvestmentTotals.new(policy_scope(Investment))
   end
 
   # GET /investments/1

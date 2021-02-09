@@ -21,21 +21,21 @@
 		<li class="list-group-item">
 			<span class="d-block text-uppercase">Quantity</span>
 			<strong class="text-muted text-right">
-				<%= @investments.sum(:quantity) %>
+				<%= @investment_totals.quantity %>
 			</strong>
 		</li>
 		<li class="list-group-item">
 			<span class="d-block text-uppercase">Total invested</span>
 			<strong class="text-muted text-right">
-				<%= number_to_currency(@total_invested) %>
+				<%= number_to_currency(@investment_totals.total_invested) %>
 			</strong>
 		</li>
 		<li class="list-group-item">
 			<span class="d-block text-uppercase">Current value</span>
 			<strong class="text-muted text-right">
 				<% if @asset.current_price.present? %>
-					<%= number_to_currency(@current_value) %>
-					[ <%= gain_loss(@total_invested, @current_value) %> ]
+					<%= number_to_currency(@investment_totals.total_accumulated) %>
+					(<%= gain_loss(@investment_totals.total_invested, @investment_totals.total_accumulated) %>)
 				<% else %>
 					Not available
 				<% end %>

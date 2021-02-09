@@ -9,7 +9,6 @@ class AssetsController < ApplicationController
       .includes(asset: :current_price)
       .order(invested_at: :desc)
 
-    @total_invested = @investments.sum(:value_invested)
-    @current_value = @investments.sum("investments.quantity * current_prices.value")
+    @investment_totals = InvestmentTotals.new(@investments)
   end
 end

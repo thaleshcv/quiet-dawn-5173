@@ -1,8 +1,4 @@
 module ApplicationHelper
-  def difference_in_pct(initial, current)
-    ((current / initial) - 1) * 100
-  end
-
   def gain_loss(initial, current)
     difference = if current.to_i.positive? && initial.to_i.positive?
       ((current / initial) - 1) * 100

@@ -21,7 +21,7 @@
 			<small class="font-weight-bold d-block text-uppercase">Current value</small>
 			<h3>
 				<%= number_to_currency(portfolio.item_current_value) %>
-				[<%= gain_loss(portfolio.item_value_invested, portfolio.item_current_value) %>]
+				(<%= gain_loss(portfolio.item_value_invested, portfolio.item_current_value) %>)
 			</h3>
 		</div>
 	</div>
