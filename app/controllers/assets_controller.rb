@@ -4,11 +4,12 @@ class AssetsController < ApplicationController
   def show
     @asset = Asset.find(params[:id])
 
-    @investments = policy_scope(Investment)
-      .where(asset_id: params[:id])
+    base_scope = policy_scope(Investment).where(asset_id: params[:id])
+
+    @investments = base_scope
       .includes(asset: :current_price)
       .order(invested_at: :desc)
 
-    @investment_totals = InvestmentTotals.new(@investments)
+    @investment_totals = InvestmentTotals.new(base_scope)
   end
 end

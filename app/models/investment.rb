@@ -42,14 +42,19 @@ class Investment < ApplicationRecord
     def for_portfolio
       joins(:asset)
         .left_joins(asset: :current_price)
-        .select("assets.id AS item_asset_id,"\
-          "assets.name AS item_asset_name,"\
-          "assets.abbreviation AS item_asset_abbr,"\
-          "SUM(investments.quantity) AS item_quantity,"\
-          "SUM(investments.value_invested) AS item_value_invested,"\
-          "SUM(investments.quantity) * COALESCE(current_prices.value, 0) AS item_current_value")
         .group("assets.id, assets.abbreviation, assets.name, current_prices.value")
         .order("assets.abbreviation ASC")
+        .select(<<~SQL)
+          assets.id AS item_asset_id,
+          assets.name AS item_asset_name,
+          assets.abbreviation AS item_asset_abbr,
+          SUM(investments.quantity) AS item_quantity,
+          SUM(investments.value_invested) AS item_value_invested,
+          COALESCE(
+            SUM(investments.quantity) * current_prices.value,
+            SUM(investments.value_invested)::money::numeric::float8
+          ) AS item_current_value
+        SQL
     end
   end
 end

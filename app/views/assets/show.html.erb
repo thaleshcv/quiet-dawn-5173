@@ -33,12 +33,8 @@
 		<li class="list-group-item">
 			<span class="d-block text-uppercase">Current value</span>
 			<strong class="text-muted text-right">
-				<% if @asset.current_price.present? %>
-					<%= number_to_currency(@investment_totals.total_accumulated) %>
-					(<%= gain_loss(@investment_totals.total_invested, @investment_totals.total_accumulated) %>)
-				<% else %>
-					Not available
-				<% end %>
+				<%= number_to_currency(@investment_totals.total_accumulated) %>
+				(<%= difference_in_percent(@investment_totals.total_invested, @investment_totals.total_accumulated) %>)
 			</strong>
 		</li>
 	</ul>

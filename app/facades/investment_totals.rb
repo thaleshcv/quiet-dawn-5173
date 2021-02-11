@@ -14,7 +14,14 @@ class InvestmentTotals
   end
 
   def total_accumulated
-    @total_accumulated ||= scope.joins(asset: :current_price)
-      .sum("investments.quantity * current_prices.value")
+    @total_accumulated ||= scope
+      .joins(:asset)
+      .left_joins(asset: :current_price)
+      .sum(<<~SQL)
+        COALESCE(
+          investments.quantity * current_prices.value,
+          investments.value_invested::money::numeric::float8
+        )
+      SQL
   end
 end

@@ -13,7 +13,7 @@
 			<span class="d-block text-uppercase">Total Accumulated</span>
 			<strong class="text-muted text-right">
 				<%= number_to_currency(@investment_totals.total_accumulated) %>
-				(<%= gain_loss(@investment_totals.total_invested, @investment_totals.total_accumulated) %>)
+				(<%= difference_in_percent(@investment_totals.total_invested, @investment_totals.total_accumulated) %>)
 			</strong>
 		</li>
 	</ul>
