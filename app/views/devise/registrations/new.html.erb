@@ -3,11 +3,12 @@
 	<%= render 'partials/flash_messages' %>
 	<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
 		<%= render "devise/shared/error_messages", resource: resource %>
+		<%= captcha_error %>
 		<%= f.input :email, autofocus: true, input_html: { autocomplete: "email" } %>
 		<%= f.input :password, input_html: { autocomplete: "new-password" } %>
 		<%= f.input :password_confirmation, input_html: { autocomplete: "new-password" } %>
 
-		<%= captcha_wrapper if captcha_enabled? %>
+		<%= captcha_tag if captcha_enabled? %>
 
 		<%= f.button :submit, class: "btn btn-primary btn-block" %>
 	<% end %>
