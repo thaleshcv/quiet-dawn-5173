@@ -2,6 +2,9 @@
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="apple-touch-icon" href="/assets/images/favicon.png" sizes="180x180">
+		<link rel="icon" href="/assets/images/favicon.png" sizes="32x32" type="image/png">
+		<link rel="icon" href="/assets/images/favicon.png" sizes="16x16" type="image/png">
 		<title>VESP | My investments</title>
 		<%= csrf_meta_tags %>
 		<%= csp_meta_tag %>
@@ -9,12 +12,15 @@
 		<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 		<%= yield(:header) if content_for?(:header) %>
 	</head>
-	<body class="bg-secondary">
-		<%= render 'partials/navbar' if user_signed_in? %>
-		<main id="root" class="pb-2 container bg-white">
-			<%= yield %>
-		</main>
-	</body>
-
+	<% if content_for?(:content) %>
+		<%= yield(:content) %>
+	<% else %>
+		<body class="bg-secondary">
+			<%= render 'partials/navbar' if user_signed_in? %>
+			<main id="root" class="pb-2 container bg-white">
+				<%= yield %>
+			</main>
+		</body>
+	<% end %>
 	<%= yield(:footer) if content_for?(:footer) %>
 </html>

@@ -1,4 +1,5 @@
 class Users::RegistrationsController < Devise::RegistrationsController
+  layout "layouts/public", only: %i[new create]
   prepend_before_action :validate_captcha_response, only: :create
 
   private

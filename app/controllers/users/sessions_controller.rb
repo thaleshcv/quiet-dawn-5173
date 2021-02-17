@@ -1,4 +1,5 @@
 class Users::SessionsController < Devise::SessionsController
+  layout "layouts/public"
   prepend_before_action :validate_captcha_response, only: :create
 
   private
