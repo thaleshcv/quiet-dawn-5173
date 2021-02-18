@@ -13,6 +13,9 @@ echo "=== ENTERING ${APP_HOME} ==="
 cd $APP_HOME
 git pull
 
+echo "=== INSTALLING GEMS ==="
+RAILS_ENV=production bundle install --deployment
+
 echo "=== RUNNING MIGRATIONS ==="
 RAILS_ENV=production bundle exec rake db:migrate
 
