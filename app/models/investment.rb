@@ -56,5 +56,16 @@ class Investment < ApplicationRecord
           ) AS item_current_value
         SQL
     end
+
+    def for_value_accumulated_chart
+      joins(asset: :prices)
+        .order("assets.abbreviation ASC, prices.date DESC")
+        .group("assets.abbreviation, prices.date")
+        .select(<<~SQL)
+          assets.abbreviation,
+          prices.date,
+          SUM(investments.quantity * prices.value) AS accumulated_value
+        SQL
+    end
   end
 end

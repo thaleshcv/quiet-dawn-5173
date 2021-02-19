@@ -41,3 +41,5 @@ gem "httparty"
 gem "pundit"
 gem "simple_form"
 gem "whenever", require: false
+
+gem "chartkick", "~> 3.4"

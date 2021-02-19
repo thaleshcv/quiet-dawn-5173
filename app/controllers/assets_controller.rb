@@ -11,5 +11,6 @@ class AssetsController < ApplicationController
       .order(invested_at: :desc)
 
     @investment_totals = InvestmentTotals.new(base_scope)
+    @accumulated_value_series = AccumulatedValueSeries.new(base_scope)
   end
 end
