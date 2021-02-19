@@ -3,7 +3,7 @@ class ImportPricesJob < ApplicationJob
   queue_as :default
 
   def perform
-    prices_attrs = assets_to_update_price.collect do |asset|
+    prices_attrs = Asset.for_price_update.collect do |asset|
       asset_id, last_price_at = asset
 
       Rails.logger.info("*** Updating price for asset #{asset_id}. Last update was #{last_price_at} ***")
@@ -31,15 +31,6 @@ class ImportPricesJob < ApplicationJob
     Rails.logger.info("*** #{prices.size} prices retrieved ***")
 
     prices.collect { |h| normalize_price_hash(h, asset_id) }
-  end
-
-  # Returns an Array of Arrays containing the asset_id and its last price date, in this order.
-  def assets_to_update_price
-    Investment.joins(:asset)
-      .left_joins(asset: :prices)
-      .group("investments.asset_id")
-      .distinct
-      .pluck("investments.asset_id, max(prices.date)")
   end
 
   # Calculates the number of days an asset has missing prices.

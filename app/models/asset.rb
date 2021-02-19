@@ -15,4 +15,14 @@ class Asset < ApplicationRecord
   has_many :prices, -> { order(date: :asc) }, inverse_of: :asset
 
   has_one :current_price
+
+  class << self
+    def for_price_update
+      joins(:investments)
+        .left_joins(:prices)
+        .group("prices.asset_id")
+        .distinct
+        .pluck("prices.asset_id, max(prices.date)")
+    end
+  end
 end
