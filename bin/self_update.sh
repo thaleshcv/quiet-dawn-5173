@@ -1,5 +1,7 @@
 #! /bin/bash
 
+echo "=== STARTING SELF-UPDATE SCRIPT ==="
+
 APP_HOME="/home/ubuntu/quiet-dawn-5173"
 
 if [[ -d $APP_HOME ]]; then
@@ -9,9 +11,10 @@ else
   exit 1
 fi
 
-echo "=== ENTERING ${APP_HOME} ==="
-cd $APP_HOME
-git pull
+if [ `pwd` != $APP_HOME ]; then
+  echo "=== ENTERING ${APP_HOME} ==="
+  cd $APP_HOME;
+fi
 
 echo "=== INSTALLING GEMS ==="
 RAILS_ENV=production bundle install --deployment
