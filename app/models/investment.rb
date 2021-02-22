@@ -57,14 +57,33 @@ class Investment < ApplicationRecord
         SQL
     end
 
-    def for_value_accumulated_chart
-      joins(asset: :prices)
+    def for_value_accumulated_series(starting_from)
+      where("investments.invested_at <= prices.date")
+        .where("prices.date >= ?", starting_from.to_i.days.ago.to_date.beginning_of_day)
+        .joins(asset: :prices)
         .order("assets.abbreviation ASC, prices.date DESC")
-        .group("assets.abbreviation, prices.date")
+        .distinct
         .select(<<~SQL)
           assets.abbreviation,
           prices.date,
-          SUM(investments.quantity * prices.value) AS accumulated_value
+          SUM(investments.quantity * prices.value) OVER(
+            PARTITION BY prices.date
+          ) AS accumulated_value
+        SQL
+    end
+
+    def for_total_invested_series(starting_from)
+      where("investments.invested_at <= prices.date")
+        .where("prices.date >= ?", starting_from.to_i.days.ago.to_date.beginning_of_day)
+        .joins(asset: :prices)
+        .order("assets.abbreviation ASC, prices.date DESC")
+        .distinct
+        .select(<<~SQL)
+          assets.abbreviation,
+          prices.date,
+          SUM(investments.value_invested::money::numeric::float8) OVER(
+            PARTITION BY prices.date
+          ) AS total_invested
         SQL
     end
   end

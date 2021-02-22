@@ -1,0 +1,8 @@
+var chart = Chartkick.charts["accumulated-value-chart"];
+chart.updateData(<%= @chart_data.to_json.html_safe %>);
+
+document.querySelectorAll(".chart-range-options > button").forEach(function(value) {
+value.disabled = false;
+});
+
+document.querySelector(".chart-range-options > button.range-<%= params[:ndays] %>").disabled = true;

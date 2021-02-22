@@ -40,9 +40,25 @@
 	</ul>
 </div>
 
-<div class="my-2">
-	<h3>Accumulated value</h3>
-	<%= line_chart @accumulated_value_series.chart_data,
+<div class="my-5">
+	<div class="d-flex justify-content-between">
+		<h3>Accumulated value</h3>
+		<div class="chart-range-options">
+			<%= chart_range_option @asset, '30 Days', range: '30days',
+				disabled: @accumulated_value_chart.range_in_days == 30 %>
+			<%= chart_range_option @asset, '60 Days', range: '60days',
+				disabled: @accumulated_value_chart.range_in_days == 60 %>
+			<%= chart_range_option @asset, '90 Days', range: '90days',
+				disabled: @accumulated_value_chart.range_in_days == 90 %>
+		</div>
+	</div>
+	<%= line_chart [
+			{ name: "Accumulated", data: @accumulated_value_chart.accumulated_series },
+			{ name: "Invested", data: @accumulated_value_chart.invested_series }
+		],
+		id: "accumulated-value-chart",
+		legend: "bottom",
+		curve: false,
 		prefix: "$",
 		thousands: ",",
 		decimals: "." %>

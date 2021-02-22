@@ -9,7 +9,7 @@ module Stock
                          query: query_options({ item: item, size: size })
                        })
 
-        raise Stock::ClientError, response.message unless response.code == 200
+        raise(Stock::ClientError, response.message) unless response.code == 200
 
         JSON.parse(response.body).fetch("docs")
       end

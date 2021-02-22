@@ -6,7 +6,9 @@ Rails.application.routes.draw do
     registrations: "users/registrations"
   }
 
-  resources :assets, only: %i[index show]
+  resources :assets, only: %i[index show] do
+    get "accumulated_series", on: :member
+  end
 
   get "home", to: "home#index"
 
