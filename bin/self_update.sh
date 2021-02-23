@@ -28,7 +28,7 @@ RAILS_ENV=production bundle exec rake assets:precompile
 
 echo "=== REFRESHING PACKS ==="
 rm -rf public/packs
-NODE_OPTIONS="--max-old-space-size=350" RAILS_ENV=production RACK_ENV=production NODE_ENV=production bin/webpack --verbose
+NODE_OPTIONS="--max-old-space-size=250" RAILS_ENV=production RACK_ENV=production NODE_ENV=production bin/webpack --verbose
 
 echo "=== RESTARTING PASSENGER ==="
 passenger-config restart-app .
