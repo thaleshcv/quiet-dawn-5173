@@ -1,6 +1,6 @@
 <span class="list-group-item">
-	<div class="d-flex w-100 justify-content-between">
-		<span class="d-flex">
+	<div class="row justify-content-between">
+		<div class="col-sm-12 col-md">
 			<span class="small">
 				<span class="mb-1 d-block text-uppercase">Value invested</span>
 				<strong class="text-muted">
@@ -24,8 +24,8 @@
 					</abbr>
 				</strong>
 			</span>
-		</span>
-		<span>
+		</div>
+		<div class="col-sm-12 col-md-auto">
 			<%= link_to "Edit", edit_investment_path(investment) %>
 			<%= link_to "Destroy", investment, method: :delete, data: { confirm: "Are you sure?" } %>
 		</div>

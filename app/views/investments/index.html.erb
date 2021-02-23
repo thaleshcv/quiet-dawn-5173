@@ -1,22 +1,26 @@
 <%= render "partials/flash_messages" %>
 
-<div class="d-flex align-items-center justify-content-between">
-	<h2>Investments</h2>
-	<ul class="list-group list-group-horizontal text-right my-3">
-		<li class="list-group-item">
-			<span class="d-block text-uppercase">Total Invested</span>
-			<strong class="text-muted text-right">
-				<%= number_to_currency(@investment_totals.total_invested) %>
-			</strong>
-		</li>
-		<li class="list-group-item">
-			<span class="d-block text-uppercase">Total Accumulated</span>
-			<strong class="text-muted text-right">
-				<%= number_to_currency(@investment_totals.total_accumulated) %>
-				(<%= difference_in_percent(@investment_totals.total_invested, @investment_totals.total_accumulated) %>)
-			</strong>
-		</li>
-	</ul>
+<div class="row align-items-center justify-content-between">
+	<div class="col-md col-sm-12">
+		<h2>Investments</h2>
+	</div>
+	<div class="col-md-auto col-sm-12">
+		<ul class="list-group list-group-horizontal text-right my-3">
+			<li class="list-group-item">
+				<span class="d-block text-uppercase">Total Invested</span>
+				<strong class="text-muted text-right">
+					<%= number_to_currency(@investment_totals.total_invested) %>
+				</strong>
+			</li>
+			<li class="list-group-item">
+				<span class="d-block text-uppercase">Total Accumulated</span>
+				<strong class="text-muted text-right">
+					<%= number_to_currency(@investment_totals.total_accumulated) %>
+					(<%= difference_in_percent(@investment_totals.total_invested, @investment_totals.total_accumulated) %>)
+				</strong>
+			</li>
+		</ul>
+	</div>
 </div>
 
 <%= link_to 'Add Investment', new_investment_path %>
