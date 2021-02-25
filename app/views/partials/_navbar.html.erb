@@ -1,33 +1,31 @@
-<nav class="navbar navbar-expand-md navbar-light py-0 bg-secondary fixed-top">
-	<div class="container bg-light shadow-sm">
-		<span class="navbar-brand">
-			<%= image_tag '/assets/images/logo_transparent.png', height: "48px", width: "auto" %>
-		</span>
-		<button class="navbar-toggler" type="button"
+<nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+	<%= link_to root_path, class: "navbar-brand" do %>
+		<%= image_tag '/assets/images/logo_transparent.png', height: "38", width: "auto" %>
+	<% end %>
+	<button class="navbar-toggler" type="button"
 		data-toggle="collapse" data-target="#navbarsExampleDefault"
 		aria-controls="navbarsExampleDefault" aria-expanded="false"
 		aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarsExampleDefault">
-			<ul class="navbar-nav ml-auto">
-				<li class="nav-item">
-					<%= link_to_unless_current 'Investments', investments_path, class: "nav-link" do %>
-						<span class="nav-link active">Investments</span>
-					<% end %>
-				</li>
-				<li class="nav-item">
-					<%= link_to_unless_current 'Account', edit_user_registration_path, class: "nav-link" do %>
-						<span class="nav-link active">Account</span>
-					<% end %>
-				</li>
-				<li class="nav-item">
-					<%= link_to 'Logout',
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+				<%= link_to_unless_current 'Investments', investments_path, class: "nav-link" do %>
+					<span class="nav-link active">Investments</span>
+				<% end %>
+			</li>
+			<li class="nav-item">
+				<%= link_to_unless_current 'Account', edit_user_registration_path, class: "nav-link" do %>
+					<span class="nav-link active">Account</span>
+				<% end %>
+			</li>
+			<li class="nav-item">
+				<%= link_to 'Logout',
 					destroy_user_session_path,
 					method: :delete,
 					class: "nav-link bg-danger text-light" %>
-				</li>
-			</ul>
-		</div>
+			</li>
+		</ul>
 	</div>
 </nav>

@@ -12,15 +12,15 @@
 		<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 		<%= yield(:header) if content_for?(:header) %>
 	</head>
-	<% if content_for?(:content) %>
-		<%= yield(:content) %>
-	<% else %>
-		<body class="bg-secondary">
+	<body>
+		<% if content_for?(:content) %>
+			<%= yield(:content) %>
+		<% else %>
 			<%= render 'partials/navbar' if user_signed_in? %>
 			<main id="root" class="pb-2 container bg-white">
 				<%= yield %>
 			</main>
-		</body>
-	<% end %>
+		<% end %>
+	</body>
 	<%= yield(:footer) if content_for?(:footer) %>
 </html>

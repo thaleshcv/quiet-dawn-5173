@@ -1,16 +1,14 @@
 <% content_for :content do %>
-	<body class="bg-light">
-		<div class="container d-flex align-items-center vh-100">
-			<div class="w-50">
-				<div class="text-center">
-					<%= image_tag '/assets/images/logo_transparent.png', class: "img-fluid" %>
-				</div>
-			</div>
-			<div class="w-50 bg-white">
-				<%= yield %>
+	<div class="container-fluid d-flex align-items-center vh-100 bg-light">
+		<div class="w-50">
+			<div class="text-center">
+				<%= image_tag '/assets/images/logo_transparent.png', class: "img-fluid" %>
 			</div>
 		</div>
-	</body>
+		<div class="w-50">
+			<%= yield %>
+		</div>
+	</div>
 <% end %>
 
 <%= render template: "layouts/application" %>
