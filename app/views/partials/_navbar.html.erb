@@ -9,7 +9,7 @@
 		<span class="navbar-toggler-icon"></span>
 	</button>
 	<div class="collapse navbar-collapse" id="navbarsExampleDefault">
-		<ul class="navbar-nav ml-auto">
+		<ul class="navbar-nav ml-auto align-items-center">
 			<li class="nav-item">
 				<%= link_to_unless_current 'Investments', investments_path, class: "nav-link" do %>
 					<span class="nav-link active">Investments</span>
@@ -20,11 +20,32 @@
 					<span class="nav-link active">Account</span>
 				<% end %>
 			</li>
-			<li class="nav-item">
-				<%= link_to 'Logout',
-					destroy_user_session_path,
-					method: :delete,
-					class: "nav-link bg-danger text-light" %>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="dropdown08"
+					data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<svg class="bd-placeholder-img rounded-circle"
+						width="36" height="36" xmlns="http://www.w3.org/2000/svg" role="img"
+						aria-label="Avatar" preserveAspectRatio="xMidYMid slice" focusable="false">
+						<title><%= current_user.email %></title>
+						<rect width="100%" height="100%" fill="#6c757d"></rect>
+						<text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#dee2e6">
+							<%= current_user.email.first.upcase %>
+						</text>
+					</svg>
+				</a>
+				<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown08">
+					<div class="container">
+						<small>
+							You are logged in as<br/>
+							<%= current_user.email %>
+						</small>
+					</div>
+					<div class="dropdown-divider"></div>
+					<%= link_to 'Logout',
+						destroy_user_session_path,
+						method: :delete,
+						class: "dropdown-item bg-danger text-light" %>
+				</div>
 			</li>
 		</ul>
 	</div>
