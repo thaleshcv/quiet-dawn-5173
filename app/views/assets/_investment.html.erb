@@ -1,10 +1,13 @@
 <span class="list-group-item">
 	<div class="row justify-content-between">
-		<div class="col-sm-12 col-md">
+		<div class="col-sm-12 col-md d-flex">
 			<span class="small">
-				<span class="mb-1 d-block text-uppercase">Value invested</span>
+				<span class="mb-1 d-block text-uppercase">Invested</span>
 				<strong class="text-muted">
-					<%= number_to_currency(investment.value_invested) %>
+					<abbr class="text-uppercase"
+						title="<%= I18n.l(investment.invested_at, format: :long) %>">
+						<%= time_ago_in_words(investment.invested_at) %> ago
+					</abbr>
 				</strong>
 			</span>
 			<span class="mx-5"></span>
@@ -16,12 +19,9 @@
 			</span>
 			<span class="mx-5"></span>
 			<span class="small">
-				<span class="mb-1 d-block text-uppercase">Invested</span>
+				<span class="mb-1 d-block text-uppercase">Value invested</span>
 				<strong class="text-muted">
-					<abbr class="text-uppercase"
-						title="<%= I18n.l(investment.invested_at, format: :long) %>">
-						<%= time_ago_in_words(investment.invested_at) %> ago
-					</abbr>
+					<%= number_to_currency(investment.value_invested) %>
 				</strong>
 			</span>
 		</div>
