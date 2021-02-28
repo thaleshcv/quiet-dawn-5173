@@ -1,7 +1,7 @@
 <%= render "partials/flash_messages" %>
 
 <div class="row">
-	<div class="col-sm-12 col-md">
+	<div class="col-sm-12 col-md-6">
 		<h2>
 			<%= @asset.abbreviation %>
 			<span class="ml-1 text-muted"><%= @asset.name %></span>
@@ -18,28 +18,28 @@
 			</strong>
 		</div>
 	</div>
-	<div class="col-sm-12 col-md-auto">
-		<ul class="list-group list-group-horizontal text-right">
-			<li class="list-group-item">
-				<span class="d-block text-uppercase">Quantity</span>
-				<strong class="text-muted text-right">
+	<div class="col-sm-12 col-md-6 ml-auto text-right">
+		<div class="row px-2">
+			<div class="col-sm-12 col-md-4 border py-2">
+				<span class="text-uppercase">Quantity</span>
+				<strong class="d-block text-muted">
 					<%= @investment_totals.quantity %>
 				</strong>
-			</li>
-			<li class="list-group-item">
-				<span class="d-block text-uppercase">Invested</span>
-				<strong class="text-muted text-right">
+			</div>
+			<div class="col-sm-12 col-md-4 border py-2">
+				<span class="text-uppercase">Invested</span>
+				<strong class="d-block text-muted">
 					<%= number_to_currency(@investment_totals.total_invested) %>
 				</strong>
-			</li>
-			<li class="list-group-item">
-				<span class="d-block text-truncate">Accumulated</span>
-				<strong class="text-muted text-right">
+			</div>
+			<div class="col-sm-12 col-md-4 border py-2">
+				<span class="text-uppercase">Accumulated</span>
+				<strong class="d-block text-muted">
 					<%= number_to_currency(@investment_totals.total_accumulated) %>
 					(<%= difference_in_percent(@investment_totals.total_invested, @investment_totals.total_accumulated) %>)
 				</strong>
-			</li>
-		</ul>
+			</div>
+		</div>
 	</div>
 </div>
 
