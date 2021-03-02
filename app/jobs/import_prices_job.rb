@@ -26,7 +26,7 @@ class ImportPricesJob < ApplicationJob
   private
 
   def fetch_prices(asset_id, count)
-    prices = Stock::PriceService.list(asset_id, count)
+    prices = Stock::PriceService.interday(asset_id, count)
 
     Rails.logger.info("*** #{prices.size} prices retrieved ***")
 

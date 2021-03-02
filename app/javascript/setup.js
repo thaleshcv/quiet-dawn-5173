@@ -22,7 +22,9 @@ const applyCurrencyMask = input => {
 };
 
 document.addEventListener("turbolinks:load", function () {
-	$("#investment_asset_id").select2();
+	$("select.form-control").each(function (_index, input) {
+		$(input).select2();
+	});
 
 	$(".integer-input").each(function (_index, input) {
 		input.value = String(input.value).replace(/\D/g, "");

@@ -16,6 +16,11 @@
 				<% end %>
 			</li>
 			<li class="nav-item">
+				<%= link_to_unless_current 'Explore', explore_path, class: "nav-link" do %>
+					<span class="nav-link active">Explore</span>
+				<% end %>
+			</li>
+			<li class="nav-item">
 				<%= link_to_unless_current 'Account', edit_user_registration_path, class: "nav-link" do %>
 					<span class="nav-link active">Account</span>
 				<% end %>

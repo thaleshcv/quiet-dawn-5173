@@ -1,0 +1,70 @@
+<%= form_with url: explore_url, method: "get", local: true do |f| %>
+	<div class="form-group">
+		<%= f.select :asset_id,
+			options_for_select(@asset_options, params[:asset_id]),
+			{
+				prompt: "Plase, select an asset"
+			},
+			{
+				class: "form-control select",
+				onchange: "submit();"
+			}
+		%>
+	</div>
+<% end %>
+
+<% if @explore_facade.present? %>
+	<div class="row">
+		<div class="col-sm-12 col-md flex-shrink-1">
+			<h2>
+				<%= @explore_facade.asset.abbreviation %>
+				<span class="ml-1 text-muted"><%= @explore_facade.asset.name %></span>
+			</h2>
+			<div class="text-uppercase small">
+				Current price
+				<span class="text-muted font-weight-bold">
+					<%= number_to_currency(@explore_facade.current_price) %>
+					(<%= number_to_percentage(@explore_facade.price_var_pct, precision: 2) %>)
+				</span>
+			</div>
+		</div>
+
+		<div class="col-sm-12 col-md-auto">
+			<ul class="list-group list-group-horizontal text-right">
+				<li class="list-group-item">
+					<span class="text-uppercase small">Open</span>
+					<div class="text-muted font-weight-bold">
+						<%= number_to_currency(@explore_facade.open_price) %>
+					</div>
+				</li>
+				<li class="list-group-item">
+					<span class="text-uppercase small">Lowest</span>
+					<div class="text-muted font-weight-bold">
+						<%= number_to_currency(@explore_facade.lowest_price) %>
+					</div>
+				</li>
+				<li class="list-group-item">
+					<span class="text-uppercase small">Highest</span>
+					<div class="text-muted font-weight-bold">
+						<%= number_to_currency(@explore_facade.highest_price) %>
+					</div>
+				</li>
+				<li class="list-group-item">
+					<span class="text-uppercase small">Volume</span>
+					<div class="text-muted font-weight-bold">
+						<%= @explore_facade.volume %>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<%= area_chart @explore_facade.prices_chart_data,
+		legend: false,
+    min: @explore_facade.lowest_price,
+    max: @explore_facade.highest_price,
+		curve: false,
+		prefix: "$",
+		thousands: ",",
+		decimals: "." %>
+<% end %>

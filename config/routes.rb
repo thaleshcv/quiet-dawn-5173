@@ -12,5 +12,7 @@ Rails.application.routes.draw do
 
   get "home", to: "home#index"
 
+  get "explore", to: "explore#index", as: :explore
+
   root "investments#index"
 end

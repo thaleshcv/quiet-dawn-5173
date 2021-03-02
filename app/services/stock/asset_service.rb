@@ -23,6 +23,10 @@ module Stock
       end
     end
 
+    def find(asset_id)
+      fetch_all.find { |ass| ass["id"].to_s == asset_id.to_s }
+    end
+
     private
 
     def filter_assets_by_name_or_abbreviation(assets, query)
