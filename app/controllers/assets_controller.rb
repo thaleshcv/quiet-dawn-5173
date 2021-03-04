@@ -12,7 +12,7 @@ class AssetsController < ApplicationController
       .includes(asset: :current_price)
       .order(invested_at: :desc)
 
-    @investment_totals = InvestmentTotals.new(@investments_scope)
+    @investment_totals = InvestmentTotalsFacade.new(@investments_scope)
   end
 
   # GET /assets/1/accumulated_series
@@ -38,6 +38,6 @@ class AssetsController < ApplicationController
 
   def set_accumulated_value_chart
     ndays = params.fetch(:ndays, ACCUMULATED_CHART_RANGES["30days"])
-    @accumulated_value_chart = AccumulatedValueChart.new(@investments_scope, ndays)
+    @accumulated_value_chart = AccumulatedValueChartFacade.new(@investments_scope, ndays)
   end
 end

@@ -1,4 +1,4 @@
-class InvestmentTotals
+class InvestmentTotalsFacade
   attr_reader :scope
 
   def initialize(scope)

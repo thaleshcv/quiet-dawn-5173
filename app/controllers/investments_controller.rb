@@ -4,7 +4,7 @@ class InvestmentsController < ApplicationController
   # GET /investments
   def index
     @portfolio = policy_scope(Investment).for_portfolio
-    @investment_totals = InvestmentTotals.new(policy_scope(Investment))
+    @investment_totals = InvestmentTotalsFacade.new(policy_scope(Investment))
   end
 
   # GET /investments/1
