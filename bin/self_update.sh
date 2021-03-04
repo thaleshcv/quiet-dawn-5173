@@ -22,5 +22,8 @@ RAILS_ENV=production bundle install --deployment
 echo "=== RUNNING MIGRATIONS ==="
 RAILS_ENV=production bundle exec rake db:migrate
 
+echo "=== UPDATING CRON JOBS ==="
+RAILS_ENV=production bundle exec whenever --update-crontab
+
 echo "=== RESTARTING PASSENGER ==="
 passenger-config restart-app .
