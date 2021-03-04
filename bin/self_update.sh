@@ -22,13 +22,5 @@ RAILS_ENV=production bundle install --deployment
 echo "=== RUNNING MIGRATIONS ==="
 RAILS_ENV=production bundle exec rake db:migrate
 
-echo "=== UPDATING ASSETS ==="
-bin/yarn install
-RAILS_ENV=production bundle exec rake assets:precompile
-
-echo "=== REFRESHING PACKS ==="
-rm -rf public/packs
-NODE_OPTIONS="--max-old-space-size=250" RAILS_ENV=production RACK_ENV=production NODE_ENV=production bin/webpack --verbose
-
 echo "=== RESTARTING PASSENGER ==="
 passenger-config restart-app .
