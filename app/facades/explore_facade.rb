@@ -9,7 +9,7 @@ class ExploreFacade
     @asset ||= Asset.find(asset_id)
   end
 
-  def prices(count = 60)
+  def prices(count = 90)
     @prices ||= Rails.cache.fetch("/explore/assets/#{asset_id}/#{count}", expires_in: 10.minutes) do
       Stock::PriceService.intraday(asset_id, count)
     end
@@ -19,6 +19,10 @@ class ExploreFacade
     @prices_chart_data ||= prices.collect do |price_item|
       [DateTime.parse(price_item["date"]), price_item["price"]]
     end
+  end
+
+  def minmax_chart_value
+    @minmax_chart_value ||= prices.collect { |p| p["price"].to_f }.minmax
   end
 
   def lowest_price
@@ -35,6 +39,10 @@ class ExploreFacade
 
   def current_price
     prices.first["price"].to_f
+  end
+
+  def current_price_at
+    DateTime.parse(prices.first["date"])
   end
 
   def price_var_pct

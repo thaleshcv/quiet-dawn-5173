@@ -20,12 +20,21 @@
 				<%= @explore_facade.asset.abbreviation %>
 				<span class="ml-1 text-muted"><%= @explore_facade.asset.name %></span>
 			</h2>
-			<div class="text-uppercase small">
-				Current price
-				<span class="text-muted font-weight-bold">
-					<%= number_to_currency(@explore_facade.current_price) %>
-					(<%= number_to_percentage(@explore_facade.price_var_pct, precision: 2) %>)
-				</span>
+			<div class="d-flex">
+				<div class="text-uppercase small">
+					Current price
+					<span class="text-muted font-weight-bold">
+						<%= number_to_currency(@explore_facade.current_price) %>
+						(<%= number_to_percentage(@explore_facade.price_var_pct, precision: 2) %>)
+					</span>
+				</div>
+				<span class="mx-3"></span>
+				<div class="text-uppercase small">
+					Updated at
+					<span class="text-muted font-weight-bold">
+						<%= I18n.l @explore_facade.current_price_at, format: :long %>
+					</span>
+				</div>
 			</div>
 		</div>
 
@@ -52,7 +61,7 @@
 				<li class="list-group-item">
 					<span class="text-uppercase small">Volume</span>
 					<div class="text-muted font-weight-bold">
-						<%= @explore_facade.volume %>
+						<%= number_to_human(@explore_facade.volume) %>
 					</div>
 				</li>
 			</ul>
@@ -61,8 +70,8 @@
 
 	<%= area_chart @explore_facade.prices_chart_data,
 		legend: false,
-    min: @explore_facade.lowest_price,
-    max: @explore_facade.highest_price,
+    min: @explore_facade.minmax_chart_value[0],
+    max: @explore_facade.minmax_chart_value[1],
 		curve: false,
 		prefix: "$",
 		thousands: ",",
