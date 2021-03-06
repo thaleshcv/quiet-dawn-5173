@@ -43,12 +43,14 @@ class ImportPricesJob < ApplicationJob
     end
   end
 
-  # Fixes the hash of price attributes to be used on upsert.
+  # Normalize price attributes to be used on upsert.
   def normalize_price_hash(hash, asset_id)
-    hash.tap do |h|
-      h["date"] = Date.parse(h["date"])
-      h["value"] = h.delete("price")
-      h["asset_id"] = asset_id
-    end
+    Hash[
+      date: Date.parse(hash["date"]),
+      value: hash["price"],
+      high: hash["high"],
+      low: hash["low"],
+      asset_id: asset_id
+    ]
   end
 end

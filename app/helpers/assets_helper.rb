@@ -6,7 +6,7 @@ module AssetsHelper
       class: "btn btn-secondary btn-sm range-#{range}",
       data: {
         remote: true,
-        url: accumulated_series_asset_url(asset, ndays: range),
+        url: accumulated_series_asset_url(asset, range_type: range),
         method: "GET"
       })
   end

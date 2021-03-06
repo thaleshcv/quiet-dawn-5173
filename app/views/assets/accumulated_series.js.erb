@@ -5,4 +5,4 @@ document.querySelectorAll(".chart-range-options > button").forEach(function(valu
 value.disabled = false;
 });
 
-document.querySelector(".chart-range-options > button.range-<%= params[:ndays] %>").disabled = true;
+document.querySelector(".chart-range-options > button.range-<%= params[:range_type] %>").disabled = true;

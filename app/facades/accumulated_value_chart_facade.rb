@@ -1,9 +1,22 @@
 class AccumulatedValueChartFacade
-  attr_reader :scope, :range_in_days
+  attr_reader :scope, :range_type
 
-  def initialize(scope, range_in_days = 30)
+  RANGE_TYPES = {
+    "30d" => 30,
+    "60d" => 60,
+    "90d" => 90,
+    "1y" => 365
+  }.freeze
+
+  DEFAULT_RANGE_TYPE = "30d".freeze
+
+  def initialize(scope, range_type = DEFAULT_RANGE_TYPE)
     @scope = scope
-    @range_in_days = range_in_days
+    @range_type = range_type || DEFAULT_RANGE_TYPE
+  end
+
+  def range_in_days
+    RANGE_TYPES.fetch(range_type, RANGE_TYPES[DEFAULT_RANGE_TYPE])
   end
 
   def accumulated_series
