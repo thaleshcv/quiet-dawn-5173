@@ -24,5 +24,13 @@ class Asset < ApplicationRecord
         .distinct
         .pluck("investments.asset_id, max(prices.date)")
     end
+
+    def with_investments(scope)
+      distinct.joins(:investments).merge(scope).order(abbreviation: :asc)
+    end
+
+    def for_select_options
+      order(abbreviation: :asc).collect { |a| ["#{a.abbreviation} - #{a.name}", a.id] }
+    end
   end
 end
