@@ -50,11 +50,17 @@
 		</div>
 		<div class="col-sm-12 col-md-6 text-right">
 			<div class="chart-range-options">
-				<%= chart_range_option @asset, '30 Days', range: '30d',
+				<%= chart_range_option '30 Days',
+					accumulated_asset_url(@asset, range_type: '30d'),
+					range: '30d',
 					disabled: @accumulated_value_chart.range_type == '30d' %>
-				<%= chart_range_option @asset, '60 Days', range: '60d',
+				<%= chart_range_option '60 Days',
+					accumulated_asset_url(@asset, range_type: '60d'),
+					range: '60d',
 					disabled: @accumulated_value_chart.range_type == '60d' %>
-				<%= chart_range_option @asset, '90 Days', range: '90d',
+				<%= chart_range_option '90 Days',
+					accumulated_asset_url(@asset, range_type: '90d'),
+					range: '90d',
 					disabled: @accumulated_value_chart.range_type == '90d' %>
 			</div>
 		</div>

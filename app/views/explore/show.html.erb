@@ -59,42 +59,22 @@
 		</div>
 		<div class="col-sm-12 col-md-6 text-right">
 			<div class="chart-range-options">
-				<%= button_tag('Today',
-					type: "button",
-					disabled: @explore_facade.range_type == '1d',
-					class: "btn btn-secondary btn-sm range-1d",
-					data: {
-						remote: true,
-						url: explore_prices_path(asset_id: params[:asset_id], range_type: '1d'),
-						method: "GET"
-					}) %>
-				<%= button_tag('30 Days',
-					type: "button",
-					disabled: @explore_facade.range_type == '30d',
-					class: "btn btn-secondary btn-sm range-30d",
-					data: {
-						remote: true,
-						url: explore_prices_path(asset_id: params[:asset_id], range_type: '30d'),
-						method: "GET"
-					}) %>
-				<%= button_tag('60 Days',
-					type: "button",
-					disabled: @explore_facade.range_type == '60d',
-					class: "btn btn-secondary btn-sm range-60d",
-					data: {
-						remote: true,
-						url: explore_prices_path(asset_id: params[:asset_id], range_type: '60d'),
-						method: "GET"
-					}) %>
-				<%= button_tag('90 Days',
-					type: "button",
-					disabled: @explore_facade.range_type == '90d',
-					class: "btn btn-secondary btn-sm range-90d",
-					data: {
-						remote: true,
-						url: explore_prices_path(asset_id: params[:asset_id], range_type: '90d'),
-						method: "GET"
-					}) %>
+				<%= chart_range_option 'Today',
+					explore_prices_path(asset_id: params[:asset_id], range_type: '1d'),
+					range: '1d',
+					disabled: @explore_facade.range_type == '1d' %>
+				<%= chart_range_option '30 Days',
+					explore_prices_path(asset_id: params[:asset_id], range_type: '30d'),
+					range: '30d',
+					disabled: @explore_facade.range_type == '30d' %>
+				<%= chart_range_option '60 Days',
+					explore_prices_path(asset_id: params[:asset_id], range_type: '60d'),
+					range: '60d',
+					disabled: @explore_facade.range_type == '60d' %>
+				<%= chart_range_option '90 Days',
+					explore_prices_path(asset_id: params[:asset_id], range_type: '90d'),
+					range: '90d',
+					disabled: @explore_facade.range_type == '90d' %>
 			</div>
 		</div>
 	</div>
