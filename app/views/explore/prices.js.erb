@@ -2,8 +2,8 @@ var chart = Chartkick.charts["asset-prices-chart"];
 var chartOptions = chart.getOptions();
 
 var newOptions = Object.assign(chartOptions, {
-min: <%= @explore_facade.minmax_chart_value[0] %>,
-max: <%= @explore_facade.minmax_chart_value[1] %>
+min: <%= @explore_facade.minmax_chart_value.first %>,
+max: <%= @explore_facade.minmax_chart_value.last %>
 });
 
 chart.updateData(<%= @explore_facade.prices_chart_data.to_json.html_safe %>, newOptions);

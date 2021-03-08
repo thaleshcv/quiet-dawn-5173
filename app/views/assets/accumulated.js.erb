@@ -2,8 +2,8 @@ var chart = Chartkick.charts["accumulated-value-chart"];
 var chartOptions = chart.getOptions();
 
 var newOptions = Object.assign(chartOptions, {
-min: <%= @accumulated_value_chart.min_value %>,
-max: <%= @accumulated_value_chart.max_value %>
+min: <%= @accumulated_value_chart.minmax_chart_value.first %>,
+max: <%= @accumulated_value_chart.minmax_chart_value.last %>
 });
 
 chart.updateData(<%= @chart_data.to_json.html_safe %>, newOptions);

@@ -30,11 +30,7 @@ class AccumulatedValueChartFacade
       .collect { |d| [d.date, d.total_invested] }
   end
 
-  def min_value
-    [accumulated_series.collect(&:last).min, invested_series.collect(&:last).min].min
-  end
-
-  def max_value
-    [accumulated_series.collect(&:last).max, invested_series.collect(&:last).max].max
+  def minmax_chart_value
+    @minmax_chart_value ||= [].concat(accumulated_series.collect(&:last), invested_series.collect(&:last)).minmax
   end
 end
