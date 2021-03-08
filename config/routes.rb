@@ -7,12 +7,13 @@ Rails.application.routes.draw do
   }
 
   resources :assets, only: %i[index show] do
-    get "accumulated_series", on: :member
+    get "accumulated", on: :member
   end
 
   get "home", to: "home#index"
 
   get "explore", to: "explore#index", as: :explore
+  get "explore/prices", to: "explore#prices", as: :explore_prices
 
   root "investments#index"
 end

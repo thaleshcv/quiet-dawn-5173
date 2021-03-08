@@ -1,17 +1,35 @@
 class ExploreFacade
-  attr_reader :asset_id
+  attr_reader :asset_id, :range_type
 
-  def initialize(asset_id)
+  RANGE_ONE_DAY = "1d".freeze
+  RANGE_THIRTY_DAYS = "30d".freeze
+  RANGE_SIXTY_DAYS = "60d".freeze
+  RANGE_NINETY_DAYS = "90d".freeze
+
+  RANGE_TYPES = {
+    RANGE_ONE_DAY => 90,
+    RANGE_THIRTY_DAYS => 30,
+    RANGE_SIXTY_DAYS => 60,
+    RANGE_NINETY_DAYS => 90
+  }.freeze
+
+  def initialize(asset_id, range_type = RANGE_ONE_DAY)
     @asset_id = asset_id
+    @range_type = range_type || RANGE_ONE_DAY
   end
 
   def asset
     @asset ||= Asset.find(asset_id)
   end
 
-  def prices(count = 90)
-    @prices ||= Rails.cache.fetch("/explore/assets/#{asset_id}/#{count}", expires_in: 10.minutes) do
-      Stock::PriceService.intraday(asset_id, count)
+  def prices
+    @prices ||= Rails.cache.fetch("/explore/assets/#{asset_id}/#{range_type}", expires_in: 15.minutes) do
+      case range_type
+      when RANGE_THIRTY_DAYS, RANGE_SIXTY_DAYS, RANGE_NINETY_DAYS
+        Stock::PriceService.interday(asset_id, RANGE_TYPES[range_type])
+      else
+        Stock::PriceService.intraday(asset_id, RANGE_TYPES[range_type])
+      end
     end
   end
 

@@ -1,0 +1,19 @@
+<%= content_for :main_content do %>
+	<%= form_with url: explore_path, method: "get", local: true do |f| %>
+		<div class="form-group">
+			<%= f.select :asset_id,
+        options_for_select(@asset_options, params[:asset_id]),
+        {
+          prompt: "Plase, select an asset"
+        },
+        {
+          class: "form-control select",
+          onchange: "submit();"
+        }
+      %>
+		</div>
+	<% end %>
+	<%= yield %>
+<% end %>
+
+<%= render template: "layouts/application" %>

@@ -1,0 +1,15 @@
+var chart = Chartkick.charts["asset-prices-chart"];
+var chartOptions = chart.getOptions();
+
+var newOptions = Object.assign(chartOptions, {
+min: <%= @explore_facade.minmax_chart_value[0] %>,
+max: <%= @explore_facade.minmax_chart_value[1] %>
+});
+
+chart.updateData(<%= @explore_facade.prices_chart_data.to_json.html_safe %>, newOptions);
+
+document.querySelectorAll(".chart-range-options > button").forEach(function(value) {
+value.disabled = false;
+});
+
+document.querySelector(".chart-range-options > button.range-<%= params[:range_type] %>").disabled = true;

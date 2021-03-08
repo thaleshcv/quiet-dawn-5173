@@ -4,8 +4,7 @@ class AccumulatedValueChartFacade
   RANGE_TYPES = {
     "30d" => 30,
     "60d" => 60,
-    "90d" => 90,
-    "1y" => 365
+    "90d" => 90
   }.freeze
 
   DEFAULT_RANGE_TYPE = "30d".freeze

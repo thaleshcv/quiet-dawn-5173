@@ -1,5 +1,12 @@
 var chart = Chartkick.charts["accumulated-value-chart"];
-chart.updateData(<%= @chart_data.to_json.html_safe %>);
+var chartOptions = chart.getOptions();
+
+var newOptions = Object.assign(chartOptions, {
+min: <%= @accumulated_value_chart.min_value %>,
+max: <%= @accumulated_value_chart.max_value %>
+});
+
+chart.updateData(<%= @chart_data.to_json.html_safe %>, newOptions);
 
 document.querySelectorAll(".chart-range-options > button").forEach(function(value) {
 value.disabled = false;

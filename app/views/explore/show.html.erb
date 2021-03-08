@@ -52,7 +52,55 @@
 	</div>
 </div>
 
+<div class="my-5">
+	<div class="row">
+		<div class="col-sm-12 col-md-6">
+			<h3>Price variation</h3>
+		</div>
+		<div class="col-sm-12 col-md-6 text-right">
+			<div class="chart-range-options">
+				<%= button_tag('Today',
+					type: "button",
+					disabled: @explore_facade.range_type == '1d',
+					class: "btn btn-secondary btn-sm range-1d",
+					data: {
+						remote: true,
+						url: explore_prices_path(asset_id: params[:asset_id], range_type: '1d'),
+						method: "GET"
+					}) %>
+				<%= button_tag('30 Days',
+					type: "button",
+					disabled: @explore_facade.range_type == '30d',
+					class: "btn btn-secondary btn-sm range-30d",
+					data: {
+						remote: true,
+						url: explore_prices_path(asset_id: params[:asset_id], range_type: '30d'),
+						method: "GET"
+					}) %>
+				<%= button_tag('60 Days',
+					type: "button",
+					disabled: @explore_facade.range_type == '60d',
+					class: "btn btn-secondary btn-sm range-60d",
+					data: {
+						remote: true,
+						url: explore_prices_path(asset_id: params[:asset_id], range_type: '60d'),
+						method: "GET"
+					}) %>
+				<%= button_tag('90 Days',
+					type: "button",
+					disabled: @explore_facade.range_type == '90d',
+					class: "btn btn-secondary btn-sm range-90d",
+					data: {
+						remote: true,
+						url: explore_prices_path(asset_id: params[:asset_id], range_type: '90d'),
+						method: "GET"
+					}) %>
+			</div>
+		</div>
+	</div>
+</div>
 <%= area_chart @explore_facade.prices_chart_data,
+		id: "asset-prices-chart",
 		legend: false,
     min: @explore_facade.minmax_chart_value[0],
     max: @explore_facade.minmax_chart_value[1],

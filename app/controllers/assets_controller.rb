@@ -1,6 +1,6 @@
 class AssetsController < ApplicationController
-  before_action :set_investments_scope, only: %i[show accumulated_series]
-  before_action :set_accumulated_value_chart, only: %i[show accumulated_series]
+  before_action :set_investments_scope, only: %i[show accumulated]
+  before_action :set_accumulated_value_chart, only: %i[show accumulated]
 
   # GET /assets/1
   def show
@@ -13,8 +13,8 @@ class AssetsController < ApplicationController
     @investment_totals = InvestmentTotalsFacade.new(@investments_scope)
   end
 
-  # GET /assets/1/accumulated_series
-  def accumulated_series
+  # GET /assets/1/accumulated
+  def accumulated
     @chart_data = [
       { name: "Accumulated", data: @accumulated_value_chart.accumulated_series },
       { name: "Invested", data: @accumulated_value_chart.invested_series }

@@ -18,7 +18,7 @@
 		<% else %>
 			<%= render 'partials/navbar' if user_signed_in? %>
 			<main id="root" class="pb-2 container bg-white">
-				<%= yield %>
+				<%= content_for?(:main_content) ? yield(:main_content) : yield %>
 			</main>
 		<% end %>
 	</body>

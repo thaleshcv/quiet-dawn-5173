@@ -10,6 +10,12 @@ class ExploreController < ApplicationController
     render :show
   end
 
+  def prices
+    return unless params.key?(:asset_id)
+
+    @explore_facade = ExploreFacade.new(params[:asset_id], params[:range_type])
+  end
+
   private
 
   def set_user_assets
