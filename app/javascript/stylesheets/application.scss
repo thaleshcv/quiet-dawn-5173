@@ -1,18 +1,2 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
-
-main#root {
-	padding-top: 5rem;
-	min-height: 100vh;
-}
-
-.form-group > label {
-	display: block;
-}
-
-.signin-form,
-.signup-form {
-	width: 100%;
-	max-width: 360px;
-	padding: 8px;
-	margin: auto;
-}
+@import "public.scss";

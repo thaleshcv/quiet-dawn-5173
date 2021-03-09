@@ -1,0 +1,28 @@
+<%= content_for :content do %>
+	<div class="container-fluid px-0">
+		<%= render 'partials/public_navbar' %>
+		<div class="landing-backdrop">
+			<div class="landing-content">
+				<h1>Welcome to the ultimate investments tracker!</h1>
+				<div class="my-5 py-3 border border-primary rounded-pill">
+					<h2>Get started</h2>
+					<p class="my-0">
+						<%= link_to 'signing in', new_user_session_path %>
+						or <%= link_to 'creating your account', new_user_registration_path %>.
+					</p>
+				</div>
+				<ul class="list-group list-group-flush">
+					<li class="list-group-item bg-transparent">
+						Track the valuation of your investments day by day
+					</li>
+					<li class="list-group-item bg-transparent">
+						Receive weekly performance reports
+					</li>
+					<li class="list-group-item bg-transparent">
+						Follow the prices of the main assets on the stock exchange
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+<% end %>

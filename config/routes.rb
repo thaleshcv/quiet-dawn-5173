@@ -1,19 +1,25 @@
 Rails.application.routes.draw do
-  resources :investments
-
   devise_for :users, controllers: {
     sessions: "users/sessions",
     registrations: "users/registrations"
   }
 
-  resources :assets, only: %i[index show] do
-    get "accumulated", on: :member
+  unauthenticated do
+    get "static/landing", as: :landing
+
+    root "static#landing"
   end
 
-  get "home", to: "home#index"
+  authenticate :user do
+    resources :investments
 
-  get "explore", to: "explore#index", as: :explore
-  get "explore/prices", to: "explore#prices", as: :explore_prices
+    resources :assets, only: %i[index show] do
+      get "accumulated", on: :member
+    end
 
-  root "investments#index"
+    get "explore", to: "explore#index", as: :explore
+    get "explore/prices", to: "explore#prices", as: :explore_prices
+
+    root "investments#index", as: :authenticated_root
+  end
 end
