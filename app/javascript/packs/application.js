@@ -9,4 +9,5 @@ import "bootstrap/js/dist/util";
 import "bootstrap/js/dist/dropdown";
 
 import "../setup";
+import "../explore";
 import "../stylesheets/application";

@@ -19,6 +19,7 @@ Rails.application.routes.draw do
 
     get "explore", to: "explore#index", as: :explore
     get "explore/prices", to: "explore#prices", as: :explore_prices
+    get "explore/assets", to: "explore#assets", as: :explore_assets
 
     root "investments#index", as: :authenticated_root
   end

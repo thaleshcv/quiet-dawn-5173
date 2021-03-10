@@ -16,6 +16,14 @@ class Asset < ApplicationRecord
 
   has_one :current_price
 
+  scope :abbreviation_or_name_like, lambda { |input|
+    where("UPPER(name) LIKE :input or UPPER(abbreviation) LIKE :input", input: "%#{input}%".upcase)
+  }
+
+  def title
+    "#{abbreviation} #{name}"
+  end
+
   class << self
     def for_price_update
       joins(:investments)

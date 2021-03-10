@@ -4,16 +4,23 @@ class ExploreController < ApplicationController
 
   # GET /explore
   def index
-    return unless params.key?(:asset_id)
+    return unless params.key?(:explore)
 
-    @explore_facade = ExploreFacade.new(params[:asset_id])
+    @explore_facade = ExploreFacade.new(explore_params[:asset_id])
     render :show
   end
 
+  # GET /explore/prices
   def prices
     return unless params.key?(:asset_id)
 
     @explore_facade = ExploreFacade.new(params[:asset_id], params[:range_type])
+  end
+
+  # GET /explore/assets
+  def assets
+    @assets = Asset.abbreviation_or_name_like(params[:query])
+    render json: @assets
   end
 
   private
@@ -27,6 +34,6 @@ class ExploreController < ApplicationController
   end
 
   def explore_params
-    params.permit(:asset_id)
+    params.require(:explore).permit(:asset_id, :asset_name)
   end
 end
