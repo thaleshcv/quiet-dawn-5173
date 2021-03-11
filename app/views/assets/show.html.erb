@@ -21,23 +21,23 @@
 	<div class="col-sm-12 col-md-6 ml-auto text-right">
 		<div class="row px-2">
 			<div class="col-sm-12 col-md-4 border py-2">
-				<span class="text-uppercase">Quantity</span>
-				<strong class="d-block text-muted">
+				<span class="text-uppercase small">Quantity</span>
+				<div class="font-weight-bold text-muted">
 					<%= @investment_totals.quantity %>
-				</strong>
+				</div>
 			</div>
 			<div class="col-sm-12 col-md-4 border py-2">
-				<span class="text-uppercase">Invested</span>
-				<strong class="d-block text-muted">
+				<span class="text-uppercase small">Invested</span>
+				<div class="font-weight-bold text-muted">
 					<%= number_to_currency(@investment_totals.total_invested) %>
-				</strong>
+				</div>
 			</div>
 			<div class="col-sm-12 col-md-4 border py-2">
-				<span class="text-uppercase">Accumulated</span>
-				<strong class="d-block text-muted">
+				<span class="text-uppercase small">Accumulated</span>
+				<div class="font-weight-bold text-muted">
 					<%= number_to_currency(@investment_totals.total_accumulated) %>
 					(<%= difference_in_percent(@investment_totals.total_invested, @investment_totals.total_accumulated) %>)
-				</strong>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -81,10 +81,8 @@
 </div>
 
 <div class="my-2">
-	<div class="d-flex justify-content-between align-items-center">
-		<h3>Investments</h3>
-		<%= link_to 'Add investment', new_investment_path(asset_id: @asset) %>
-	</div>
+	<h3>Investments</h3>
+	<%= link_to 'Add investment', new_investment_path(asset_id: @asset) %>
 
 	<div class="list-group">
 		<%= render partial: "assets/investment", collection: @investments %>

@@ -1,6 +1,6 @@
 <span class="list-group-item">
 	<div class="row justify-content-between">
-		<div class="col-xs-6">
+		<div class="col-xs-6 col-md-3">
 			<span class="small">
 				<span class="mb-1 d-block text-uppercase">Invested</span>
 				<strong class="text-muted">
@@ -11,7 +11,7 @@
 				</strong>
 			</span>
 		</div>
-		<div class="col-xs-6">
+		<div class="col-xs-6 col-md-3">
 			<span class="small">
 				<span class="mb-1 d-block text-uppercase">Quantity</span>
 				<strong class="text-muted">
@@ -19,18 +19,20 @@
 				</strong>
 			</span>
 		</div>
-		<div class="col-xs-6">
+		<div class="col-xs-6 col-md-3">
 			<span class="small">
-				<span class="mb-1 d-block text-uppercase">Value invested</span>
+				<span class="mb-1 d-block text-uppercase">Value</span>
 				<strong class="text-muted">
 					<%= number_to_currency(investment.value_invested) %>
 				</strong>
 			</span>
 		</div>
-		<div class="col-xs-6 d-flex align-items-center">
-			<%= link_to "Edit", edit_investment_path(investment) %>
-			<span class="mx-1"></span>
-			<%= link_to "Destroy", investment, method: :delete, data: { confirm: "Are you sure?" } %>
+		<div class="col-xs-6 col-md-3">
+			<div class="d-flex justify-content-end align-items-center">
+				<%= link_to "Edit", edit_investment_path(investment) %>
+				<span class="mx-1"></span>
+				<%= link_to "Destroy", investment, method: :delete, data: { confirm: "Are you sure?" } %>
+			</div>
 		</div>
 	</div>
 </span>
