@@ -2,6 +2,12 @@ class AssetsController < ApplicationController
   before_action :set_investments_scope, only: %i[show accumulated]
   before_action :set_accumulated_value_chart, only: %i[show accumulated]
 
+  # GET /assets
+  def index
+    @assets = Asset.abbreviation_or_name_like(params[:query])
+    render json: @assets
+  end
+
   # GET /assets/1
   def show
     @asset = Asset.find(params[:id])

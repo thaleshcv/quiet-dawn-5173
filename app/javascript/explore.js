@@ -28,6 +28,11 @@
 	function populateDropdownMenu(items) {
 		clearDropdownMenu();
 
+		if (items.length === 0) {
+			addDropdownMessage();
+			return;
+		}
+
 		items.forEach(function (item) {
 			const button = document.createElement("button");
 			button.innerText = `${item.abbreviation} ${item.name}`;
@@ -69,7 +74,7 @@
 			}
 
 			queryTimeoutId = setTimeout(function () {
-				$.get("/explore/assets", {
+				$.get("/assets", {
 					query: target.value
 				}).then(data => populateDropdownMenu(data));
 			}, 500);

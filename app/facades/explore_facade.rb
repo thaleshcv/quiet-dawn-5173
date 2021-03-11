@@ -1,6 +1,8 @@
 class ExploreFacade
   attr_reader :asset_id, :range_type
 
+  delegate :title, to: :asset, prefix: true, allow_nil: true
+
   RANGE_ONE_DAY = "1d".freeze
   RANGE_THIRTY_DAYS = "30d".freeze
   RANGE_SIXTY_DAYS = "60d".freeze
@@ -16,6 +18,10 @@ class ExploreFacade
   def initialize(asset_id, range_type = RANGE_ONE_DAY)
     @asset_id = asset_id
     @range_type = range_type || RANGE_ONE_DAY
+  end
+
+  def asset_exists?
+    Asset.exists?(asset_id)
   end
 
   def asset

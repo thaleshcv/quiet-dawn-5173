@@ -3,12 +3,7 @@ class ExploreController < ApplicationController
   before_action :set_user_assets, only: :index
 
   # GET /explore
-  def index
-    return unless params.key?(:explore)
-
-    @explore_facade = ExploreFacade.new(explore_params[:asset_id])
-    render :show
-  end
+  def index; end
 
   # GET /explore/prices
   def prices
@@ -19,8 +14,9 @@ class ExploreController < ApplicationController
 
   # GET /explore/assets
   def assets
-    @assets = Asset.abbreviation_or_name_like(params[:query])
-    render json: @assets
+    @explore_facade = ExploreFacade.new(explore_params[:asset_id])
+
+    redirect_to(explore_path, alert: "The asset requested does not exists.") unless @explore_facade.asset_exists?
   end
 
   private
