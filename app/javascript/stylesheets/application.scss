@@ -1,6 +1,15 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 @import "public.scss";
 
+main#root {
+	padding-top: 5rem;
+	min-height: 100vh;
+}
+
+.form-group > label {
+	display: block;
+}
+
 .up-arrow::after {
 	content: "\21E1";
 }
