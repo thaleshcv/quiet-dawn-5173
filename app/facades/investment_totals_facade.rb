@@ -1,4 +1,8 @@
+require "calculations"
+
 class InvestmentTotalsFacade
+  include Calculations
+
   attr_reader :scope
 
   def initialize(scope)

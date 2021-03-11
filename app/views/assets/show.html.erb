@@ -36,7 +36,9 @@
 				<span class="text-uppercase small">Accumulated</span>
 				<div class="font-weight-bold text-muted">
 					<%= number_to_currency(@investment_totals.total_accumulated) %>
-					(<%= difference_in_percent(@investment_totals.total_invested, @investment_totals.total_accumulated) %>)
+					<%= styled_numeric(@investment_totals.difference_in_percent(:total_invested, :total_accumulated)) do |num| %>
+						(<%= number_to_percentage(num, precision: 1) %>)
+					<% end %>
 				</div>
 			</div>
 		</div>

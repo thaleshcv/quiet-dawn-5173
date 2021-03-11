@@ -5,7 +5,9 @@
 				Current price
 				<span class="text-muted font-weight-bold">
 					<%= number_to_currency(@explore_facade.current_price) %>
-					(<%= number_to_percentage(@explore_facade.price_var_pct, precision: 2) %>)
+					<%= styled_numeric(@explore_facade.price_var_pct) do |num| %>
+						(<%= number_to_percentage(@explore_facade.price_var_pct, precision: 2) %>)
+					<% end %>
 				</span>
 			</div>
 			<span class="mx-3"></span>

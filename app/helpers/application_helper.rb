@@ -11,18 +11,24 @@ module ApplicationHelper
       })
   end
 
+  def styled_numeric(numeric,
+                     html: "span",
+                     negative_class: "text-danger",
+                     positive_class: "text-success")
+
+    numeric_class = numeric.negative? ? negative_class : positive_class
+
+    content_tag(html, class: numeric_class) do
+      block_given? ? yield(numeric) : numeric
+    end
+  end
+
   def difference_in_percent(initial, current)
     # avoiding division by zero and NaN values
-    difference = if initial.to_f.zero? || current.to_f.zero?
+    if initial.to_f.zero? || current.to_f.zero?
       0
     else
       ((current / initial) - 1) * 100
-    end
-
-    color = difference.negative? ? "danger" : "success"
-
-    content_tag(:span, class: "text-#{color}") do
-      concat(number_to_percentage(difference, precision: 1))
     end
   end
 end

@@ -1,3 +1,5 @@
+require "calculations"
+
 # == Schema Information
 #
 # Table name: investments
@@ -22,6 +24,8 @@
 #  fk_rails_...  (user_id => users.id)
 #
 class Investment < ApplicationRecord
+  include Calculations
+
   attribute :value_invested, :money
 
   belongs_to :user, inverse_of: :investments
