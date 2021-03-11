@@ -1,6 +1,6 @@
 <%= content_for :main_content do %>
 	<%= render "partials/flash_messages" %>
-	<%= form_with scope: :explore,
+	<%= form_with namespace: :explore,
     id: "explore_form",
     url: explore_assets_path,
     method: "get",
