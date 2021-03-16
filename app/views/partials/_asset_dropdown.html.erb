@@ -1,0 +1,17 @@
+<div class="dropdown">
+	<div class="dropdown-toggle" id="asset_dropdown"
+    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<%= text_field_tag nil, (selected_asset.title if selected_asset.present?),
+      id: "asset_dropdown_input",
+      autocomplete: "off",
+      placeholder: "Search asset by abbreviation or name...",
+      class: input_html[:class],
+      data: input_html[:data] %>
+	</div>
+	<div class="dropdown-menu w-100" id="asset_dropdown_menu" aria-labelledby="asset_dropdown">
+		<p class="text-center text-muted font-italic">
+			Nothing to display.
+		</p>
+	</div>
+	<%= form.hidden_field name, id: "asset_dropdown_hidden" %>
+</div>

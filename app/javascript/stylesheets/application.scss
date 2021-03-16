@@ -17,3 +17,13 @@ main#root {
 .down-arrow::after {
 	content: "\21E3";
 }
+
+#asset_dropdown::after {
+	display: none;
+}
+
+#explore_form #asset_dropdown_input {
+	font-size: 2rem;
+	padding-left: 0;
+	padding-right: 0;
+}

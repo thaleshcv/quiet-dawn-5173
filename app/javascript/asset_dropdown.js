@@ -1,14 +1,13 @@
-/**
- * Setup explore page adding a dropdown menu to be used as input autocomplete.
- *
- * As the user inputs text in the search field, the dropdown is populated with
- * assets which abbreviation or name matches the text entered.
- */
 (function () {
-	let inputName, inputId, dropdownMenu;
+	let inputText, inputHidden, dropdownMenu;
+
+	function clearHiddenValue() {
+		inputHidden.value = "";
+	}
 
 	function handleDropdownMenuItemClick(evt) {
-		inputId.value = evt.target.dataset.asset_id;
+		inputText.value = evt.target.innerText;
+		inputHidden.value = evt.target.dataset.asset_id;
 	}
 
 	function addDropdownMessage() {
@@ -30,12 +29,16 @@
 
 		if (items.length === 0) {
 			addDropdownMessage();
+			clearHiddenValue();
+
 			return;
 		}
 
 		items.forEach(function (item) {
 			const button = document.createElement("button");
 			button.innerText = `${item.abbreviation} ${item.name}`;
+			button.type =
+				inputText.dataset.autoSubmit === "true" ? "submit" : "button";
 			button.dataset.asset_id = item.id;
 			button.classList.add("dropdown-item");
 			button.addEventListener("click", handleDropdownMenuItemClick);
@@ -45,17 +48,19 @@
 	}
 
 	document.addEventListener("turbolinks:load", function () {
-		inputName = document.getElementById("explore_asset_name");
-		inputId = document.getElementById("explore_asset_id");
-		dropdownMenu = document.getElementById("explore_dropdown_menu");
+		dropdownMenu = document.getElementById("asset_dropdown_menu");
+		inputText = document.getElementById("asset_dropdown_input");
+		inputHidden = dropdownMenu.parentElement.querySelector(
+			"input[type=hidden]"
+		);
 
-		if (!inputName) {
+		if (!inputText) {
 			return;
 		}
 
 		let queryTimeoutId;
 
-		inputName.addEventListener("keyup", function (evt) {
+		inputText.addEventListener("keyup", function (evt) {
 			const target = evt.target;
 
 			if (evt.shiftKey || evt.ctrlKey || evt.altKey || evt.metaKey) {
@@ -69,6 +74,7 @@
 			if (target.value.trim().length === 0) {
 				clearDropdownMenu();
 				addDropdownMessage();
+				clearHiddenValue();
 
 				return;
 			}

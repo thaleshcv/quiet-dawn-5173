@@ -1,10 +1,4 @@
 import $ from "jquery";
-import "select2";
-import "select2/dist/css/select2.css";
-import "select2-bootstrap-theme/dist/select2-bootstrap.min.css";
-
-$.fn.select2.defaults.set("theme", "bootstrap");
-$.fn.select2.defaults.set("width", "100%");
 
 const applyCurrencyMaskOnLoad = input => {
 	input.value = input.value.replace(/(\d+)\.(\d{1})$/g, "$1.$20");
@@ -22,10 +16,6 @@ const applyCurrencyMask = input => {
 };
 
 document.addEventListener("turbolinks:load", function () {
-	$("select.form-control").each(function (_index, input) {
-		$(input).select2();
-	});
-
 	$(".integer-input").each(function (_index, input) {
 		input.value = String(input.value).replace(/\D/g, "");
 
