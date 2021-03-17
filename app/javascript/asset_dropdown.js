@@ -48,15 +48,16 @@
 	}
 
 	document.addEventListener("turbolinks:load", function () {
-		dropdownMenu = document.getElementById("asset_dropdown_menu");
 		inputText = document.getElementById("asset_dropdown_input");
-		inputHidden = dropdownMenu.parentElement.querySelector(
-			"input[type=hidden]"
-		);
 
 		if (!inputText) {
 			return;
 		}
+
+		dropdownMenu = document.getElementById("asset_dropdown_menu");
+		inputHidden = dropdownMenu.parentElement.querySelector(
+			"input[type=hidden]"
+		);
 
 		let queryTimeoutId;
 

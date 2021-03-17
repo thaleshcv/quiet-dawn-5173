@@ -1,10 +1,3 @@
-import $ from "jquery";
-
-const applyCurrencyMaskOnLoad = input => {
-	input.value = input.value.replace(/(\d+)\.(\d{1})$/g, "$1.$20");
-	applyCurrencyMask(input);
-};
-
 const applyCurrencyMask = input => {
 	const value = String(input.value).replace(/\D/g, "");
 	const num = (Number(value) / 100)
@@ -15,21 +8,37 @@ const applyCurrencyMask = input => {
 	input.value = "$" + num;
 };
 
-document.addEventListener("turbolinks:load", function () {
-	$(".integer-input").each(function (_index, input) {
-		input.value = String(input.value).replace(/\D/g, "");
+const applyCurrencyMaskOnLoad = input => {
+	input.value = input.value.replace(/(\d+)\.(\d{1})$/g, "$1.$20");
+	applyCurrencyMask(input);
+};
 
-		$(input).on("change blur keyup", function () {
-			input.value = String(input.value).replace(/\D/g, "");
-		});
+const handleCurrencyInputEvent = evt => {
+	applyCurrencyMask(evt.target);
+};
+
+const applyIntegerMask = input => {
+	input.value = String(input.value).replace(/\D/g, "");
+};
+
+const handleIntegerInputEvent = evt => {
+	applyIntegerMask(evt.target);
+};
+
+document.addEventListener("turbolinks:load", function () {
+	document.querySelectorAll(".integer-input").forEach(function (el) {
+		applyIntegerMask(el);
+
+		el.addEventListener("blur", handleIntegerInputEvent);
+		el.addEventListener("keyup", handleIntegerInputEvent);
+		el.addEventListener("change", handleIntegerInputEvent);
 	});
 
-	$(".money-input").each(function (_index, input) {
-		// apply mask on initial value
-		applyCurrencyMaskOnLoad(input);
+	document.querySelectorAll(".money-input").forEach(function (el) {
+		applyCurrencyMaskOnLoad(el);
 
-		$(input).on("change blur keyup", function () {
-			applyCurrencyMask(input);
-		});
+		el.addEventListener("blur", handleCurrencyInputEvent);
+		el.addEventListener("keyup", handleCurrencyInputEvent);
+		el.addEventListener("change", handleCurrencyInputEvent);
 	});
 });
