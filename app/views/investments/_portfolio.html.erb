@@ -1,32 +1,31 @@
-<%= link_to asset_path(portfolio.item_asset_id), class: "list-group-item list-group-item-action" do %>
-	<div class="row justify-content-between align-items-center">
-		<div class="col-md col-sm-12">
-			<p>
-				<strong class="mr-1"><%= portfolio.item_asset_abbr %></strong>
-				<%= portfolio.item_asset_name %>
-			</p>
-			<div class="d-flex w-100">
-				<span class="small">
-					<strong class="mb-1 d-block text-uppercase">Value invested</strong>
-					<%= number_to_currency(portfolio.item_value_invested) %>
-				</span>
-				<span class="mx-5"></span>
-				<span class="small">
-					<strong class="mb-1 d-block text-uppercase">Quantity</strong>
-					<%= portfolio.item_quantity %>
-				</span>
+<div class="column is-one-quarter-desktop is-half-tablet is-full-mobile">
+	<%= link_to asset_path(portfolio.item_asset_id), class: "list-group-item list-group-item-action" do %>
+		<div class="card">
+			<div class="card-content has-text-centered">
+				<p class="title is-4"><%= portfolio.item_asset_abbr %></p>
+				<p class="subtitle is-6"><%= portfolio.item_asset_name %></p>
+				<div class="block">
+					<div class="columns is-mobile">
+						<div class="column is-half-mobile">
+							<p class="heading">Invested</p>
+							<p class="subtitle"><%= number_to_currency(portfolio.item_value_invested) %></p>
+						</div>
+						<div class="column is-half-mobile">
+							<p class="heading">Quantity</p>
+							<p class="subtitle"><%= portfolio.item_quantity %></p>
+						</div>
+					</div>
+				</div>
+				<div class="block">
+					<p class="heading">Position</p>
+					<p class="subtitle has-text-weight-bold">
+						<%= number_to_currency(portfolio.item_current_value) %>
+						<%= styled_numeric(portfolio.difference_in_percent(:item_value_invested, :item_current_value)) do |num| %>
+							(<%= number_to_percentage(num, precision: 1) %>)
+						<% end %>
+					</p>
+				</div>
 			</div>
 		</div>
-		<div class="col-md-auto col-sm-12">
-			<div class="my-3 text-sm-center text-md-right">
-				<small class="font-weight-bold d-block text-uppercase">Current value</small>
-				<h3>
-					<%= number_to_currency(portfolio.item_current_value) %>
-					<%= styled_numeric(portfolio.difference_in_percent(:item_value_invested, :item_current_value)) do |num| %>
-						(<%= number_to_percentage(num, precision: 1) %>)
-					<% end %>
-				</h3>
-			</div>
-		</div>
-	</div>
-<% end %>
+	<% end %>
+</div>

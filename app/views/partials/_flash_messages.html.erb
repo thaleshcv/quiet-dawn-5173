@@ -1,11 +1,11 @@
 <% if flash.key?(:notice) %>
-	<div class="alert alert-success">
+	<div class="notification is-success">
 		<%= flash.notice %>
 	</div>
 <% end %>
 
 <% if flash.key?(:alert) %>
-	<div class="alert alert-danger">
+	<div class="notification is-danger">
 		<%= flash.alert %>
 	</div>
 <% end %>

@@ -5,7 +5,7 @@
 <%= content_for :content do %>
 	<%= render 'partials/public_navbar' %>
 	<div class="signup-form">
-		<h2 class="text-center">Create your account</h2>
+		<h2 class="subtitle has-text-centered">Create your account</h2>
 		<%= render 'partials/flash_messages' %>
 		<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
 			<%= render "devise/shared/error_messages", resource: resource %>
@@ -15,7 +15,7 @@
 			<%= f.input :password_confirmation, input_html: { autocomplete: "new-password" } %>
 
 			<%= captcha_tag if captcha_enabled? %>
-			<%= f.button :submit, class: "btn btn-primary btn-block" %>
+			<%= f.button :submit, class: "button is-primary is-fullwidth" %>
 		<% end %>
 		<div class="my-2">
 			<%= render "devise/shared/links" %>

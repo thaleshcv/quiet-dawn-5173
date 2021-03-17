@@ -1,7 +1,26 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-transparent border-bottom">
-	<div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
-		<a class="navbar-brand" href="/">
-			<strong class="font-italic">VESP</strong>
+<nav class="navbar is-white" role="navigation" aria-label="main navigation">
+	<div class="navbar-brand">
+		<a class="navbar-item" href="/">
+			<strong>VESP</strong>
 		</a>
+		<div class="navbar-burger" data-target="public-navbar__content">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+	<div id="public-navbar__content" class="navbar-menu">
+		<div class="navbar-end">
+			<div class="navbar-item">
+				<div class="field is-grouped">
+					<p class="control">
+						<%= link_to "Sign in", new_user_session_path, class: "is-link" %>
+					</p>
+					<p class="control">
+						<%= link_to "Register", new_user_registration_path, class: "is-link" %>
+					</p>
+				</div>
+			</div>
+		</div>
 	</div>
 </nav>

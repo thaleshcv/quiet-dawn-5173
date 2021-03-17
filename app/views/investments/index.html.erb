@@ -1,34 +1,40 @@
 <%= render "partials/flash_messages" %>
 
-<div class="row align-items-center justify-content-between">
-	<div class="col-md col-sm-12">
-		<h2>Investments</h2>
+<div class="columns">
+	<div class="column is-half-desktop is-full-mobile has-text-centered-mobile">
+		<h1 class="title">Investments</h1>
 	</div>
-	<div class="col-md-auto col-sm-12">
-		<ul class="list-group list-group-horizontal text-right my-3">
-			<li class="list-group-item">
-				<span class="text-uppercase small">Invested</span>
-				<div class="font-weight-bold text-muted">
-					<%= number_to_currency(@investment_totals.total_invested) %>
+	<div class="column is-half-desktop is-full-mobile">
+		<nav class="level">
+			<div class="level-item mr-1 has-text-right-desktop has-text-centered-mobile">
+				<div>
+					<p class="heading">Invested</p>
+					<p class="title"><%= number_to_currency(@investment_totals.total_invested) %></p>
 				</div>
-			</li>
-			<li class="list-group-item">
-				<span class="text-uppercase small">Accumulated</span>
-				<div class="font-weight-bold text-muted">
-					<%= number_to_currency(@investment_totals.total_accumulated) %>
-					<%= styled_numeric(@investment_totals.difference_in_percent(:total_invested, :total_accumulated)) do |num| %>
-						(<%= number_to_percentage(num, precision: 1) %>)
-					<% end %>
+			</div>
+			<div class="level-item ml-1 has-text-right-desktop has-text-centered-mobile">
+				<div>
+					<p class="heading">Accumulated</p>
+					<p class="title">
+						<%= number_to_currency(@investment_totals.total_accumulated) %>
+						<%= styled_numeric(@investment_totals.difference_in_percent(:total_invested, :total_accumulated)) do |num| %>
+							(<%= number_to_percentage(num, precision: 1) %>)
+						<% end %>
+					</p>
 				</div>
-			</li>
-		</ul>
+			</div>
+		</nav>
 	</div>
 </div>
 
-<%= link_to 'Add Investment', new_investment_path %>
+<div class="block">
+	<%= link_to 'Add Investment', new_investment_path %>
+</div>
 
-<div class="list-group">
-	<%= render partial: "investments/portfolio", collection: @portfolio %>
+<div class="block">
+	<div class="columns is-multiline">
+		<%= render partial: "investments/portfolio", collection: @portfolio %>
+	</div>
 </div>
 
 <% if @portfolio.empty? %>

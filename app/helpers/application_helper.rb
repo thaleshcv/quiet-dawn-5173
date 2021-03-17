@@ -13,8 +13,8 @@ module ApplicationHelper
 
   def styled_numeric(numeric,
                      html: "span",
-                     negative_class: "text-danger",
-                     positive_class: "text-success")
+                     negative_class: "has-text-danger",
+                     positive_class: "has-text-success")
 
     numeric_class = numeric.negative? ? negative_class : positive_class
 

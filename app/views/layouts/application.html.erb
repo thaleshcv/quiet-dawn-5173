@@ -17,9 +17,11 @@
 			<%= yield(:content) %>
 		<% else %>
 			<%= render 'partials/navbar' if user_signed_in? %>
-			<main id="root" class="pb-2 container bg-white">
-				<%= content_for?(:main_content) ? yield(:main_content) : yield %>
-			</main>
+			<section class="section">
+				<main id="root" class="container">
+					<%= content_for?(:main_content) ? yield(:main_content) : yield %>
+				</main>
+			</section>
 		<% end %>
 	</body>
 	<%= yield(:footer) if content_for?(:footer) %>
