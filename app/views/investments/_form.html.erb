@@ -1,10 +1,9 @@
 <%= simple_form_for(@investment) do |f| %>
 	<%= f.error_notification %>
 	<%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-
-	<div class="form-inputs">
-		<div class="form-group">
-			<%= f.label :asset_id, required: true %>
+	<div class="field">
+		<%= f.label :asset_id, required: true, class: "label" %>
+		<div class="control">
 			<%= assets_dropdown f, :asset_id,
 				selected_asset: @investment.asset,
 				input_html: {
@@ -12,20 +11,18 @@
 				} %>
 			<%= f.full_error :asset, class: 'invalid-feedback d-block' %>
 		</div>
-		<div class="form-row">
-			<div class="col-md-4">
-				<%= f.input :quantity, as: :string, input_html: { class: "integer-input" } %>
-			</div>
-			<div class="col-md-4">
-				<%= f.input :value_invested, as: :string, input_html: { class: "money-input"} %>
-			</div>
-			<div class="col-md-4">
-				<%= f.input :invested_at, as: :string, input_html: { type: 'date' } %>
-			</div>
-		</div>
 	</div>
 
-	<div class="form-actions">
-		<%= yield f %>
+	<div class="columns">
+		<div class="column is-one-third-desktop is-full-mobile">
+			<%= f.input :quantity, as: :string, input_html: { class: "integer-input" } %>
+		</div>
+		<div class="column is-one-third-desktop is-full-mobile">
+			<%= f.input :value_invested, as: :string, input_html: { class: "money-input"} %>
+		</div>
+		<div class="column is-one-third-desktop is-full-mobile">
+			<%= f.input :invested_at, as: :string, input_html: { type: 'date' } %>
+		</div>
 	</div>
+	<%= yield f %>
 <% end %>

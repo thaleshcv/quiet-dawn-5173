@@ -57,7 +57,7 @@ SimpleForm.setup do |config|
     b.optional :min_max
     b.optional :readonly
     b.use :label, class: "label"
-    b.use :input, class: "input", error_class: "is-invalid", valid_class: "is-valid"
+    b.use :input, class: "input", wrap_with: { tag: "div", class: "control" }, error_class: "is-invalid", valid_class: "is-valid"
     b.use :full_error, wrap_with: { tag: "p", class: "help is-danger" }
     b.use :hint, wrap_with: { tag: "small", class: "form-text text-muted" }
   end

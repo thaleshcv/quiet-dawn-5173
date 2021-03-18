@@ -1,26 +1,45 @@
 (function () {
-	let inputText, inputHidden, dropdownMenu;
+	let inputText, inputHidden, dropdown, dropdownContent;
 
 	function clearHiddenValue() {
 		inputHidden.value = "";
 	}
 
+	function activateDropdown() {
+		dropdown.classList.add("is-active");
+	}
+
+	function deactivateDropdown() {
+		dropdown.classList.remove("is-active");
+	}
+
+	function createDropDownItem(child) {
+		const ddItem = document.createElement("div");
+		ddItem.classList.add("dropdown-item");
+
+		ddItem.appendChild(child);
+		return ddItem;
+	}
+
 	function handleDropdownMenuItemClick(evt) {
 		inputText.value = evt.target.innerText;
 		inputHidden.value = evt.target.dataset.asset_id;
+
+		deactivateDropdown();
 	}
 
 	function addDropdownMessage() {
 		const textEl = document.createElement("p");
 		textEl.innerText = "Nothing to display.";
-		textEl.classList.add("text-center", "text-muted", "font-italic");
+		textEl.classList.add("has-text-centered", "is-italic");
+		textEl.addEventListener("click", deactivateDropdown);
 
-		dropdownMenu.appendChild(textEl);
+		dropdownContent.appendChild(createDropDownItem(textEl));
 	}
 
 	function clearDropdownMenu() {
-		while (dropdownMenu.firstChild) {
-			dropdownMenu.removeChild(dropdownMenu.firstChild);
+		while (dropdownContent.firstChild) {
+			dropdownContent.removeChild(dropdownContent.firstChild);
 		}
 	}
 
@@ -40,11 +59,13 @@
 			button.type =
 				inputText.dataset.autoSubmit === "true" ? "submit" : "button";
 			button.dataset.asset_id = item.id;
-			button.classList.add("dropdown-item");
+			button.classList.add("button", "is-inverted", "dropdown-item");
 			button.addEventListener("click", handleDropdownMenuItemClick);
 
-			dropdownMenu.appendChild(button);
+			dropdownContent.appendChild(button);
 		});
+
+		activateDropdown();
 	}
 
 	document.addEventListener("turbolinks:load", function () {
@@ -54,10 +75,9 @@
 			return;
 		}
 
-		dropdownMenu = document.getElementById("asset_dropdown_menu");
-		inputHidden = dropdownMenu.parentElement.querySelector(
-			"input[type=hidden]"
-		);
+		dropdown = document.getElementById("asset_dropdown");
+		dropdownContent = document.getElementById("asset_dropdown_content");
+		inputHidden = dropdown.querySelector("input[type=hidden]");
 
 		let queryTimeoutId;
 
@@ -81,9 +101,12 @@
 			}
 
 			queryTimeoutId = setTimeout(function () {
-				$.get("/assets", {
-					query: target.value
-				}).then(data => populateDropdownMenu(data));
+				const url = new URL("/assets", window.location.origin);
+				url.search = new URLSearchParams({ query: target.value }).toString();
+
+				fetch(url)
+					.then(response => response.json())
+					.then(data => populateDropdownMenu(data));
 			}, 500);
 		});
 	});

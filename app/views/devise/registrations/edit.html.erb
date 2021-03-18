@@ -1,4 +1,4 @@
-<h2>Edit Account</h2>
+<h2 class="title">Edit Account</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
 	<%= render "devise/shared/error_messages", resource: resource %>
@@ -21,23 +21,24 @@
     input_html: { autocomplete: "current-password" },
     hint: "We need your current password to confirm your changes" %>
 
-	<div class="form-actions">
-		<%= f.button :submit, class: "btn btn-primary" %>
+	<div class="field">
+		<%= f.button :submit, class: "button is-primary" %>
 	</div>
 <% end %>
 
-<h3 class="mt-5"><span>&#9762;</span> Danger zone</h3>
-<div class="p-3 mb-3 border border-danger rounded">
-	<div class="d-flex justify-content-between align-items-center">
+<div class="panel is-danger mt-5">
+	<p class="panel-heading">
+		<span>&#9762;</span> Danger zone
+	</p>
+	<div class="panel-block py-5 is-justify-content-space-between is-align-content-center">
 		<span>
 			<strong>Delete my account</strong><br/>
 			<small>
 				Once you delete your account, there is no going back. Please be certain. 
 			</small>
 		</span>
-		<span class="mx-2"></span>
 		<%= button_to "Delete my account", registration_path(resource_name),
-      class: "btn btn-danger", data: { confirm: "Are you sure?" },
-      method: :delete %>
+			class: "button is-danger", data: { confirm: "Are you sure?" },
+			method: :delete %>
 	</div>
 </div>

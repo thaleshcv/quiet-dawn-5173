@@ -1,16 +1,17 @@
-<h2>Your assets</h2>
-<div class="row mt-2">
-	<% @user_assets.each do |asset| %>
-		<div class="col-sm-6 col-md-3">
-			<div class="card w-100 mb-1 text-center">
-				<div class="card-body">
-					<h5 class="card-title"><%= asset.abbreviation %></h5>
-					<h6 class="card-subtitle mb-2 text-muted"><%= asset.name %></h6>
-				</div>
-				<div class="card-footer text-muted">
-					<%= link_to 'View this asset', explore_assets_path(asset_id: asset) %>
-				</div>
+<div class="block">
+	<h2 class="subtitle">Your assets</h2>
+	<div class="columns is-multiline">
+		<% @user_assets.each do |asset| %>
+			<div class="column is-one-third-desktop is-half-mobile">
+				<%= link_to explore_assets_path(asset_id: asset) do %>
+					<div class="card has-text-centered">
+						<div class="card-content">
+							<p class="title"><%= asset.abbreviation %></p>
+							<p class="subtitle"><%= asset.name %></p>
+						</div>
+					</div>
+				<% end %>
 			</div>
-		</div>
-	<% end %>
+		<% end %>
+	</div>
 </div>

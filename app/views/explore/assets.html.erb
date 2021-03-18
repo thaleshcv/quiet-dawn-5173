@@ -1,61 +1,69 @@
-<div class="row">
-	<div class="col-sm-12 col-md flex-shrink-1">
-		<div class="d-flex">
-			<div class="text-uppercase small">
-				Current price
-				<span class="text-muted font-weight-bold">
+<div class="columns">
+	<div class="column is-half-desktop is-full-mobile">
+		<div class="is-flex">
+			<div class="heading">
+				Current price&nbsp;
+				<span class="has-text-weight-bold">
 					<%= number_to_currency(@explore_facade.current_price) %>
 					<%= styled_numeric(@explore_facade.price_var_pct) do |num| %>
 						(<%= number_to_percentage(@explore_facade.price_var_pct, precision: 2) %>)
 					<% end %>
 				</span>
 			</div>
-			<span class="mx-3"></span>
-			<div class="text-uppercase small">
-				Updated at
-				<span class="text-muted font-weight-bold">
+			<div class="mx-2"></div>
+			<div class="heading">
+				Updated at&nbsp;
+				<span class="has-text-weight-bold">
 					<%= I18n.l @explore_facade.current_price_at, format: :long %>
 				</span>
 			</div>
 		</div>
 	</div>
 
-	<div class="col-sm-12 col-md-auto">
-		<ul class="list-group list-group-horizontal text-right">
-			<li class="list-group-item">
-				<span class="text-uppercase small">Open</span>
-				<div class="text-muted font-weight-bold">
-					<%= number_to_currency(@explore_facade.open_price) %>
+	<div class="column is-half-desktop is-full-mobile">
+		<div class="level">
+			<div class="level-item mr-1 has-text-right-desktop has-text-centered-mobile">
+				<div>
+					<p class="heading">Open</p>
+					<p class="title">
+						<%= number_to_currency(@explore_facade.open_price) %>
+					</p>
 				</div>
-			</li>
-			<li class="list-group-item">
-				<span class="text-uppercase small">Lowest</span>
-				<div class="text-muted font-weight-bold">
-					<%= number_to_currency(@explore_facade.lowest_price) %>
+			</div>
+			<div class="level-item mr-1 has-text-right-desktop has-text-centered-mobile">
+				<div>
+					<p class="heading">Lowest</p>
+					<p class="title">
+						<%= number_to_currency(@explore_facade.lowest_price) %>
+					</p>
 				</div>
-			</li>
-			<li class="list-group-item">
-				<span class="text-uppercase small">Highest</span>
-				<div class="text-muted font-weight-bold">
-					<%= number_to_currency(@explore_facade.highest_price) %>
+			</div>
+			<div class="level-item mr-1 has-text-right-desktop has-text-centered-mobile">
+				<div>
+					<p class="heading">Highest</p>
+					<p class="title">
+						<%= number_to_currency(@explore_facade.highest_price) %>
+					</p>
 				</div>
-			</li>
-			<li class="list-group-item">
-				<span class="text-uppercase small">Volume</span>
-				<div class="text-muted font-weight-bold">
-					<%= number_to_human(@explore_facade.volume) %>
+			</div>
+			<div class="level-item mr-1 has-text-right-desktop has-text-centered-mobile">
+				<div>
+					<p class="heading">Volume</p>
+					<p class="title">
+						<%= number_to_human(@explore_facade.volume) %>
+					</p>
 				</div>
-			</li>
-		</ul>
+			</div>
+		</div>
 	</div>
 </div>
 
-<div class="my-3">
-	<div class="row">
-		<div class="col-sm-12 col-md-6">
-			<h3>Price variation</h3>
+<div class="block">
+	<div class="columns">
+		<div class="column is-half-desktop is-full-mobile">
+			<h3 class="subtitle">Price variation</h3>
 		</div>
-		<div class="col-sm-12 col-md-6 text-right">
+		<div class="column has-text-right is-half-desktop is-full-mobile">
 			<div class="chart-range-options">
 				<%= chart_range_option 'Today',
 					explore_prices_path(asset_id: @explore_facade.asset_id, range_type: '1d'),
@@ -77,6 +85,7 @@
 		</div>
 	</div>
 </div>
+
 <%= area_chart @explore_facade.prices_chart_data,
 		id: "asset-prices-chart",
 		legend: false,

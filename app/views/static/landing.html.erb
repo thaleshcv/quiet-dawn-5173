@@ -4,8 +4,14 @@
 		<div class="landing-content">
 			<h1 class="title mb-6">Welcome to the ultimate investments tracker!</h1>
 			<h2 class="subtitle">Track the valuation of your investments day by day</h2>
-			<h2 class="subtitle">Receive weekly performance reports</h2>
+			<h2 class="subtitle">Receive periodically performance reports</h2>
 			<h2 class="subtitle">Follow the prices of the main assets on the stock exchange</h2>
+
+			<div class="is-flex is-justify-content-center">
+				<%= link_to 'Sign in', new_user_session_path, class: 'button is-outlined is-link' %>
+				<span class="mx-5">or</span>
+				<%= link_to 'Register now', new_user_registration_path, class: 'button is-outlined is-link' %>
+			</div>
 		</div>
 	</div>
 <% end %>

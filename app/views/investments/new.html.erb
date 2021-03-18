@@ -1,8 +1,8 @@
-<h1>New Investment</h1>
+<h1 class="title">New Investment</h1>
 
 <%= render 'form', investment: @investment do |f| %>
-	<%= f.button :submit, class: "btn btn-primary" %>
+	<%= f.button :submit, class: "button is-primary" %>
 	<%= link_to 'Cancel',
 		params.key?(:asset_id) ? asset_path(params[:asset_id]) : investments_path,
-		class: "btn btn-secondary" %>
+		class: "button is-secondary" %>
 <% end %>

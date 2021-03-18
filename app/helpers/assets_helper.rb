@@ -27,7 +27,7 @@ module AssetsHelper
     input_html = input_html.symbolize_keys
 
     input_props = {
-      class: "form-control #{input_html[:class]}".strip,
+      class: "input #{input_html[:class]}".strip,
       data: {
         "auto-submit": auto_submit
       }

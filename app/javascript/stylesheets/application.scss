@@ -21,6 +21,16 @@ main#root {
 	display: none;
 }
 
+#asset_dropdown {
+	width: 100%;
+	display: block;
+}
+
+#asset_dropdown_content {
+	max-height: 200px;
+	overflow-y: auto;
+}
+
 #explore_form #asset_dropdown_input {
 	font-size: 2rem;
 	padding-left: 0;

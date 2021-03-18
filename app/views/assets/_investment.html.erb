@@ -1,38 +1,34 @@
-<span class="list-group-item">
-	<div class="row justify-content-between">
-		<div class="col-xs-6 col-md-3">
-			<span class="small">
-				<span class="mb-1 d-block text-uppercase">Invested</span>
-				<strong class="text-muted">
-					<abbr class="text-uppercase"
-						title="<%= I18n.l(investment.invested_at, format: :long) %>">
-						<%= time_ago_in_words(investment.invested_at) %> ago
-					</abbr>
-				</strong>
-			</span>
-		</div>
-		<div class="col-xs-6 col-md-3">
-			<span class="small">
-				<span class="mb-1 d-block text-uppercase">Quantity</span>
-				<strong class="text-muted">
-					<%= investment.quantity %>
-				</strong>
-			</span>
-		</div>
-		<div class="col-xs-6 col-md-3">
-			<span class="small">
-				<span class="mb-1 d-block text-uppercase">Value</span>
-				<strong class="text-muted">
-					<%= number_to_currency(investment.value_invested) %>
-				</strong>
-			</span>
-		</div>
-		<div class="col-xs-6 col-md-3">
-			<div class="d-flex justify-content-end align-items-center">
-				<%= link_to "Edit", edit_investment_path(investment) %>
-				<span class="mx-1"></span>
-				<%= link_to "Destroy", investment, method: :delete, data: { confirm: "Are you sure?" } %>
+<div class="column is-one-quarter-desktop is-half-tablet is-full-mobile">
+	<div class="card">
+		<div class="card-content has-text-centered">
+			<div class="columns is-mobile">
+				<div class="column is-half-mobile">
+					<p class="heading">Quantity</p>
+					<p class="subtitle"><%= investment.quantity %></p>
+				</div>
+				<div class="column is-half-mobile">
+					<p class="heading">Value</p>
+					<p class="subtitle has-text-weight-bold">
+						<%= number_to_currency(investment.value_invested) %>
+					</p>
+				</div>
+			</div>
+			<div class="block">
+				<p class="heading">Invested</p>
+				<p class="subtitle" title="<%= I18n.l(investment.invested_at, format: :long) %>">
+					<%= time_ago_in_words(investment.invested_at) %> ago
+				</p>
 			</div>
 		</div>
+		<footer class="card-footer">
+			<%= link_to 'Edit',
+				edit_investment_path(investment),
+				class: "card-footer-item" %>
+			<%= link_to 'Delete',
+				investment,
+				class: "card-footer-item has-text-danger",
+				method: :delete,
+				data: {confirm: "Are you sure?"} %>
+		</footer>
 	</div>
-</span>
+</div>

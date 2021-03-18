@@ -1,17 +1,17 @@
 <%= content_for :main_content do %>
-	<%= render "partials/flash_messages" %>
-	<%= form_with namespace: :explore,
+	<div class="block">
+		<%= render "partials/flash_messages" %>
+		<%= form_with namespace: :explore,
     id: "explore_form",
     url: explore_assets_path,
     method: "get",
     local: true do |f| %>
-		<div class="form-group border-bottom">
 			<%= assets_dropdown f, :asset_id,
 				auto_submit: true,
 				selected_asset: (@explore_facade.asset if @explore_facade.present?),
 				input_html: { class: "border-0 form-control-lg" } %>
-		</div>
-	<% end %>
+		<% end %>
+	</div>
 	<%= yield %>
 <% end %>
 

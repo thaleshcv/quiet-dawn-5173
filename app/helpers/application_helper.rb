@@ -3,7 +3,7 @@ module ApplicationHelper
     button_tag(label,
       type: "button",
       disabled: disabled,
-      class: "btn btn-secondary btn-sm range-#{range}",
+      class: "button is-small range-#{range}",
       data: {
         remote: true,
         url: path,
