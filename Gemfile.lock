@@ -141,7 +141,11 @@ GEM
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    pdf-core (0.9.0)
     pg (1.2.3)
+    prawn (2.4.0)
+      pdf-core (~> 0.9.0)
+      ttfunk (~> 1.7)
     public_suffix (4.0.6)
     puma (4.3.7)
       nio4r (~> 2.0)
@@ -227,6 +231,7 @@ GEM
       net-ssh (>= 2.8.0)
     thor (1.0.1)
     thread_safe (0.3.6)
+    ttfunk (1.7.0)
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
@@ -274,6 +279,7 @@ DEPENDENCIES
   httparty
   listen (~> 3.2)
   pg (>= 0.18, < 2.0)
+  prawn (~> 2.4)
   puma (~> 4.1)
   pundit
   rails (~> 6.0.3, >= 6.0.3.4)

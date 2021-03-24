@@ -23,4 +23,9 @@ class User < ApplicationRecord
     :recoverable, :rememberable, :validatable
 
   has_many :investments, inverse_of: :user
+  has_many :reports, inverse_of: :user
+
+  def last_report
+    reports.order_by(created_at: :desc).first
+  end
 end

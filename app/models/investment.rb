@@ -36,6 +36,8 @@ class Investment < ApplicationRecord
   validates_presence_of :user, :asset, :quantity, :value_invested, :invested_at
   validates_numericality_of :quantity, only_integer: true, greater_than: 0
 
+  scope :total_invested, -> { sum(:value_invested) }
+
   def current_value
     return if asset.current_price.blank?
 
@@ -43,17 +45,30 @@ class Investment < ApplicationRecord
   end
 
   class << self
+    def total_accumulated
+      joins(:asset)
+        .left_joins(asset: :current_price)
+        .sum(<<~SQL)
+          COALESCE(
+            investments.quantity * current_prices.value,
+            investments.value_invested::money::numeric::float8
+          )
+        SQL
+    end
+
     def for_portfolio
       joins(:asset)
         .left_joins(asset: :current_price)
-        .group("assets.id, assets.abbreviation, assets.name, current_prices.value")
+        .group("investments.user_id, assets.id, assets.abbreviation, assets.name, current_prices.value, current_prices.date")
         .order("assets.abbreviation ASC")
         .select(<<~SQL)
+          investments.user_id,
           assets.id AS item_asset_id,
           assets.name AS item_asset_name,
           assets.abbreviation AS item_asset_abbr,
+          COALESCE(current_prices.date, NOW()) AS position_at,
           SUM(investments.quantity) AS item_quantity,
-          SUM(investments.value_invested) AS item_value_invested,
+          SUM(investments.value_invested)::money::numeric::float8 AS item_value_invested,
           COALESCE(
             SUM(investments.quantity) * current_prices.value,
             SUM(investments.value_invested)::money::numeric::float8

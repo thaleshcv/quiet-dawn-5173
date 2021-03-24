@@ -18,7 +18,9 @@
 /tmp/pids/*
 !/tmp/pids/
 !/tmp/pids/.keep
-
+/tmp/reports/*
+!/tmp/reports/
+!/tmp/reports/.keep
 
 /public/assets
 .byebug_history

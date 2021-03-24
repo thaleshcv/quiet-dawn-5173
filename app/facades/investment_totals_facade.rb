@@ -14,18 +14,10 @@ class InvestmentTotalsFacade
   end
 
   def total_invested
-    @total_invested ||= scope.sum(:value_invested)
+    @total_invested ||= scope.total_invested
   end
 
   def total_accumulated
-    @total_accumulated ||= scope
-      .joins(:asset)
-      .left_joins(asset: :current_price)
-      .sum(<<~SQL)
-        COALESCE(
-          investments.quantity * current_prices.value,
-          investments.value_invested::money::numeric::float8
-        )
-      SQL
+    @total_accumulated ||= scope.total_accumulated
   end
 end
