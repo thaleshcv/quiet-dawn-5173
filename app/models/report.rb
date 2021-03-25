@@ -29,4 +29,12 @@ class Report < ApplicationRecord
       .order(created_at: :desc)
       .first
   end
+
+  def delivered_now!
+    update_attribute(:delivered_at, Time.zone.now)
+  end
+
+  def report_name
+    "#{user.email.downcase.gsub(/[^a-z]/, '_')}-#{created_at.to_s(:number)}.pdf"
+  end
 end
