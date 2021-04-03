@@ -33,11 +33,11 @@ class PortfolioReport
   private
 
   def sum_total_invested
-    @sum_total_invested ||= @data.reduce(0) { |memo, item| memo + item["item_value_invested"] }
+    @sum_total_invested ||= @data.reduce(0) { |memo, item| memo + item.item_value_invested }
   end
 
   def sum_current_value
-    @sum_current_value ||= @data.reduce(0) { |memo, item| memo + item["item_current_value"] }
+    @sum_current_value ||= @data.reduce(0) { |memo, item| memo + item.item_current_value }
   end
 
   def page_header(pdf)
@@ -75,51 +75,51 @@ class PortfolioReport
 
       # first column
       pdf.bounding_box([x_pos, y_pos], width: CLIENT_WIDTH * 0.2) do
-        pdf.text row["item_asset_name"], size: 10
-        pdf.text row["item_asset_abbr"], size: 12
-        pdf.stroke_bounds
+        pdf.text row.item_asset_name, size: 10
+        pdf.text row.item_asset_abbr, size: 12
+        # pdf.stroke_bounds
       end
 
       # second column
       pdf.bounding_box([(x_pos += CLIENT_WIDTH * 0.2), y_pos], width: CLIENT_WIDTH * 0.2) do
         pdf.text "Invested", size: 10, align: :right
-        pdf.text number_to_currency(row["item_value_invested"]), size: 12, align: :right
-        pdf.stroke_bounds
+        pdf.text number_to_currency(row.item_value_invested), size: 12, align: :right
+        # pdf.stroke_bounds
       end
 
       # third column
       pdf.bounding_box([(x_pos += CLIENT_WIDTH * 0.2), y_pos], width: CLIENT_WIDTH * 0.15) do
         pdf.text "Date", size: 10, align: :right
-        pdf.text Date.parse(row["position_at"]).to_formatted_s(:rfc822), size: 12, align: :right
-        pdf.stroke_bounds
+        pdf.text row.position_at.to_formatted_s(:rfc822), size: 12, align: :right
+        # pdf.stroke_bounds
       end
 
       # fourth column
       pdf.bounding_box([(x_pos += CLIENT_WIDTH * 0.15), y_pos], width: CLIENT_WIDTH * 0.15) do
         pdf.text "Quantity", size: 10, align: :right
-        pdf.text row["item_quantity"].to_s, size: 12, align: :right
-        pdf.stroke_bounds
+        pdf.text row.item_quantity.to_s, size: 12, align: :right
+        # pdf.stroke_bounds
       end
 
       # fifth column
       pdf.bounding_box([(x_pos += (CLIENT_WIDTH * 0.15)), y_pos], width: CLIENT_WIDTH * 0.2) do
         pdf.text "Accumulated", size: 10, align: :right
-        pdf.text number_to_currency(row["item_current_value"]), size: 12, align: :right
-        pdf.stroke_bounds
+        pdf.text number_to_currency(row.item_current_value), size: 12, align: :right
+        # pdf.stroke_bounds
       end
 
       # sixth column
       pdf.bounding_box([(x_pos + (CLIENT_WIDTH * 0.2)), y_pos], width: CLIENT_WIDTH * 0.1) do
         pdf.text "+/-", size: 10, align: :center
 
-        variation_pct = ((row["item_current_value"] - row["item_value_invested"]) / row["item_value_invested"]) * 100
-        pdf.text number_to_percentage(variation_pct, precision: 1),
+        value_variation_in_pct = row.value_variation_in_pct
+        pdf.text number_to_percentage(value_variation_in_pct, precision: 1),
           style: :bold,
           size: 12,
           align: :right,
-          color: variation_pct.negative? ? "FF0000" : "00FF00"
+          color: value_variation_in_pct.negative? ? "FF0000" : "00FF00"
 
-        pdf.stroke_bounds
+        # pdf.stroke_bounds
       end
 
       pdf.move_down 20

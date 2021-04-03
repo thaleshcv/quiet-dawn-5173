@@ -1,0 +1,63 @@
+<h1 class="title">Report of <%= I18n.l(@report.created_at, format: :long) %></h1>
+
+<nav class="level">
+	<div class="level-item has-text-right-desktop has-text-centered-mobile">
+		<div>
+			<p class="heading">Invested</p>
+			<p class="title"><%= number_to_currency(@report.sum_total_invested) %></p>
+		</div>
+	</div>
+	<div class="level-item has-text-right-desktop has-text-centered-mobile">
+		<div>
+			<p class="heading">Accumulated</p>
+			<p class="title">
+				<%= number_to_currency(@report.sum_current_value) %>
+				<%= styled_numeric(@report.value_variation_in_pct) do |var| %>
+					(<%= number_to_percentage(var, precision: 1) %>)
+				<% end %>
+			</p>
+		</div>
+	</div>
+</nav>
+
+<table class="table is-hoverable" style="margin:auto;">
+	<thead>
+		<tr>
+			<th>Asset</th>
+			<th>Invested</th>
+			<th>Date</th>
+			<th>Quantity</th>
+			<th>Accumulated</th>
+			<th>+/-</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @report.portfolio_items.each do |row| %>
+			<tr>
+				<td>
+					<small>
+						<%= row.item_asset_name %>
+					</small><br/>
+					<%= row.item_asset_abbr %>
+				</td>
+				<td>
+					<%= number_to_currency(row.item_value_invested) %>
+				</td>
+				<td>
+					<%= I18n.l(row.position_at, format: :long) %>
+				</td>
+				<td>
+					<%= row.item_quantity %>
+				</td>
+				<td>
+					<%= number_to_currency(row.item_current_value) %>
+				</td>
+				<td>
+					<%= styled_numeric(row.value_variation_in_pct) do |number| %>
+						<%= number_to_percentage(number, precision: 1) %>
+					<% end %>
+				</td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>

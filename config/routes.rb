@@ -6,7 +6,6 @@ Rails.application.routes.draw do
 
   unauthenticated do
     get "static/landing", as: :landing
-
     root "static#landing"
   end
 
@@ -16,6 +15,8 @@ Rails.application.routes.draw do
     resources :assets, only: %i[index show] do
       get "accumulated", on: :member
     end
+
+    resources :reports, only: %i[index show]
 
     get "explore", to: "explore#index", as: :explore
     get "explore/prices", to: "explore#prices", as: :explore_prices

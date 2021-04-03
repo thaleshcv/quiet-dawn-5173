@@ -1,3 +1,5 @@
+require "calculations"
+
 # == Schema Information
 #
 # Table name: reports
@@ -18,9 +20,23 @@
 #  fk_rails_...  (user_id => users.id)
 #
 class Report < ApplicationRecord
+  include Calculations
+
   belongs_to :user, inverse_of: :reports
 
   scope :not_delivered, -> { where(delivered_at: nil) }
+
+  def sum_total_invested
+    @sum_total_invested ||= payload.reduce(0) { |memo, item| memo + item["item_value_invested"] }
+  end
+
+  def sum_current_value
+    @sum_current_value ||= payload.reduce(0) { |memo, item| memo + item["item_current_value"] }
+  end
+
+  def value_variation_in_pct
+    difference_in_percent(sum_total_invested, sum_current_value)
+  end
 
   def previous_report
     self.class
@@ -35,6 +51,13 @@ class Report < ApplicationRecord
   end
 
   def report_name
-    "#{user.email.downcase.gsub(/[^a-z]/, '_')}-#{created_at.to_s(:number)}.pdf"
+    "#{user.email.downcase.gsub(/[^a-zA-Z0-9]/, '_')}-#{created_at.to_s(:number)}.pdf"
+  end
+
+  def portfolio_items
+    @portfolio_items ||= begin
+      items = payload.collect { |item| PortfolioItemFacade.new(item) }
+      items.sort_by(&:value_variation_in_pct).reverse
+    end
   end
 end

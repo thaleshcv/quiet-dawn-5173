@@ -12,13 +12,16 @@
 	<div id="app-navbar__content" class="navbar-menu">
 		<div class="navbar-end">
 			<%= link_to_unless_current 'Investments', investments_path, class: "navbar-item" do %>
-				<span class="navbar-item active">Investments</span>
+				<span class="navbar-item has-background-black-ter">Investments</span>
 			<% end %>
 			<%= link_to_unless_current 'Explore', explore_path, class: "navbar-item" do %>
-				<span class="navbar-item active">Explore</span>
+				<span class="navbar-item has-background-black-ter">Explore</span>
+			<% end %>
+			<%= link_to_unless_current 'Reports', reports_path, class: "navbar-item" do %>
+				<span class="navbar-item has-background-black-ter">Reports</span>
 			<% end %>
 			<%= link_to_unless_current 'Account', edit_user_registration_path, class: "navbar-item" do %>
-				<span class="navbar-item active">Account</span>
+				<span class="navbar-item has-background-black-ter">Account</span>
 			<% end %>
 			<div class="navbar-item has-dropdown is-hoverable">
 				<a class="navbar-link">
