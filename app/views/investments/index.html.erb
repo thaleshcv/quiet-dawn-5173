@@ -3,6 +3,7 @@
 <div class="columns">
 	<div class="column is-half-desktop is-full-mobile has-text-centered-mobile">
 		<h1 class="title">Investments</h1>
+		<%= link_to 'Add Investment', new_investment_path %>
 	</div>
 	<div class="column is-half-desktop is-full-mobile">
 		<nav class="level">
@@ -28,18 +29,14 @@
 </div>
 
 <div class="block">
-	<%= link_to 'Add Investment', new_investment_path %>
-</div>
-
-<div class="block">
 	<div class="columns is-multiline">
 		<%= render partial: "investments/portfolio", collection: @portfolio %>
 	</div>
 </div>
 
 <% if @portfolio.empty? %>
-	<div class="alert alert-info">
-		<strong>Info!</strong>
-		You have no investments yet.
-	</div>
+	<%= render partial: "partials/no_content",
+		locals: {
+			message: "Your portfolio is empty. <br/> #{link_to('Add your first investment here', new_investment_path)}.".html_safe
+		} %>
 <% end %>

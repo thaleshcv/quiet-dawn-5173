@@ -1,0 +1,28 @@
+<table class="table is-hoverable is-fullwidth">
+	<thead>
+		<th class="has-text-centered">Date</th>
+		<th class="has-text-centered">Delivered</th>
+		<th></th>
+	</thead>
+	<tbody>
+		<% @reports.each do |item| %>
+			<tr>
+				<td class="has-text-centered">
+					<%= I18n.l(item.created_at, format: :long) %>
+				</td>
+				<td class="has-text-centered">
+					<% if item.delivered_at.present? %>
+						<span title="Report delivered" class="has-text-success">&#10004;</span>
+					<% else %>
+						<span title="Report not delivered" class="has-text-danger">&#10005;</span>
+					<% end %>
+				</td>
+				<td class="has-text-right">
+					<%= link_to item, class: "button is-outlined is-link" do %>
+						<span>&#10132;</span>
+					<% end %>
+				</td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
