@@ -2,12 +2,12 @@
 #
 # Table name: current_prices
 #
-#  id       :bigint
-#  date     :date
-#  high     :decimal(10, 2)
-#  low      :decimal(10, 2)
-#  value    :decimal(10, 2)
-#  asset_id :bigint
+#  id      :bigint
+#  date    :date
+#  high    :decimal(10, 2)
+#  low     :decimal(10, 2)
+#  value   :decimal(10, 2)
+#  item_id :bigint
 #
 require 'rails_helper'
 

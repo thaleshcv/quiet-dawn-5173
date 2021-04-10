@@ -3,34 +3,34 @@ class ImportPricesJob < ApplicationJob
   queue_as :default
 
   def perform
-    prices_attrs = Asset.for_price_update.collect do |asset|
-      asset_id, last_price_at = asset
+    prices_attrs = Item.for_price_update.collect do |item|
+      item_id, last_price_at = item
 
-      Rails.logger.info("*** Updating price for asset #{asset_id}. Last update was #{last_price_at} ***")
+      Rails.logger.info("*** Updating price for item #{item_id}. Last update was #{last_price_at} ***")
 
       count = needed_price_records_count(last_price_at)
 
       next if count <= 1
 
-      Rails.logger.info("*** Getting last #{count} prices for asset #{asset_id} ***")
+      Rails.logger.info("*** Getting last #{count} prices for item #{item_id} ***")
 
-      fetch_prices(asset_id, count)
+      fetch_prices(item_id, count)
     end.flatten.compact
 
     return if prices_attrs.blank?
 
-    Price.upsert_all(prices_attrs, unique_by: :index_prices_on_asset_id_and_date)
+    Price.upsert_all(prices_attrs, unique_by: :index_prices_on_item_id_and_date)
     CurrentPrice.refresh
   end
 
   private
 
-  def fetch_prices(asset_id, count)
-    prices = Stock::PriceService.interday(asset_id, count)
+  def fetch_prices(item_id, count)
+    prices = Stock::PriceService.interday(item_id, count)
 
     Rails.logger.info("*** #{prices.size} prices retrieved ***")
 
-    prices.collect { |h| normalize_price_hash(h, asset_id) }
+    prices.collect { |h| normalize_price_hash(h, item_id) }
   end
 
   # Calculates the number of days an asset has missing prices.
@@ -44,13 +44,13 @@ class ImportPricesJob < ApplicationJob
   end
 
   # Normalize price attributes to be used on upsert.
-  def normalize_price_hash(hash, asset_id)
+  def normalize_price_hash(hash, item_id)
     Hash[
       date: Date.parse(hash["date"]),
       value: hash["price"],
       high: hash["high"],
       low: hash["low"],
-      asset_id: asset_id
+      item_id: item_id
     ]
   end
 end

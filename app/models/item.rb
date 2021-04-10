@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: assets
+# Table name: items
 #
 #  id           :bigint           not null, primary key
 #  abbreviation :string           not null
@@ -8,11 +8,11 @@
 #
 # Indexes
 #
-#  index_assets_on_abbreviation  (abbreviation) UNIQUE
+#  index_items_on_abbreviation  (abbreviation) UNIQUE
 #
-class Asset < ApplicationRecord
-  has_many :investments, inverse_of: :asset
-  has_many :prices, -> { order(date: :asc) }, inverse_of: :asset
+class Item < ApplicationRecord
+  has_many :investments, inverse_of: :item
+  has_many :prices, -> { order(date: :asc) }, inverse_of: :item
 
   has_one :current_price
 
@@ -28,9 +28,9 @@ class Asset < ApplicationRecord
     def for_price_update
       joins(:investments)
         .left_joins(:prices)
-        .group("investments.asset_id")
+        .group("investments.item_id")
         .distinct
-        .pluck("investments.asset_id, max(prices.date)")
+        .pluck("investments.item_id, max(prices.date)")
     end
 
     def with_investments(scope)

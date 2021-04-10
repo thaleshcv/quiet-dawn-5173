@@ -1,7 +1,7 @@
 class ExploreFacade
-  attr_reader :asset_id, :range_type
+  attr_reader :item_id, :range_type
 
-  delegate :title, to: :asset, prefix: true, allow_nil: true
+  delegate :title, to: :item, prefix: true, allow_nil: true
 
   RANGE_ONE_DAY = "1d".freeze
   RANGE_THIRTY_DAYS = "30d".freeze
@@ -15,26 +15,26 @@ class ExploreFacade
     RANGE_NINETY_DAYS => 90
   }.freeze
 
-  def initialize(asset_id, range_type = RANGE_ONE_DAY)
-    @asset_id = asset_id
+  def initialize(item_id, range_type = RANGE_ONE_DAY)
+    @item_id = item_id
     @range_type = range_type || RANGE_ONE_DAY
   end
 
-  def asset_exists?
-    Asset.exists?(asset_id)
+  def item_exists?
+    Item.exists?(item_id)
   end
 
-  def asset
-    @asset ||= Asset.find(asset_id)
+  def item
+    @item ||= Item.find(item_id)
   end
 
   def prices
-    @prices ||= Rails.cache.fetch("/explore/assets/#{asset_id}/#{range_type}", expires_in: 15.minutes) do
+    @prices ||= Rails.cache.fetch("/explore/items/#{item_id}/#{range_type}", expires_in: 15.minutes) do
       case range_type
       when RANGE_THIRTY_DAYS, RANGE_SIXTY_DAYS, RANGE_NINETY_DAYS
-        Stock::PriceService.interday(asset_id, RANGE_TYPES[range_type])
+        Stock::PriceService.interday(item_id, RANGE_TYPES[range_type])
       else
-        Stock::PriceService.intraday(asset_id, RANGE_TYPES[range_type])
+        Stock::PriceService.intraday(item_id, RANGE_TYPES[range_type])
       end
     end
   end

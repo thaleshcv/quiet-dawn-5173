@@ -66,19 +66,19 @@
 		<div class="column has-text-right is-half-desktop is-full-mobile">
 			<div class="chart-range-options">
 				<%= chart_range_option 'Today',
-					explore_prices_path(asset_id: @explore_facade.asset_id, range_type: '1d'),
+					explore_prices_path(item_id: @explore_facade.item_id, range_type: '1d'),
 					range: '1d',
 					disabled: @explore_facade.range_type == '1d' %>
 				<%= chart_range_option '30 Days',
-					explore_prices_path(asset_id: @explore_facade.asset_id, range_type: '30d'),
+					explore_prices_path(item_id: @explore_facade.item_id, range_type: '30d'),
 					range: '30d',
 					disabled: @explore_facade.range_type == '30d' %>
 				<%= chart_range_option '60 Days',
-					explore_prices_path(asset_id: @explore_facade.asset_id, range_type: '60d'),
+					explore_prices_path(item_id: @explore_facade.item_id, range_type: '60d'),
 					range: '60d',
 					disabled: @explore_facade.range_type == '60d' %>
 				<%= chart_range_option '90 Days',
-					explore_prices_path(asset_id: @explore_facade.asset_id, range_type: '90d'),
+					explore_prices_path(item_id: @explore_facade.item_id, range_type: '90d'),
 					range: '90d',
 					disabled: @explore_facade.range_type == '90d' %>
 			</div>

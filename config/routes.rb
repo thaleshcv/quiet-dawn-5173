@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   authenticate :user do
     resources :investments
 
-    resources :assets, only: %i[index show] do
+    resources :items, only: %i[index show] do
       get "accumulated", on: :member
     end
 
@@ -20,7 +20,7 @@ Rails.application.routes.draw do
 
     get "explore", to: "explore#index", as: :explore
     get "explore/prices", to: "explore#prices", as: :explore_prices
-    get "explore/assets", to: "explore#assets", as: :explore_assets
+    get "explore/items", to: "explore#items", as: :explore_items
 
     root "investments#index", as: :authenticated_root
   end

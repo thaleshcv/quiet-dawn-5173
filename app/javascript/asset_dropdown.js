@@ -101,7 +101,7 @@
 			}
 
 			queryTimeoutId = setTimeout(function () {
-				const url = new URL("/assets", window.location.origin);
+				const url = new URL("/items", window.location.origin);
 				url.search = new URLSearchParams({ query: target.value }).toString();
 
 				fetch(url)

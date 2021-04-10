@@ -6,9 +6,9 @@ class PortfolioItemFacade
   include Calculations
 
   attribute :user_id, :integer
-  attribute :item_asset_id, :integer
-  attribute :item_asset_name, :string
-  attribute :item_asset_abbr, :string
+  attribute :item_id, :integer
+  attribute :item_name, :string
+  attribute :item_abbr, :string
   attribute :item_quantity, :integer
   attribute :item_value_invested, :float
   attribute :item_current_value, :float

@@ -24,7 +24,7 @@ class PortfolioReport
 
       pdf.move_down 30
 
-      create_assets_table(pdf)
+      create_items_table(pdf)
 
       pdf.render_file(@filename)
     end
@@ -68,15 +68,15 @@ class PortfolioReport
     end
   end
 
-  def create_assets_table(pdf)
+  def create_items_table(pdf)
     @data.each do |row|
       x_pos = 0
       y_pos = pdf.cursor
 
       # first column
       pdf.bounding_box([x_pos, y_pos], width: CLIENT_WIDTH * 0.2) do
-        pdf.text row.item_asset_name, size: 10
-        pdf.text row.item_asset_abbr, size: 12
+        pdf.text row.item_name, size: 10
+        pdf.text row.item_abbr, size: 12
         # pdf.stroke_bounds
       end
 

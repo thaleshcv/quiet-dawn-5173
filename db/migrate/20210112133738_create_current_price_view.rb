@@ -4,7 +4,7 @@ class CreateCurrentPriceView < ActiveRecord::Migration[6.0]
       CREATE MATERIALIZED VIEW current_prices AS
         SELECT p1.* FROM prices p1
         WHERE date=(
-          SELECT MAX(date) FROM prices p2 WHERE p2.asset_id = p1.asset_id
+          SELECT MAX(date) FROM prices p2 WHERE p2.item_id = p1.item_id
         )
     SQL
   end

@@ -1,13 +1,13 @@
 <div class="block">
-	<h2 class="subtitle">Your assets</h2>
+	<h2 class="subtitle">Your items</h2>
 	<div class="columns is-multiline">
-		<% @user_assets.each do |asset| %>
+		<% @user_items.each do |item| %>
 			<div class="column is-one-third-desktop is-half-mobile">
-				<%= link_to explore_assets_path(asset_id: asset) do %>
+				<%= link_to explore_items_path(item_id: item) do %>
 					<div class="card has-text-centered">
 						<div class="card-content">
-							<p class="title"><%= asset.abbreviation %></p>
-							<p class="subtitle"><%= asset.name %></p>
+							<p class="title"><%= item.abbreviation %></p>
+							<p class="subtitle"><%= item.name %></p>
 						</div>
 					</div>
 				<% end %>

@@ -10,37 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_19_210150) do
+ActiveRecord::Schema.define(version: 2021_04_10_023220) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "assets", force: :cascade do |t|
-    t.string "abbreviation", null: false
-    t.string "name", null: false
-    t.index ["abbreviation"], name: "index_assets_on_abbreviation", unique: true
-  end
-
   create_table "investments", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.bigint "asset_id", null: false
+    t.bigint "item_id", null: false
     t.integer "quantity", null: false
     t.money "value_invested", scale: 2, null: false
     t.date "invested_at", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["asset_id"], name: "index_investments_on_asset_id"
+    t.index ["item_id"], name: "index_investments_on_item_id"
     t.index ["user_id"], name: "index_investments_on_user_id"
   end
 
+  create_table "items", force: :cascade do |t|
+    t.string "abbreviation", null: false
+    t.string "name", null: false
+    t.index ["abbreviation"], name: "index_items_on_abbreviation", unique: true
+  end
+
   create_table "prices", force: :cascade do |t|
-    t.bigint "asset_id", null: false
+    t.bigint "item_id", null: false
     t.decimal "value", precision: 10, scale: 2, null: false
     t.decimal "low", precision: 10, scale: 2, null: false
     t.decimal "high", precision: 10, scale: 2, null: false
     t.date "date", null: false
-    t.index ["asset_id", "date"], name: "index_prices_on_asset_id_and_date", unique: true
-    t.index ["asset_id"], name: "index_prices_on_asset_id"
+    t.index ["item_id", "date"], name: "index_prices_on_item_id_and_date", unique: true
+    t.index ["item_id"], name: "index_prices_on_item_id"
   end
 
   create_table "reports", force: :cascade do |t|
@@ -64,8 +64,8 @@ ActiveRecord::Schema.define(version: 2021_03_19_210150) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "investments", "assets"
+  add_foreign_key "investments", "items"
   add_foreign_key "investments", "users"
-  add_foreign_key "prices", "assets"
+  add_foreign_key "prices", "items"
   add_foreign_key "reports", "users"
 end

@@ -10,17 +10,17 @@ require "calculations"
 #  value_invested :money            not null
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
-#  asset_id       :bigint           not null
+#  item_id        :bigint           not null
 #  user_id        :bigint           not null
 #
 # Indexes
 #
-#  index_investments_on_asset_id  (asset_id)
-#  index_investments_on_user_id   (user_id)
+#  index_investments_on_item_id  (item_id)
+#  index_investments_on_user_id  (user_id)
 #
 # Foreign Keys
 #
-#  fk_rails_...  (asset_id => assets.id)
+#  fk_rails_...  (item_id => items.id)
 #  fk_rails_...  (user_id => users.id)
 #
 class Investment < ApplicationRecord
@@ -29,25 +29,25 @@ class Investment < ApplicationRecord
   attribute :value_invested, :money
 
   belongs_to :user, inverse_of: :investments
-  belongs_to :asset, inverse_of: :investments
+  belongs_to :item, inverse_of: :investments
 
-  delegate :name, :abbreviation, to: :asset, prefix: true, allow_nil: true
+  delegate :name, :abbreviation, to: :item, prefix: true, allow_nil: true
 
-  validates_presence_of :user, :asset, :quantity, :value_invested, :invested_at
+  validates_presence_of :user, :item, :quantity, :value_invested, :invested_at
   validates_numericality_of :quantity, only_integer: true, greater_than: 0
 
   scope :total_invested, -> { sum(:value_invested) }
 
   def current_value
-    return if asset.current_price.blank?
+    return if item.current_price.blank?
 
-    @current_value ||= quantity * asset.current_price.value
+    @current_value ||= quantity * item.current_price.value
   end
 
   class << self
     def total_accumulated
-      joins(:asset)
-        .left_joins(asset: :current_price)
+      joins(:item)
+        .left_joins(item: :current_price)
         .sum(<<~SQL)
           COALESCE(
             investments.quantity * current_prices.value,
@@ -57,15 +57,15 @@ class Investment < ApplicationRecord
     end
 
     def for_portfolio
-      joins(:asset)
-        .left_joins(asset: :current_price)
-        .group("investments.user_id, assets.id, assets.abbreviation, assets.name, current_prices.value, current_prices.date")
-        .order("assets.abbreviation ASC")
+      joins(:item)
+        .left_joins(item: :current_price)
+        .group("investments.user_id, items.id, items.abbreviation, items.name, current_prices.value, current_prices.date")
+        .order("items.abbreviation ASC")
         .select(<<~SQL)
           investments.user_id,
-          assets.id AS item_asset_id,
-          assets.name AS item_asset_name,
-          assets.abbreviation AS item_asset_abbr,
+          items.id AS item_id,
+          items.name AS item_name,
+          items.abbreviation AS item_abbr,
           COALESCE(current_prices.date, NOW()) AS position_at,
           SUM(investments.quantity) AS item_quantity,
           SUM(investments.value_invested)::money::numeric::float8 AS item_value_invested,
@@ -79,11 +79,11 @@ class Investment < ApplicationRecord
     def for_value_accumulated_series(starting_from)
       where("investments.invested_at <= prices.date")
         .where("prices.date >= ?", starting_from.to_i.days.ago.to_date.beginning_of_day)
-        .joins(asset: :prices)
-        .order("assets.abbreviation ASC, prices.date DESC")
+        .joins(item: :prices)
+        .order("items.abbreviation ASC, prices.date DESC")
         .distinct
         .select(<<~SQL)
-          assets.abbreviation,
+          items.abbreviation,
           prices.date,
           SUM(investments.quantity * prices.value) OVER(
             PARTITION BY prices.date
@@ -94,11 +94,11 @@ class Investment < ApplicationRecord
     def for_total_invested_series(starting_from)
       where("investments.invested_at <= prices.date")
         .where("prices.date >= ?", starting_from.to_i.days.ago.to_date.beginning_of_day)
-        .joins(asset: :prices)
-        .order("assets.abbreviation ASC, prices.date DESC")
+        .joins(item: :prices)
+        .order("items.abbreviation ASC, prices.date DESC")
         .distinct
         .select(<<~SQL)
-          assets.abbreviation,
+          items.abbreviation,
           prices.date,
           SUM(investments.value_invested::money::numeric::float8) OVER(
             PARTITION BY prices.date

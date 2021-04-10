@@ -1,5 +1,5 @@
 module Stock
-  class AssetService
+  class ItemService
     include HTTParty
     base_uri "https://api.cotacoes.uol.com"
 
@@ -17,20 +17,20 @@ module Stock
 
     def list(query = nil)
       if query.present?
-        filter_assets_by_name_or_abbreviation(fetch_all, query.strip.upcase)
+        filter_items_by_name_or_abbreviation(fetch_all, query.strip.upcase)
       else
         fetch_all
       end
     end
 
-    def find(asset_id)
-      fetch_all.find { |ass| ass["id"].to_s == asset_id.to_s }
+    def find(item_id)
+      fetch_all.find { |ass| ass["id"].to_s == item_id.to_s }
     end
 
     private
 
-    def filter_assets_by_name_or_abbreviation(assets, query)
-      assets.select do |ass|
+    def filter_items_by_name_or_abbreviation(items, query)
+      items.select do |ass|
         ass["name"].include?(query) || ass["abbreviation"].include?(query)
       end
     end
