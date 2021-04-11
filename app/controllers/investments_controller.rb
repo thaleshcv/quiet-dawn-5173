@@ -12,7 +12,7 @@ class InvestmentsController < ApplicationController
 
   # GET /investments/new
   def new
-    @investment = Investment.new(asset_id: params[:asset_id])
+    @investment = Investment.new(item_id: params[:item_id])
   end
 
   # GET /investments/1/edit
@@ -23,7 +23,7 @@ class InvestmentsController < ApplicationController
     @investment = current_user.investments.build(investment_params)
 
     if @investment.save
-      redirect_to @investment.asset, notice: "Investment was successfully created."
+      redirect_to @investment.item, notice: "Investment was successfully created."
     else
       render :new
     end
@@ -32,7 +32,7 @@ class InvestmentsController < ApplicationController
   # PATCH/PUT /investments/1
   def update
     if @investment.update(investment_params)
-      redirect_to @investment.asset, notice: "Investment was successfully updated."
+      redirect_to @investment.item, notice: "Investment was successfully updated."
     else
       render :edit
     end
@@ -41,7 +41,7 @@ class InvestmentsController < ApplicationController
   # DELETE /investments/1
   def destroy
     @investment.destroy
-    redirect_to @investment.asset, notice: "Investment was successfully destroyed."
+    redirect_to @investment.item, notice: "Investment was successfully destroyed."
   end
 
   private
@@ -53,6 +53,6 @@ class InvestmentsController < ApplicationController
 
   # Only allow a trusted parameter "white list" through.
   def investment_params
-    params.require(:investment).permit(:asset_id, :quantity, :value_invested, :invested_at)
+    params.require(:investment).permit(:item_id, :quantity, :value_invested, :invested_at)
   end
 end

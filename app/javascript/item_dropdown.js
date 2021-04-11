@@ -23,7 +23,7 @@
 
 	function handleDropdownMenuItemClick(evt) {
 		inputText.value = evt.target.innerText;
-		inputHidden.value = evt.target.dataset.asset_id;
+		inputHidden.value = evt.target.dataset.item_id;
 
 		deactivateDropdown();
 	}
@@ -58,7 +58,7 @@
 			button.innerText = `${item.abbreviation} ${item.name}`;
 			button.type =
 				inputText.dataset.autoSubmit === "true" ? "submit" : "button";
-			button.dataset.asset_id = item.id;
+			button.dataset.item_id = item.id;
 			button.classList.add("button", "is-inverted", "dropdown-item");
 			button.addEventListener("click", handleDropdownMenuItemClick);
 
@@ -69,14 +69,14 @@
 	}
 
 	document.addEventListener("turbolinks:load", function () {
-		inputText = document.getElementById("asset_dropdown_input");
+		inputText = document.getElementById("item_dropdown_input");
 
 		if (!inputText) {
 			return;
 		}
 
-		dropdown = document.getElementById("asset_dropdown");
-		dropdownContent = document.getElementById("asset_dropdown_content");
+		dropdown = document.getElementById("item_dropdown");
+		dropdownContent = document.getElementById("item_dropdown_content");
 		inputHidden = dropdown.querySelector("input[type=hidden]");
 
 		let queryTimeoutId;

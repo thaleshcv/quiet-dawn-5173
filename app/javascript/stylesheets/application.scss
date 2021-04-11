@@ -17,21 +17,21 @@ main#root {
 	content: "\21E3";
 }
 
-#asset_dropdown::after {
+#item_dropdown::after {
 	display: none;
 }
 
-#asset_dropdown {
+#item_dropdown {
 	width: 100%;
 	display: block;
 }
 
-#asset_dropdown_content {
+#item_dropdown_content {
 	max-height: 200px;
 	overflow-y: auto;
 }
 
-#explore_form #asset_dropdown_input {
+#explore_form #item_dropdown_input {
 	font-size: 2rem;
 	padding-left: 0;
 	padding-right: 0;

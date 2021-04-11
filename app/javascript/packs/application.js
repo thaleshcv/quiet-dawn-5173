@@ -6,5 +6,5 @@ require("chart.js");
 require.context("../images", true);
 
 import "../setup";
-import "../asset_dropdown";
+import "../item_dropdown";
 import "../stylesheets/application";

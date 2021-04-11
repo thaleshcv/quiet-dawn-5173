@@ -2,17 +2,16 @@
 	<%= f.error_notification %>
 	<%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 	<div class="field">
-		<%= f.label :asset_id, required: true, class: "label" %>
+		<%= f.label :item_id, required: true, class: "label" %>
 		<div class="control">
-			<%= assets_dropdown f, :asset_id,
-				selected_asset: @investment.asset,
+			<%= items_dropdown f, :item_id,
+				selected_item: @investment.item,
 				input_html: {
-					class: @investment.errors.key?(:asset) ? "is-invalid" : (@investment.asset_id_changed? ? "is-valid" : "")
+					class: @investment.errors.key?(:item) ? "is-invalid" : (@investment.item_id_changed? ? "is-valid" : "")
 				} %>
-			<%= f.full_error :asset, class: 'invalid-feedback d-block' %>
+			<%= f.full_error :item, class: 'help is-danger' %>
 		</div>
 	</div>
-
 	<div class="columns">
 		<div class="column is-one-third-desktop is-full-mobile">
 			<%= f.input :quantity, as: :string, input_html: { class: "integer-input" } %>

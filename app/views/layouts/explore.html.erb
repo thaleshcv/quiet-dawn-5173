@@ -6,9 +6,9 @@
     url: explore_items_path,
     method: "get",
     local: true do |f| %>
-			<%= assets_dropdown f, :item_id,
+			<%= items_dropdown f, :item_id,
 				auto_submit: true,
-				selected_asset: (@explore_facade.item if @explore_facade.present?),
+				selected_item: (@explore_facade.item if @explore_facade.present?),
 				input_html: { class: "border-0 form-control-lg" } %>
 		<% end %>
 	</div>
