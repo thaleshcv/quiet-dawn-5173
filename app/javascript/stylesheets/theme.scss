@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+// Set brand colors
+$purple: #3b113e;
+$light-purple: #800080;
+$gold: #d8b836;
+$white: #ffffff;
+
+$navbar-background-color: $purple;
+$navbar-item-color: $white;
+$navbar-item-hover-color: $gold;
+$navbar-item-hover-background-color: $light-purple;
+$navbar-item-active-color: $gold;
+$navbar-item-active-background-color: $light-purple;
+$navbar-dropdown-background-color: $purple;
+$navbar-dropdown-item-hover-color: $gold;
+$navbar-dropdown-item-hover-background-color: $light-purple;
+
+.navbar-dropdown .dropdown-content {
+	background-color: $purple;
+
+	& > .dropdown-item {
+		color: $white;
+	}
+}
+
+// Import Bulma modules
+@import "~bulma/bulma";

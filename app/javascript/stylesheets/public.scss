@@ -9,8 +9,8 @@
 .landing-backdrop {
 	z-index: -1;
 	min-height: 100vh;
-	background-image: url("../images/landing-image-md.jpg");
-	background-size: 60% auto;
+	background-image: url("../images/undraw_Dashboard_re_3b76.svg");
+	background-size: 50% auto;
 	background-repeat: no-repeat;
 	background-position: right center;
 	display: flex;
@@ -23,4 +23,9 @@
 	box-sizing: border-box;
 	padding: 8px;
 	text-align: center;
+	color: #fff;
+}
+
+.is-full-height {
+	min-height: 100vh;
 }

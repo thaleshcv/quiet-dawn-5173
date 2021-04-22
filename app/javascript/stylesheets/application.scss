@@ -1,5 +1,5 @@
-@import "bulma/css/bulma.css";
 @import "public.scss";
+@import "theme";
 
 main#root {
 	min-height: 100vh;
@@ -35,4 +35,20 @@ main#root {
 	font-size: 2rem;
 	padding-left: 0;
 	padding-right: 0;
+}
+
+.custom-background {
+	background-color: #3b113e;
+}
+
+.custom-background {
+	& * {
+		color: #fff;
+	}
+
+	& input,
+	select,
+	button {
+		color: initial;
+	}
 }
