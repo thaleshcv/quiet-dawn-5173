@@ -32,9 +32,16 @@ main#root {
 }
 
 #explore_form #item_dropdown_input {
+	color: white;
+	background-color: transparent;
 	font-size: 2rem;
 	padding-left: 0;
 	padding-right: 0;
+}
+
+#explore_form #item_dropdown_input::placeholder {
+	color: white;
+	opacity: 0.3;
 }
 
 .custom-background {

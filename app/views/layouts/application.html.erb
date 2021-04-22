@@ -17,6 +17,14 @@
 			<%= yield(:content) %>
 		<% else %>
 			<%= render 'partials/navbar' if user_signed_in? %>
+			<% if content_for?(:page_head) %>
+				<section class="hero custom-background">
+					<div class="hero-body">
+						<%= yield(:page_head) %>
+					</div>
+				</section>
+			<% end %>
+
 			<section class="section">
 				<main id="root" class="container">
 					<%= content_for?(:main_content) ? yield(:main_content) : yield %>

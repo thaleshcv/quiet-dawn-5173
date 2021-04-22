@@ -1,6 +1,8 @@
 <%= render "partials/flash_messages" %>
 
-<h1 class="title">Reports</h1>
+<%= content_for :page_head do %>
+	<h1 class="title">Reports</h1>
+<% end %>
 
 <% if @reports.any? %>
 	<%= render 'reports_table' %>

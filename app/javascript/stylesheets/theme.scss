@@ -16,6 +16,11 @@ $navbar-dropdown-background-color: $purple;
 $navbar-dropdown-item-hover-color: $gold;
 $navbar-dropdown-item-hover-background-color: $light-purple;
 
+.navbar-item.is-active {
+	color: $gold;
+	background-color: $light-purple;
+}
+
 .navbar-dropdown .dropdown-content {
 	background-color: $purple;
 

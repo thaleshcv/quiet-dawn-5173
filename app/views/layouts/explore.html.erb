@@ -1,17 +1,20 @@
-<%= content_for :main_content do %>
+<%= content_for :page_head do %>
 	<div class="block">
 		<%= render "partials/flash_messages" %>
 		<%= form_with namespace: :explore,
-    id: "explore_form",
-    url: explore_items_path,
-    method: "get",
-    local: true do |f| %>
+			id: "explore_form",
+			url: explore_items_path,
+			method: "get",
+			local: true do |f| %>
 			<%= items_dropdown f, :item_id,
 				auto_submit: true,
 				selected_item: (@explore_facade.item if @explore_facade.present?),
 				input_html: { class: "border-0 form-control-lg" } %>
 		<% end %>
 	</div>
+<% end %>
+
+<%= content_for :main_content do %>
 	<%= yield %>
 <% end %>
 
