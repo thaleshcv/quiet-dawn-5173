@@ -27,9 +27,9 @@ $button-ghost-hover-color: findDarkColor($gold);
 $button-colors: mergeColorMaps(
 	(
 		"primary": (
-			$purple,
-			$purple-invert,
 			$purple-light,
+			$purple-invert,
+			$purple,
 			$purple-dark
 		),
 		"danger": (
