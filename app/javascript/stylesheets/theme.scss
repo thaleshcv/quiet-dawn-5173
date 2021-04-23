@@ -1,24 +1,50 @@
 @charset "utf-8";
 
+@import "~bulma/sass/utilities/initial-variables";
+@import "~bulma/sass/utilities/derived-variables";
+@import "~bulma/sass/utilities/functions";
+
 // Set brand colors
 $purple: #3b113e;
-$light-purple: #800080;
+$purple-light: #800080;
+$purple-invert: findColorInvert($purple);
+$purple-dark: findDarkColor($purple);
 $gold: #d8b836;
 $white: #ffffff;
 
 $navbar-background-color: $purple;
 $navbar-item-color: $white;
 $navbar-item-hover-color: $gold;
-$navbar-item-hover-background-color: $light-purple;
+$navbar-item-hover-background-color: $purple-light;
 $navbar-item-active-color: $gold;
-$navbar-item-active-background-color: $light-purple;
+$navbar-item-active-background-color: $purple-light;
 $navbar-dropdown-background-color: $purple;
 $navbar-dropdown-item-hover-color: $gold;
-$navbar-dropdown-item-hover-background-color: $light-purple;
+$navbar-dropdown-item-hover-background-color: $purple-light;
+
+$button-ghost-color: $gold;
+$button-ghost-hover-color: findDarkColor($gold);
+$button-colors: mergeColorMaps(
+	(
+		"primary": (
+			$purple,
+			$purple-invert,
+			$purple-light,
+			$purple-dark
+		),
+		"danger": (
+			$danger,
+			$danger-invert,
+			$danger-light,
+			$danger-dark
+		)
+	),
+	$custom-colors
+);
 
 .navbar-item.is-active {
 	color: $gold;
-	background-color: $light-purple;
+	background-color: $purple-light;
 }
 
 .navbar-dropdown .dropdown-content {

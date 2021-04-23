@@ -4,7 +4,6 @@
 	<div class="columns">
 		<div class="column is-half-desktop is-full-mobile has-text-centered-mobile">
 			<h1 class="title">Investments</h1>
-			<%= link_to 'Add Investment', new_investment_path, class: "button is-primary" %>
 		</div>
 		<div class="column is-half-desktop is-full-mobile">
 			<nav class="level">
@@ -27,6 +26,9 @@
 				</div>
 			</nav>
 		</div>
+	</div>
+	<div class="mt-5 has-text-centered">
+		<%= link_to 'Add Investment', new_investment_path, class: "button is-ghost" %>
 	</div>
 <% end %>
 

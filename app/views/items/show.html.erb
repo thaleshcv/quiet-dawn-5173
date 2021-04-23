@@ -58,6 +58,10 @@
 			</nav>
 		</div>
 	</div>
+
+	<div class="mt-5 has-text-centered">
+		<%= link_to 'Add investment', new_investment_path(item_id: @item), class: "button is-ghost" %>
+	</div>
 <% end %>
 
 <div class="columns">
@@ -99,7 +103,6 @@
 
 <div class="block">
 	<h3 class="subtitle">Investments</h3>
-	<%= link_to 'Add investment', new_investment_path(item_id: @item), class: "button is-primary" %>
 </div>
 
 <div class="columns is-multiline">
