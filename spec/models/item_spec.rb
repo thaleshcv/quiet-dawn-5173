@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: assets
+# Table name: items
 #
 #  id           :bigint           not null, primary key
 #  abbreviation :string           not null
@@ -8,7 +8,7 @@
 #
 # Indexes
 #
-#  index_assets_on_abbreviation  (abbreviation) UNIQUE
+#  index_items_on_abbreviation  (abbreviation) UNIQUE
 #
 require 'rails_helper'
 

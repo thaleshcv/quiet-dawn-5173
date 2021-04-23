@@ -1,4 +1,18 @@
 module ApplicationHelper
+  def navbar_user_avatar
+    html = <<~HTML
+      <svg style="border-radius:50%;" width="36" height="36"
+        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Avatar"
+        preserveAspectRatio="xMidYMid slice" focusable="false">
+        <title>#{current_user.username}</title>
+        <rect width="100%" height="100%" fill="#6c757d"></rect>
+        <image href="#{current_user.avatar.url}" x="2" y="2" height="32px" width="32px" />
+      </svg>
+    HTML
+
+    html.html_safe
+  end
+
   def chart_range_option(label, path, range:, disabled: false)
     button_tag(label,
       type: "button",

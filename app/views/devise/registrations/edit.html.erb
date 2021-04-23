@@ -5,23 +5,39 @@
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
 	<%= render "devise/shared/error_messages", resource: resource %>
 
-	<%= f.input :email, autofocus: true, input_html: { autocomplete: "email" } %>
+	<div class="columns">
+		<div class="column is-one-quarter">
+			<figure class="image is-128x128">
+				<%= image_tag current_user.avatar.url %>
+			</figure>
+
+			<%= f.label :avatar, class: "button is-ghost" do %>
+				Upload avatar
+				<%= f.file_field :avatar, class: "is-hidden", accept: "image/*" %>
+			<% end %>
+		</div>
+
+		<div class="column is-three-quarters">
+			<%= f.input :name, autofocus: true, input_html: { autocomplete: "name" } %>
+			<%= f.input :email, input_html: { autocomplete: "email" } %>
+		</div>
+	</div>
 
 	<% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
 		<div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
 	<% end %>
 
 	<%= f.input :password,
-    input_html: { autocomplete: "new-password" },
-    hint: "Leave blank if you don't want to change"  %>
+		input_html: { autocomplete: "new-password" },
+		hint: "Leave blank if you don't want to change"  %>
 
 	<%= f.input :password_confirmation,
-    input_html: { autocomplete: "new-password" },
-    hint: "if you are going to change your password, please confirm the new one" %>
+		input_html: { autocomplete: "new-password" },
+		hint: "if you are going to change your password, please confirm the new one" %>
 
 	<%= f.input :current_password,
-    input_html: { autocomplete: "current-password" },
-    hint: "We need your current password to confirm your changes" %>
+		input_html: { autocomplete: "current-password" },
+		hint: "We need your current password to confirm your changes" %>
 
 	<div class="field">
 		<%= f.button :submit, class: "button is-primary" %>

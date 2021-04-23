@@ -42,5 +42,6 @@ gem "pundit"
 gem "simple_form"
 gem "whenever", require: false
 
+gem "carrierwave", "~> 2.2"
 gem "chartkick", "~> 3.4"
 gem "prawn", "~> 2.4"
