@@ -1,0 +1,16 @@
+<div class="panel is-danger mt-5">
+	<p class="panel-heading">
+		<span>&#9762;</span> Danger zone
+	</p>
+	<div class="panel-block py-5 is-justify-content-space-between is-align-content-center">
+		<span>
+			<strong>Delete my account</strong><br/>
+			<small>
+				Once you delete your account, there is no going back. Please be certain. 
+			</small>
+		</span>
+		<%= button_to "Delete my account", registration_path(resource_name),
+			class: "button is-danger", data: { confirm: "Are you sure?" },
+			method: :delete %>
+	</div>
+</div>

@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {
     sessions: "users/sessions",
     registrations: "users/registrations"
+  }, path_names: {
+    edit: "edit(/:section)"
   }
 
   unauthenticated do

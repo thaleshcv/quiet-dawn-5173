@@ -48,7 +48,7 @@ class InvestmentsController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_investment
-    @investment = Investment.find(params[:id])
+    @investment = policy_scope(Investment).find(params[:id])
   end
 
   # Only allow a trusted parameter "white list" through.

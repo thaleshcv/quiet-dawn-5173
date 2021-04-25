@@ -1,0 +1,23 @@
+<div class="columns">
+	<div class="column is-one-quarter">
+		<figure class="image is-128x128">
+			<%= image_tag current_user.avatar.url %>
+		</figure>
+
+		<%= form.label :avatar, class: "button is-ghost" do %>
+			Upload avatar
+			<%= form.file_field :avatar, class: "is-hidden", accept: "image/*" %>
+		<% end %>
+	</div>
+
+	<div class="column is-three-quarters">
+		<%= form.input :name, autofocus: true, input_html: { autocomplete: "name" } %>
+		<%= form.input :email, input_html: { autocomplete: "email" } %>
+		<%= form.input :current_password,
+			input_html: { autocomplete: "current-password" },
+			hint: "We need your current password to confirm your changes" %>
+		<div class="field">
+			<%= form.button :submit, class: "button is-primary" %>
+		</div>
+	</div>
+</div>

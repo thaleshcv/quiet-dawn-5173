@@ -1,62 +1,37 @@
 <%= content_for :page_head do %>
 	<h2 class="title">Edit Account</h2>
-<% end %>
-
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-	<%= render "devise/shared/error_messages", resource: resource %>
-
-	<div class="columns">
-		<div class="column is-one-quarter">
-			<figure class="image is-128x128">
-				<%= image_tag current_user.avatar.url %>
-			</figure>
-
-			<%= f.label :avatar, class: "button is-ghost" do %>
-				Upload avatar
-				<%= f.file_field :avatar, class: "is-hidden", accept: "image/*" %>
-			<% end %>
-		</div>
-
-		<div class="column is-three-quarters">
-			<%= f.input :name, autofocus: true, input_html: { autocomplete: "name" } %>
-			<%= f.input :email, input_html: { autocomplete: "email" } %>
-		</div>
-	</div>
 
 	<% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
 		<div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
 	<% end %>
 
-	<%= f.input :password,
-		input_html: { autocomplete: "new-password" },
-		hint: "Leave blank if you don't want to change"  %>
-
-	<%= f.input :password_confirmation,
-		input_html: { autocomplete: "new-password" },
-		hint: "if you are going to change your password, please confirm the new one" %>
-
-	<%= f.input :current_password,
-		input_html: { autocomplete: "current-password" },
-		hint: "We need your current password to confirm your changes" %>
-
-	<div class="field">
-		<%= f.button :submit, class: "button is-primary" %>
+	<div class="tabs is-centered">
+		<ul>
+			<li class="<%= "is-active" if current_section == 'profile' %>">
+				<%= link_to 'Profile',
+					edit_user_registration_path(section: "profile"),
+					class: "button is-ghost" %>
+			</li>
+			<li class="<%= "is-active" if current_section == 'password' %>">
+				<%= link_to 'Password',
+					edit_user_registration_path(section: "password"),
+					class: "button is-ghost" %>
+			</li>
+			<li class="<%= "is-active" if current_section == 'danger_zone' %>">
+				<%= link_to 'Danger zone',
+					edit_user_registration_path(section: "danger_zone"),
+					class: "button is-ghost" %>
+			</li>
+		</ul>
 	</div>
 <% end %>
 
-<div class="panel is-danger mt-5">
-	<p class="panel-heading">
-		<span>&#9762;</span> Danger zone
-	</p>
-	<div class="panel-block py-5 is-justify-content-space-between is-align-content-center">
-		<span>
-			<strong>Delete my account</strong><br/>
-			<small>
-				Once you delete your account, there is no going back. Please be certain. 
-			</small>
-		</span>
-		<%= button_to "Delete my account", registration_path(resource_name),
-			class: "button is-danger", data: { confirm: "Are you sure?" },
-			method: :delete %>
-	</div>
+<%= render "partials/flash_messages" %>
+
+<div class="compact">
+	<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+		<%= render "devise/shared/error_messages", resource: resource %>
+		<%= hidden_field_tag :section, current_section %>
+		<%= render partial: "devise/registrations/edit/#{current_section}", locals: { form: f } %>
+	<% end %>
 </div>
