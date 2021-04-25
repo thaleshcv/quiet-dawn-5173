@@ -2,7 +2,7 @@
 	z-index: -1;
 	height: 100vh;
 	overflow: hidden;
-	background-image: url("../images/purple-tech.png");
+	background-image: url("../images/urban-purple.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -24,4 +24,19 @@
 	padding: 8px;
 	text-align: center;
 	color: #fff;
+}
+
+.backdrop-credit {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+
+	& > a {
+		color: white;
+		opacity: 0.3;
+	}
+
+	& > a:hover {
+		opacity: 0.8;
+	}
 }
