@@ -2,24 +2,21 @@
 	<script src="https://hcaptcha.com/1/api.js" async refer></script>
 <% end %>
 
-<%= content_for :content do %>
-	<%= render 'partials/public_header' %>
-	<div class="is-full-height custom-background">
-		<div class="signin-form">
-			<h2 class="subtitle has-text-centered">Log in to continue</h2>
-			<%= render 'partials/flash_messages' %>
-			<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-				<%= captcha_error %>
-				<%= f.input :email, autofocus: true, input_html: { autocomplete: "email" } %>
-				<%= f.input :password, input_html: { autocomplete: "current-password" } %>
-				<%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+<%= content_for :public do %>
+	<div class="signin-form">
+		<h2 class="subtitle has-text-centered">Log in to continue</h2>
+		<%= render 'partials/flash_messages' %>
+		<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+			<%= captcha_error %>
+			<%= f.input :email, autofocus: true, input_html: { autocomplete: "email" } %>
+			<%= f.input :password, input_html: { autocomplete: "current-password" } %>
+			<%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
 
-				<%= captcha_tag if captcha_enabled? %>
-				<%= f.button :submit, "Log in", class: "button is-primary is-fullwidth" %>
-			<% end %>
-			<div class="my-2">
-				<%= render "devise/shared/links" %>
-			</div>
+			<%= captcha_tag if captcha_enabled? %>
+			<%= f.button :submit, "Log in", class: "button is-primary is-fullwidth" %>
+		<% end %>
+		<div class="my-2">
+			<%= render "devise/shared/links" %>
 		</div>
 	</div>
 <% end %>

@@ -1,4 +1,6 @@
 class StaticController < ApplicationController
+  layout "public"
+
   skip_before_action :authenticate_user!
   # prepend_before_action :redirect_if_signed_in!
 

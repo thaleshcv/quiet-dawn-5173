@@ -1,0 +1,76 @@
+main#root {
+	min-height: 100vh;
+}
+
+.compact {
+	width: 100%;
+	max-width: 880px;
+	margin: auto;
+}
+
+.form-group > label {
+	display: block;
+}
+
+.up-arrow::after {
+	content: "\21E1";
+}
+
+.down-arrow::after {
+	content: "\21E3";
+}
+
+#item_dropdown::after {
+	display: none;
+}
+
+#item_dropdown {
+	width: 100%;
+	display: block;
+}
+
+#item_dropdown_content {
+	max-height: 200px;
+	overflow-y: auto;
+}
+
+#explore_form #item_dropdown_input {
+	color: white;
+	background-color: transparent;
+	font-size: 2rem;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+#explore_form #item_dropdown_input::placeholder {
+	color: white;
+	opacity: 0.3;
+}
+
+.custom-background {
+	background-color: #3b113e;
+}
+
+.custom-background {
+	& * {
+		color: #fff;
+	}
+
+	& input,
+	select,
+	button {
+		color: initial;
+	}
+}
+
+.signin-form,
+.signup-form {
+	width: 100%;
+	max-width: 360px;
+	padding: 8px;
+	margin: auto;
+}
+
+.is-full-height {
+	min-height: 100vh;
+}
