@@ -7,6 +7,6 @@
 		<%= f.button :submit, class: "button is-primary" %>
 		<%= link_to 'Cancel',
 			params.key?(:asset_id) ? asset_path(params[:asset_id]) : investments_path,
-			class: "button is-secondary" %>
+			class: "button" %>
 	<% end %>
 </div>
