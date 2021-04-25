@@ -7,4 +7,5 @@ require.context("../images", true);
 
 import "../setup";
 import "../item_dropdown";
+import "../avatar_upload";
 import "../stylesheets/application";

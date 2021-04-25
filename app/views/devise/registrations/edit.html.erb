@@ -9,18 +9,15 @@
 		<ul>
 			<li class="<%= "is-active" if current_section == 'profile' %>">
 				<%= link_to 'Profile',
-					edit_user_registration_path(section: "profile"),
-					class: "button is-ghost" %>
+					edit_user_registration_path(section: "profile") %>
 			</li>
 			<li class="<%= "is-active" if current_section == 'password' %>">
 				<%= link_to 'Password',
-					edit_user_registration_path(section: "password"),
-					class: "button is-ghost" %>
+					edit_user_registration_path(section: "password") %>
 			</li>
 			<li class="<%= "is-active" if current_section == 'danger_zone' %>">
 				<%= link_to 'Danger zone',
-					edit_user_registration_path(section: "danger_zone"),
-					class: "button is-ghost" %>
+					edit_user_registration_path(section: "danger_zone") %>
 			</li>
 		</ul>
 	</div>

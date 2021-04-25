@@ -1,13 +1,13 @@
 <div class="columns">
 	<div class="column is-one-quarter">
 		<figure class="image is-128x128">
-			<%= image_tag current_user.avatar.url %>
+			<%= image_tag current_user.avatar.url, id: "current-user-avatar-preview" %>
 		</figure>
-
 		<%= form.label :avatar, class: "button is-ghost" do %>
-			Upload avatar
+			Select avatar
 			<%= form.file_field :avatar, class: "is-hidden", accept: "image/*" %>
 		<% end %>
+		<div id="avatar-status" class="has-text-danger"></div>
 	</div>
 
 	<div class="column is-three-quarters">

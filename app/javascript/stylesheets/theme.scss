@@ -42,6 +42,26 @@ $button-colors: mergeColorMaps(
 	$custom-colors
 );
 
+// Some Tabs variables not working when tab is inside hero
+section.hero .tabs {
+	& li.is-active {
+		background-color: $purple-light;
+	}
+
+	& li > a {
+		color: $white;
+	}
+
+	& li > a:hover {
+		background-color: $purple-light;
+		color: $gold;
+	}
+
+	& li.is-active > a {
+		color: $gold;
+	}
+}
+
 .navbar-item.is-active {
 	color: $gold;
 	background-color: $purple-light;
