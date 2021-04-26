@@ -6,13 +6,13 @@ class ImportPricesJob < ApplicationJob
     prices_attrs = Item.for_price_update.collect do |item|
       item_id, last_price_at = item
 
-      Rails.logger.info("*** Updating price for item #{item_id}. Last update was #{last_price_at} ***")
+      logger.info("*** Updating price for item #{item_id}. Last update was #{last_price_at} ***")
 
       count = needed_price_records_count(last_price_at)
 
       next if count <= 1
 
-      Rails.logger.info("*** Getting last #{count} prices for item #{item_id} ***")
+      logger.info("*** Getting last #{count} prices for item #{item_id} ***")
 
       fetch_prices(item_id, count)
     end.flatten.compact
@@ -28,13 +28,12 @@ class ImportPricesJob < ApplicationJob
   def fetch_prices(item_id, count)
     prices = Stock::PriceService.interday(item_id, count)
 
-    Rails.logger.info("*** #{prices.size} prices retrieved ***")
+    logger.info("*** #{prices.size} prices retrieved ***")
 
     prices.collect { |h| normalize_price_hash(h, item_id) }
   end
 
   # Calculates the number of days an asset has missing prices.
-  # Maximum is 10.
   def needed_price_records_count(last_price_at)
     if last_price_at.present?
       (Date.today - last_price_at.to_date).to_i

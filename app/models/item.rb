@@ -26,10 +26,10 @@ class Item < ApplicationRecord
 
   class << self
     def for_price_update
-      joins(:investments)
+      distinct
+        .joins(:investments)
         .left_joins(:prices)
         .group("investments.item_id")
-        .distinct
         .pluck("investments.item_id, max(prices.date)")
     end
 
