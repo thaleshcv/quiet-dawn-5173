@@ -31,6 +31,6 @@ class AccumulatedValueChartFacade
   end
 
   def minmax_chart_value
-    @minmax_chart_value ||= [].concat(accumulated_series.collect(&:last), invested_series.collect(&:last)).minmax
+    @minmax_chart_value ||= [0].concat(accumulated_series.collect(&:last), invested_series.collect(&:last)).minmax
   end
 end
