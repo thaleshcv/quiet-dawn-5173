@@ -4,7 +4,12 @@
 		<meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
 	</head>
 	<body>
-		<h1>Hello, <%= @user.email %></h1>
-		<p>Here is your portfolio report for this week.</p>
+		<p><strong>Hello, <%= @user.username %></h1>
+		</p>
+		<p>
+			Here is your portfolio report for this week.<br/>
+			You can view this and other reports on our reports page. Just follow this link:
+			<%= link_to 'Reports', reports_url %>
+		</p>
 	</body>
 </html>
