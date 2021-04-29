@@ -3,28 +3,28 @@
 		<div class="card-content has-text-centered">
 			<div class="columns is-mobile">
 				<div class="column is-half-mobile">
-					<p class="heading">Quantity</p>
-					<p class="subtitle"><%= investment.quantity %></p>
-				</div>
-				<div class="column is-half-mobile">
-					<p class="heading">Value</p>
+					<p class="heading">Valor</p>
 					<p class="subtitle has-text-weight-bold">
 						<%= number_to_currency(investment.value_invested) %>
 					</p>
 				</div>
+				<div class="column is-half-mobile">
+					<p class="heading">Quantidade</p>
+					<p class="subtitle"><%= investment.quantity %></p>
+				</div>
 			</div>
 			<div class="block">
-				<p class="heading">Invested</p>
+				<p class="heading">Investido</p>
 				<p class="subtitle" title="<%= I18n.l(investment.invested_at, format: :long) %>">
-					<%= time_ago_in_words(investment.invested_at) %> ago
+					Há <%= time_ago_in_words(investment.invested_at) %>
 				</p>
 			</div>
 		</div>
 		<footer class="card-footer">
-			<%= link_to 'Edit',
+			<%= link_to 'Editar',
 				edit_investment_path(investment),
 				class: "card-footer-item" %>
-			<%= link_to 'Delete',
+			<%= link_to 'Excluir',
 				investment,
 				class: "card-footer-item has-text-danger",
 				method: :delete,

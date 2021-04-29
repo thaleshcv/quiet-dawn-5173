@@ -11,14 +11,14 @@
 	</div>
 	<div id="app-navbar__content" class="navbar-menu">
 		<div class="navbar-end">
-			<%= link_to_unless_current 'Investments', investments_path, class: "navbar-item" do %>
-				<span class="navbar-item is-active">Investments</span>
+			<%= link_to_unless_current 'Investimentos', investments_path, class: "navbar-item" do %>
+				<span class="navbar-item is-active">Investimentos</span>
 			<% end %>
-			<%= link_to_unless_current 'Explore', explore_path, class: "navbar-item" do %>
-				<span class="navbar-item is-active">Explore</span>
+			<%= link_to_unless_current 'Explorar', explore_path, class: "navbar-item" do %>
+				<span class="navbar-item is-active">Explorar</span>
 			<% end %>
-			<%= link_to_unless_current 'Reports', reports_path, class: "navbar-item" do %>
-				<span class="navbar-item is-active">Reports</span>
+			<%= link_to_unless_current 'Relatórios', reports_path, class: "navbar-item" do %>
+				<span class="navbar-item is-active">Relatórios</span>
 			<% end %>
 			<div class="navbar-item has-dropdown is-hoverable">
 				<a class="navbar-link">
@@ -28,15 +28,15 @@
 					<div class="dropdown-content">
 						<div class="dropdown-item" style="min-width:180px;">
 							<small>
-								You are logged in as<br/>
+								Você entrou como:<br/>
 								<span class="has-text-weight-bold"><%= current_user.email %></span>
 							</small>
 						</div>
 					</div>
-					<%= link_to 'Account',
+					<%= link_to 'Cadastro',
 						edit_user_registration_path,
 						class: "navbar-item" %>
-					<%= link_to 'Logout',
+					<%= link_to 'Sair',
 						destroy_user_session_path,
 						method: :delete,
 						class: "navbar-item" %>

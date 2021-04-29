@@ -4,7 +4,7 @@
 			<%= image_tag current_user.avatar.url, id: "current-user-avatar-preview" %>
 		</figure>
 		<%= form.label :avatar, class: "button is-ghost" do %>
-			Select avatar
+			Selecione um avatar
 			<%= form.file_field :avatar, class: "is-hidden", accept: "image/*" %>
 		<% end %>
 		<div id="avatar-status" class="has-text-danger"></div>
@@ -15,7 +15,7 @@
 		<%= form.input :email, input_html: { autocomplete: "email" } %>
 		<%= form.input :current_password,
 			input_html: { autocomplete: "current-password" },
-			hint: "We need your current password to confirm your changes" %>
+			hint: "Precisamos da sua senha atual para confirmar as alterações" %>
 		<div class="field">
 			<%= form.button :submit, class: "button is-primary" %>
 		</div>

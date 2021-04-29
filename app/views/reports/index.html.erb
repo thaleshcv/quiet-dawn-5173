@@ -1,11 +1,11 @@
 <%= render "partials/flash_messages" %>
 
 <%= content_for :page_head do %>
-	<h1 class="title">Reports</h1>
+	<h1 class="title">Relatórios</h1>
 <% end %>
 
 <% if @reports.any? %>
 	<%= render 'reports_table' %>
 <% else %>
-	<%= render partial: "partials/no_content", locals: { message: "Sorry. You have no reports yet."} %>
+	<%= render partial: "partials/no_content", locals: { message: "Desculpe. Você ainda não possui relatórios."} %>
 <% end %>

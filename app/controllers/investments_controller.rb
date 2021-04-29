@@ -1,14 +1,11 @@
 class InvestmentsController < ApplicationController
-  before_action :set_investment, only: %i[show edit update destroy]
+  before_action :set_investment, only: %i[edit update destroy]
 
   # GET /investments
   def index
     @portfolio = policy_scope(Investment).for_portfolio
     @investment_totals = InvestmentTotalsFacade.new(policy_scope(Investment))
   end
-
-  # GET /investments/1
-  def show; end
 
   # GET /investments/new
   def new
@@ -23,7 +20,7 @@ class InvestmentsController < ApplicationController
     @investment = current_user.investments.build(investment_params)
 
     if @investment.save
-      redirect_to @investment.item, notice: "Investment was successfully created."
+      redirect_to @investment.item, notice: "Investimento criado com sucesso."
     else
       render :new
     end
@@ -32,7 +29,7 @@ class InvestmentsController < ApplicationController
   # PATCH/PUT /investments/1
   def update
     if @investment.update(investment_params)
-      redirect_to @investment.item, notice: "Investment was successfully updated."
+      redirect_to @investment.item, notice: "Investimento atualizado com sucesso."
     else
       render :edit
     end
@@ -41,7 +38,7 @@ class InvestmentsController < ApplicationController
   # DELETE /investments/1
   def destroy
     @investment.destroy
-    redirect_to @investment.item, notice: "Investment was successfully destroyed."
+    redirect_to @investment.item, notice: "Investimento excluído com sucesso."
   end
 
   private

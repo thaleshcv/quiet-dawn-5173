@@ -9,7 +9,7 @@ class ExploreController < ApplicationController
   def items
     @explore_facade = ExploreFacade.new(params[:item_id])
 
-    redirect_to(explore_path, alert: "The item requested does not exists.") unless @explore_facade.item_exists?
+    redirect_to(explore_path, alert: "O item solicitado não existe.") unless @explore_facade.item_exists?
   end
 
   # GET /explore/prices

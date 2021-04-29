@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   end
 
   authenticate :user do
-    resources :investments
+    resources :investments, except: :show
 
     resources :items, only: %i[index show] do
       get "accumulated", on: :member

@@ -1,15 +1,15 @@
 <%= content_for :public do %>
 	<div class="signin-form">
-		<h2 class="subtitle has-text-centered">Change your password</h2>
+		<h2 class="subtitle has-text-centered">Muda sua senha</h2>
 		<%= render 'partials/flash_messages' %>
 		<%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
 			<%= render "devise/shared/error_messages", resource: resource %>
 			<%= f.hidden_field :reset_password_token %>
 			<%= f.input :password, autofocus: true,
-      hint: "#{@minimum_password_length} characters minimum",
+      	hint: "#{@minimum_password_length} caracteres no mínimo",
       input_html: {autocomplete: "new-password"} %>
 			<%= f.input :password_confirmation, input_html: { autocomplete: "new-password" } %>
-			<%= f.button :submit, "Change my password", class: "button is-primary is-fullwidth" %>
+			<%= f.button :submit, "Mudar minha senha", class: "button is-primary is-fullwidth" %>
 		<% end %>
 		<div class="my-2">
 			<%= render "devise/shared/links" %>

@@ -3,14 +3,14 @@
 		<%= text_field_tag nil, (selected_item.title if selected_item.present?),
       id: "item_dropdown_input",
       autocomplete: "off",
-      placeholder: "Search item by abbreviation or name...",
+      placeholder: "Pesquise por nome ou código...",
       class: input_html[:class],
       data: input_html[:data] %>
 	</div>
 	<div style="width:100%;" class="dropdown-menu" aria-labelledby="item_dropdown">
 		<div class="dropdown-content" id="item_dropdown_content">
 			<p class="has-text-centered is-italic">
-				Nothing to display.
+				Nada para exibir.
 			</p>
 		</div>
 	</div>

@@ -11,8 +11,8 @@ module HCaptcha
   class VerifyError < StandardError; end
 
   DEFAULT_ERRORS = {
-    captcha_unreachable: "Oops, we failed to validate your hCAPTCHA response. Please try again.",
-    verification_failed: "hCAPTCHA verification failed, please try again."
+    captcha_unreachable: "Não conseguimos validar o captcha. Por favor, tente novamente.",
+    verification_failed: "Verificação do captcha falhou. Por favor, tente novamente."
   }.freeze
 
   def self.configuration

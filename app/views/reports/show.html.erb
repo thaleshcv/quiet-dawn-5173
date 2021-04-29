@@ -1,15 +1,15 @@
-<h1 class="title">Report of <%= I18n.l(@report.created_at, format: :long) %></h1>
+<h1 class="title">Relatório de <%= I18n.l(@report.created_at, format: :long) %></h1>
 
 <nav class="level">
 	<div class="level-item has-text-right-desktop has-text-centered-mobile">
 		<div>
-			<p class="heading">Invested</p>
+			<p class="heading">Investido</p>
 			<p class="title"><%= number_to_currency(@report.sum_total_invested) %></p>
 		</div>
 	</div>
 	<div class="level-item has-text-right-desktop has-text-centered-mobile">
 		<div>
-			<p class="heading">Accumulated</p>
+			<p class="heading">Acumulado</p>
 			<p class="title">
 				<%= number_to_currency(@report.sum_current_value) %>
 				<%= styled_numeric(@report.value_variation_in_pct) do |var| %>
@@ -23,11 +23,11 @@
 <table class="table is-hoverable" style="margin:auto;">
 	<thead>
 		<tr>
-			<th>Asset</th>
-			<th>Invested</th>
-			<th>Date</th>
-			<th>Quantity</th>
-			<th>Accumulated</th>
+			<th>Item</th>
+			<th>Investido</th>
+			<th>Data</th>
+			<th>Quantidade</th>
+			<th>Acumulado</th>
 			<th>+/-</th>
 		</tr>
 	</thead>
@@ -36,9 +36,9 @@
 			<tr>
 				<td>
 					<small>
-						<%= row.item_asset_name %>
+						<%= row.item_name %>
 					</small><br/>
-					<%= row.item_asset_abbr %>
+					<%= row.item_abbr %>
 				</td>
 				<td>
 					<%= number_to_currency(row.item_value_invested) %>

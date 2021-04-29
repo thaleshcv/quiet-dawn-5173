@@ -7,17 +7,17 @@
 				<div class="block">
 					<div class="columns is-mobile">
 						<div class="column is-half-mobile">
-							<p class="heading">Invested</p>
+							<p class="heading">Investido</p>
 							<p class="subtitle"><%= number_to_currency(portfolio.item_value_invested) %></p>
 						</div>
 						<div class="column is-half-mobile">
-							<p class="heading">Quantity</p>
+							<p class="heading">Quantidade</p>
 							<p class="subtitle"><%= portfolio.item_quantity %></p>
 						</div>
 					</div>
 				</div>
 				<div class="block">
-					<p class="heading">Position</p>
+					<p class="heading">Acumulado</p>
 					<p class="subtitle has-text-weight-bold">
 						<%= number_to_currency(portfolio.item_current_value) %>
 						<%= styled_numeric(portfolio.difference_in_percent(:item_value_invested, :item_current_value)) do |num| %>

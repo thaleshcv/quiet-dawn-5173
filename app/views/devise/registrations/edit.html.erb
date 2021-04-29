@@ -1,22 +1,22 @@
 <%= content_for :page_head do %>
-	<h2 class="title">Edit Account</h2>
+	<h2 class="title">Editar cadastro</h2>
 
 	<% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-		<div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+		<div>Aguardando confirmação para: <%= resource.unconfirmed_email %></div>
 	<% end %>
 
 	<div class="tabs is-centered">
 		<ul>
 			<li class="<%= "is-active" if current_section == 'profile' %>">
-				<%= link_to 'Profile',
+				<%= link_to 'Perfil',
 					edit_user_registration_path(section: "profile") %>
 			</li>
 			<li class="<%= "is-active" if current_section == 'password' %>">
-				<%= link_to 'Password',
+				<%= link_to 'Senha',
 					edit_user_registration_path(section: "password") %>
 			</li>
 			<li class="<%= "is-active" if current_section == 'danger_zone' %>">
-				<%= link_to 'Danger zone',
+				<%= link_to 'Área perigosa',
 					edit_user_registration_path(section: "danger_zone") %>
 			</li>
 		</ul>

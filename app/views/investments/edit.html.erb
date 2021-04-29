@@ -1,10 +1,10 @@
 <%= content_for :page_head do %>
-	<h1 class="title">Editing Investment</h1>
+	<h1 class="title">Editar investimento</h1>
 <% end %>
 
 <div class="compact">
 	<%= render 'form', investment: @investment do |f| %>
 		<%= f.button :submit, class: "button is-primary" %>
-		<%= link_to 'Cancel', item_path(@investment.item_id), class: "button" %>
+		<%= link_to 'Cancelar', item_path(@investment.item_id), class: "button" %>
 	<% end %>
 </div>
