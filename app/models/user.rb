@@ -36,4 +36,13 @@ class User < ApplicationRecord
   def last_report
     reports.order_by(created_at: :desc).first
   end
+
+  class << self
+    def for_portfolio_report
+      select("users.id, users.email, MAX(reports.created_at) AS last_report_at")
+        .left_joins(:reports)
+        .having("MAX(reports.created_at) IS NULL OR MAX(reports.created_at) <= ?", 7.days.ago)
+        .group("users.id, users.email")
+    end
+  end
 end

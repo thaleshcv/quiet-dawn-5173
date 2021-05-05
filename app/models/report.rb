@@ -60,4 +60,10 @@ class Report < ApplicationRecord
       items.sort_by(&:value_variation_in_pct).reverse
     end
   end
+
+  class << self
+    def for_deliver_report
+      not_delivered.includes(:user)
+    end
+  end
 end

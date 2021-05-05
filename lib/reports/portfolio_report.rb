@@ -17,7 +17,7 @@ class PortfolioReport
     @data = data
   end
 
-  def generate
+  def build
     Prawn::Document.new(PDF_OPTIONS) do |pdf|
       page_header(pdf)
       totals_section(pdf)

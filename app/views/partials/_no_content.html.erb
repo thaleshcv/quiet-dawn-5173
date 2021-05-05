@@ -1,8 +1,9 @@
 <div class="is-flex is-align-items-center is-flex-direction-column">
 	<div class="block">
 		<%= image_pack_tag 'thinking.png',
+			id: "thinking",
 			class: "image is-square p-0",
 			width: "312" %>
 	</div>
-	<p class="has-text-centered"><%= message %></p>
+	<p class="has-text-centered"><%= message.html_safe %></p>
 </div>

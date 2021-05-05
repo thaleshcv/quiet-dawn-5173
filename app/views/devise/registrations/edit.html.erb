@@ -15,9 +15,9 @@
 				<%= link_to 'Senha',
 					edit_user_registration_path(section: "password") %>
 			</li>
-			<li class="<%= "is-active" if current_section == 'danger_zone' %>">
-				<%= link_to 'Área perigosa',
-					edit_user_registration_path(section: "danger_zone") %>
+			<li class="<%= "is-active" if current_section == 'settings' %>">
+				<%= link_to 'Configurações',
+					edit_user_registration_path(section: "settings") %>
 			</li>
 		</ul>
 	</div>

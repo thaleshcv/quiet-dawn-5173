@@ -1,7 +1,7 @@
 <div class="columns">
 	<div class="column is-half-desktop is-full-mobile">
 		<div class="is-flex">
-			<div class="heading">
+			<div id="heading-price" class="heading">
 				Preço atual&nbsp;
 				<span class="has-text-weight-bold">
 					<%= number_to_currency(@explore_facade.current_price) %>
@@ -11,7 +11,7 @@
 				</span>
 			</div>
 			<div class="mx-2"></div>
-			<div class="heading">
+			<div id="heading-updated-at" class="heading">
 				Atualizado em&nbsp;
 				<span class="has-text-weight-bold">
 					<%= I18n.l @explore_facade.current_price_at, format: :long %>
@@ -22,7 +22,7 @@
 
 	<div class="column is-half-desktop is-full-mobile">
 		<div class="level">
-			<div class="level-item mr-2 has-text-right-desktop has-text-centered-mobile">
+			<div id="level-opening" class="level-item mr-2 has-text-right-desktop has-text-centered-mobile">
 				<div>
 					<p class="heading">Abertura</p>
 					<p class="title">
@@ -30,7 +30,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="level-item mr-2 has-text-right-desktop has-text-centered-mobile">
+			<div id="level-lowest" class="level-item mr-2 has-text-right-desktop has-text-centered-mobile">
 				<div>
 					<p class="heading">Mínimo</p>
 					<p class="title">
@@ -38,7 +38,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="level-item mr-2 has-text-right-desktop has-text-centered-mobile">
+			<div id="level-highest" class="level-item mr-2 has-text-right-desktop has-text-centered-mobile">
 				<div>
 					<p class="heading">Máximo</p>
 					<p class="title">
@@ -46,7 +46,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="level-item mr-2 has-text-right-desktop has-text-centered-mobile">
+			<div id="level-volume" class="level-item mr-2 has-text-right-desktop has-text-centered-mobile">
 				<div>
 					<p class="heading">Volume</p>
 					<p class="title">

@@ -12,7 +12,6 @@ gem "webpacker", "~> 4.0"
 
 group :development, :test do
   gem "byebug", platforms: %i[mri mingw x64_mingw]
-  gem "rspec-rails"
 end
 
 group :development do
@@ -29,19 +28,24 @@ end
 
 group :test do
   gem "capybara", ">= 2.15"
+  gem "database_cleaner-active_record", "~> 2.0"
+  gem "factory_bot_rails", "~> 6.1"
+  gem "faker", "~> 2.17"
+  gem "rspec-rails"
   gem "selenium-webdriver"
+  gem "vcr", "~> 6.0"
   gem "webdrivers"
+  gem "webmock", "~> 3.12"
 end
 
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 
 gem "annotate"
+gem "carrierwave", "~> 2.2"
+gem "chartkick", "~> 3.4"
 gem "devise"
 gem "httparty"
+gem "prawn", "~> 2.4"
 gem "pundit"
 gem "simple_form"
 gem "whenever", require: false
-
-gem "carrierwave", "~> 2.2"
-gem "chartkick", "~> 3.4"
-gem "prawn", "~> 2.4"

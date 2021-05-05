@@ -1,17 +1,26 @@
-<div class="block">
-	<h2 class="subtitle">Seus itens</h2>
-	<div class="columns is-multiline">
-		<% @user_items.each do |item| %>
-			<div class="column is-one-third-desktop is-half-mobile">
-				<%= link_to explore_items_path(item_id: item) do %>
-					<div class="card has-text-centered">
-						<div class="card-content">
-							<p class="title"><%= item.abbreviation %></p>
-							<p class="subtitle"><%= item.name %></p>
+<% if @user_items.empty? %>
+	<%= render partial: 'partials/no_content', locals: {
+		message: "Seus itens aparecerão aqui quando você incluir seus investimentos." 
+		} %>
+<% end %>
+
+<% if @user_items.any? %>
+	<div class="block">
+		<h2 class="subtitle">Seus itens</h2>
+		<div class="columns is-multiline">
+			<% @user_items.each do |item| %>
+				<div id="user-item-<%= item.id %>"
+					class="column is-one-third-desktop is-half-mobile">
+					<%= link_to explore_items_path(item_id: item) do %>
+						<div class="card has-text-centered">
+							<div class="card-content">
+								<p class="title"><%= item.abbreviation %></p>
+								<p class="subtitle"><%= item.name %></p>
+							</div>
 						</div>
-					</div>
-				<% end %>
-			</div>
-		<% end %>
+					<% end %>
+				</div>
+			<% end %>
+		</div>
 	</div>
-</div>
+<% end %>

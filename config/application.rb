@@ -30,5 +30,6 @@ module QuietDawn5173
     # the framework and any gems in your application.
 
     config.i18n.default_locale = "pt-BR"
+    config.active_record.schema_format = :sql
   end
 end

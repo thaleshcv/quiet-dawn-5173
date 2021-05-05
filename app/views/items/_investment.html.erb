@@ -26,6 +26,7 @@
 				class: "card-footer-item" %>
 			<%= link_to 'Excluir',
 				investment,
+				id: "delete-#{investment.id}",
 				class: "card-footer-item has-text-danger",
 				method: :delete,
 				data: {confirm: "Are you sure?"} %>

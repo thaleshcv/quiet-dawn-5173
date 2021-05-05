@@ -6,7 +6,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   helper_method :current_section
 
-  EDIT_ACCOUNT_SECTIONS = %w[profile password danger_zone].freeze
+  EDIT_ACCOUNT_SECTIONS = %w[profile password settings].freeze
 
   def update
     # Copied the entire original implementation since we need a different

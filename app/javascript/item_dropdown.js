@@ -55,6 +55,7 @@
 
 		items.forEach(function (item) {
 			const button = document.createElement("button");
+			button.id = item.abbreviation;
 			button.innerText = `${item.abbreviation} ${item.name}`;
 			button.type =
 				inputText.dataset.autoSubmit === "true" ? "submit" : "button";
@@ -81,7 +82,7 @@
 
 		let queryTimeoutId;
 
-		inputText.addEventListener("keyup", function (evt) {
+		function handleInput(evt) {
 			const target = evt.target;
 
 			if (evt.shiftKey || evt.ctrlKey || evt.altKey || evt.metaKey) {
@@ -108,6 +109,9 @@
 					.then(response => response.json())
 					.then(data => populateDropdownMenu(data));
 			}, 500);
-		});
+		}
+
+		inputText.addEventListener("keyup", handleInput);
+		inputText.addEventListener("input", handleInput);
 	});
 })();

@@ -1,0 +1,1094 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.cotacoes.uol.com/asset/list?fields=abbreviation,name,id&format=JSON
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 29 Apr 2021 17:23:56 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      X-Application-Context:
+      - application:prod
+      Expires:
+      - Thu, 29 Apr 2021 17:24:56 GMT
+      Cache-Control:
+      - max-age=60
+      X-Cache:
+      - MISS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, OPTIONS
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '{"prev":null,"next":null,"docs":[{"abbreviation":"ABCB4.SA","name":"ABC
+        BRASIL PN","id":18},{"abbreviation":"AGRO3.SA","name":"BRASILAGRO ON","id":32},{"abbreviation":"AHEB3.SA","name":"SPTURIS
+        ON","id":33},{"abbreviation":"AHEB6.SA","name":"SPTURIS PNB","id":35},{"abbreviation":"ALPA4.SA","name":"ALPARGATAS
+        PN","id":39},{"abbreviation":"ALPA3.SA","name":"ALPARGATAS ON","id":40},{"abbreviation":"AZEV4.SA","name":"AZEVEDO
+        PN","id":58},{"abbreviation":"AZEV3.SA","name":"AZEVEDO ON","id":59},{"abbreviation":"BAHI3.SA","name":"BAHEMA
+        ON","id":61},{"abbreviation":"BALM3.SA","name":"BAUMER ON","id":62},{"abbreviation":"BALM4.SA","name":"BAUMER
+        PN","id":63},{"abbreviation":"BAUH4.SA","name":"EXCELSIOR PN","id":64},{"abbreviation":"BAZA3.SA","name":"AMAZONIA
+        ON","id":66},{"abbreviation":"BBAS3.SA","name":"BRASIL ON","id":67},{"abbreviation":"BBDC3.SA","name":"BRADESCO
+        ON","id":68},{"abbreviation":"BBDC4.SA","name":"BRADESCO PN","id":69},{"abbreviation":"BBRK3.SA","name":"BRASIL
+        BROK ON","id":70},{"abbreviation":"BDLL4.SA","name":"BARDELLA PN","id":71},{"abbreviation":"BDLL3.SA","name":"BARDELLA
+        ON","id":72},{"abbreviation":"BEEF3.SA","name":"MINERVA ON","id":73},{"abbreviation":"BEES3.SA","name":"BANESTES
+        ON","id":74},{"abbreviation":"BGIP3.SA","name":"BANESE ON","id":76},{"abbreviation":"BGIP4.SA","name":"BANESE
+        PN","id":77},{"abbreviation":"BIOM3.SA","name":"BIOMM ON","id":81},{"abbreviation":"BMEB4.SA","name":"MERC
+        BRASIL PN","id":83},{"abbreviation":"BMEB3.SA","name":"MERC BRASIL ON","id":84},{"abbreviation":"BMIN3.SA","name":"MERC
+        INVEST ON","id":85},{"abbreviation":"BMIN4.SA","name":"MERC INVEST PN","id":86},{"abbreviation":"BMKS3.SA","name":"BIC
+        MONARK ON","id":87},{"abbreviation":"BNBR3.SA","name":"NORD BRASIL ON","id":91},{"abbreviation":"BOBR3.SA","name":"BOMBRIL
+        ON","id":93},{"abbreviation":"BOBR4.SA","name":"BOMBRIL PN","id":94},{"abbreviation":"BPAR3.SA","name":"BANPARA
+        ON","id":95},{"abbreviation":"BRAP4.SA","name":"BRADESPAR PN","id":100},{"abbreviation":"BRAP3.SA","name":"BRADESPAR
+        ON","id":101},{"abbreviation":"BRGE3.SA","name":"ALFA CONSORC ON","id":102},{"abbreviation":"BRGE11.SA","name":"ALFA
+        CONSORC PNE","id":103},{"abbreviation":"BRGE6.SA","name":"ALFA CONSORC PNB","id":104},{"abbreviation":"BRGE7.SA","name":"ALFA
+        CONSORC PNC","id":105},{"abbreviation":"BRGE5.SA","name":"ALFA CONSORC PNA","id":106},{"abbreviation":"BRGE8.SA","name":"ALFA
+        CONSORC PND","id":107},{"abbreviation":"BRGE12.SA","name":"ALFA CONSORC PNF","id":108},{"abbreviation":"BRIV4.SA","name":"ALFA
+        INVEST PN","id":109},{"abbreviation":"BRIV3.SA","name":"ALFA INVEST ON","id":110},{"abbreviation":"BRKM5.SA","name":"BRASKEM
+        PNA","id":111},{"abbreviation":"BRKM3.SA","name":"BRASKEM ON","id":112},{"abbreviation":"BRKM6.SA","name":"BRASKEM
+        PNB","id":113},{"abbreviation":"BRML3.SA","name":"BR MALLS PAR ON","id":114},{"abbreviation":"BRSR6.SA","name":"BANRISUL
+        PNB","id":115},{"abbreviation":"BRSR5.SA","name":"BANRISUL PNA","id":116},{"abbreviation":"BRSR3.SA","name":"BANRISUL
+        ON","id":117},{"abbreviation":"BSLI4.SA","name":"BRB BANCO PN","id":131},{"abbreviation":"BSLI3.SA","name":"BRB
+        BANCO ON","id":132},{"abbreviation":"BTOW3.SA","name":"B2W GLOBAL ON","id":133},{"abbreviation":"BTTL3.SA","name":"BATTISTELLA
+        ON","id":135},{"abbreviation":"CALI4.SA","name":"CONST A LIND PN","id":140},{"abbreviation":"CALI3.SA","name":"CONST
+        A LIND ON","id":141},{"abbreviation":"CAMB3.SA","name":"CAMBUCI ON","id":142},{"abbreviation":"CARD3.SA","name":"CSU
+        CARDSYST ON","id":144},{"abbreviation":"CASN3.SA","name":"CASAN ON","id":145},{"abbreviation":"CASN4.SA","name":"CASAN
+        PN","id":148},{"abbreviation":"CATA3.SA","name":"IND CATAGUAS ON","id":149},{"abbreviation":"CATA4.SA","name":"IND
+        CATAGUAS PN","id":150},{"abbreviation":"CBEE3.SA","name":"AMPLA ENERG ON","id":152},{"abbreviation":"CCPR3.SA","name":"CYRE
+        COM-CCP ON","id":158},{"abbreviation":"CCRO3.SA","name":"CCR RODOVIAS ON","id":159},{"abbreviation":"CEBR5.SA","name":"CEB
+        PNA","id":160},{"abbreviation":"CEBR6.SA","name":"CEB PNB","id":161},{"abbreviation":"CEBR3.SA","name":"CEB
+        ON","id":162},{"abbreviation":"CEDO4.SA","name":"CEDRO PN","id":163},{"abbreviation":"CEDO3.SA","name":"CEDRO
+        ON","id":164},{"abbreviation":"CEEB6.SA","name":"COELBA PNB","id":165},{"abbreviation":"CEEB5.SA","name":"COELBA
+        PNA","id":166},{"abbreviation":"CEEB3.SA","name":"COELBA ON","id":167},{"abbreviation":"CEGR3.SA","name":"CEG
+        ON","id":168},{"abbreviation":"CEPE3.SA","name":"CELPE ON","id":174},{"abbreviation":"CEPE6.SA","name":"CELPE
+        PNB","id":175},{"abbreviation":"CEPE5.SA","name":"CELPE PNA","id":176},{"abbreviation":"CESP3.SA","name":"CESP
+        ON","id":177},{"abbreviation":"CESP5.SA","name":"CESP PNA","id":178},{"abbreviation":"CESP6.SA","name":"CESP
+        PNB","id":179},{"abbreviation":"CGAS5.SA","name":"COMGAS PNA","id":180},{"abbreviation":"CGAS3.SA","name":"COMGAS
+        ON","id":181},{"abbreviation":"CGRA3.SA","name":"GRAZZIOTIN ON","id":182},{"abbreviation":"CGRA4.SA","name":"GRAZZIOTIN
+        PN","id":183},{"abbreviation":"CLSC3.SA","name":"CELESC ON","id":186},{"abbreviation":"CMIG3.SA","name":"CEMIG
+        ON","id":191},{"abbreviation":"CMIG4.SA","name":"CEMIG PN","id":192},{"abbreviation":"CMSA3.SA","name":"CIMS
+        ON","id":193},{"abbreviation":"CMSA4.SA","name":"CIMS PN","id":194},{"abbreviation":"COCE6.SA","name":"COELCE
+        PNB","id":197},{"abbreviation":"COCE3.SA","name":"COELCE ON","id":198},{"abbreviation":"COCE5.SA","name":"COELCE
+        PNA","id":199},{"abbreviation":"CORR4.SA","name":"COR RIBEIRO PN","id":200},{"abbreviation":"CORR3.SA","name":"COR
+        RIBEIRO ON","id":201},{"abbreviation":"CPFE3.SA","name":"CPFL ENERGIA ON","id":202},{"abbreviation":"CPLE5.SA","name":"COPEL
+        PNA","id":203},{"abbreviation":"CPLE3.SA","name":"COPEL ON","id":204},{"abbreviation":"CPLE6.SA","name":"COPEL
+        PNB","id":205},{"abbreviation":"CRDE3.SA","name":"CR2 ON","id":212},{"abbreviation":"CRIV4.SA","name":"ALFA
+        FINANC PN","id":214},{"abbreviation":"CRIV3.SA","name":"ALFA FINANC ON","id":215},{"abbreviation":"CSAB4.SA","name":"SEG
+        AL BAHIA PN","id":217},{"abbreviation":"CSAB3.SA","name":"SEG AL BAHIA ON","id":218},{"abbreviation":"CSAN3.SA","name":"COSAN
+        ON","id":219},{"abbreviation":"CSMG3.SA","name":"COPASA MG ON","id":221},{"abbreviation":"CSNA3.SA","name":"SID
+        NACIONAL ON","id":222},{"abbreviation":"CSRN6.SA","name":"COSERN PNB","id":223},{"abbreviation":"CSRN5.SA","name":"COSERN
+        PNA","id":224},{"abbreviation":"CSRN3.SA","name":"COSERN ON","id":225},{"abbreviation":"CTKA4.SA","name":"KARSTEN
+        PN","id":228},{"abbreviation":"CTKA3.SA","name":"KARSTEN ON","id":229},{"abbreviation":"CTNM4.SA","name":"COTEMINAS
+        PN","id":232},{"abbreviation":"CTNM3.SA","name":"COTEMINAS ON","id":233},{"abbreviation":"CTSA3.SA","name":"SANTANENSE
+        ON","id":235},{"abbreviation":"CTSA4.SA","name":"SANTANENSE PN","id":236},{"abbreviation":"CTSA8.SA","name":"SANTANENSE
+        PND","id":237},{"abbreviation":"CYRE3.SA","name":"CYRELA REALT ON","id":238},{"abbreviation":"DASA3.SA","name":"DASA
+        ON","id":243},{"abbreviation":"DOHL3.SA","name":"DOHLER ON","id":250},{"abbreviation":"DOHL4.SA","name":"DOHLER
+        PN","id":251},{"abbreviation":"DTCY4.SA","name":"DTCOM-DIRECT PN","id":253},{"abbreviation":"DTCY3.SA","name":"DTCOM-DIRECT
+        ON","id":254},{"abbreviation":"EALT4.SA","name":"ACO ALTONA PN","id":262},{"abbreviation":"EALT3.SA","name":"ACO
+        ALTONA ON","id":263},{"abbreviation":"ECPR4.SA","name":"ENCORPAR PN","id":267},{"abbreviation":"ECPR3.SA","name":"ENCORPAR
+        ON","id":268},{"abbreviation":"EKTR3.SA","name":"ELEKTRO ON","id":269},{"abbreviation":"EKTR4.SA","name":"ELEKTRO
+        PN","id":270},{"abbreviation":"ELET6.SA","name":"ELETROBRAS PNB","id":273},{"abbreviation":"ELET3.SA","name":"ELETROBRAS
+        ON","id":274},{"abbreviation":"ELET5.SA","name":"ELETROBRAS PNA","id":275},{"abbreviation":"EMAE4.SA","name":"EMAE
+        PN","id":281},{"abbreviation":"EMAE3.SA","name":"EMAE ON","id":282},{"abbreviation":"EMBR3.SA","name":"EMBRAER
+        ON","id":283},{"abbreviation":"ENBR3.SA","name":"ENERGIAS BR ON","id":284},{"abbreviation":"ENGI4.SA","name":"ENERGISA
+        PN","id":285},{"abbreviation":"ENGI3.SA","name":"ENERGISA ON","id":286},{"abbreviation":"EQTL3.SA","name":"EQUATORIAL
+        ON","id":287},{"abbreviation":"ESTR3.SA","name":"ESTRELA ON","id":289},{"abbreviation":"ESTR4.SA","name":"ESTRELA
+        PN","id":290},{"abbreviation":"ETER3.SA","name":"ETERNIT ON","id":291},{"abbreviation":"EUCA4.SA","name":"EUCATEX
+        PN","id":292},{"abbreviation":"EUCA3.SA","name":"EUCATEX ON","id":293},{"abbreviation":"EVEN3.SA","name":"EVEN
+        ON","id":294},{"abbreviation":"EZTC3.SA","name":"EZTEC ON","id":295},{"abbreviation":"FESA4.SA","name":"FERBASA
+        PN","id":300},{"abbreviation":"FESA3.SA","name":"FERBASA ON","id":301},{"abbreviation":"FHER3.SA","name":"FER
+        HERINGER ON","id":306},{"abbreviation":"FIGE3.SA","name":"INVEST BEMGE ON","id":307},{"abbreviation":"FIGE4.SA","name":"INVEST
+        BEMGE PN","id":308},{"abbreviation":"FNCN3.SA","name":"FINANSINOS ON","id":311},{"abbreviation":"FRAS3.SA","name":"FRAS-LE
+        ON","id":313},{"abbreviation":"FRIO3.SA","name":"METALFRIO ON","id":314},{"abbreviation":"GEPA4.SA","name":"GER
+        PARANAP PN","id":321},{"abbreviation":"GEPA3.SA","name":"GER PARANAP ON","id":322},{"abbreviation":"GFSA3.SA","name":"GAFISA
+        ON","id":325},{"abbreviation":"GGBR3.SA","name":"GERDAU ON","id":326},{"abbreviation":"GGBR4.SA","name":"GERDAU
+        PN","id":327},{"abbreviation":"GOAU3.SA","name":"GERDAU MET ON","id":329},{"abbreviation":"GOAU4.SA","name":"GERDAU
+        MET PN","id":330},{"abbreviation":"GOLL4.SA","name":"GOL PN","id":332},{"abbreviation":"GPCP3.SA","name":"GPC
+        PART ON","id":333},{"abbreviation":"GRND3.SA","name":"GRENDENE ON","id":335},{"abbreviation":"GSHP3.SA","name":"GENERALSHOPP
+        ON","id":338},{"abbreviation":"GUAR3.SA","name":"GUARARAPES ON","id":339},{"abbreviation":"HAGA4.SA","name":"HAGA
+        S/A PN","id":342},{"abbreviation":"HAGA3.SA","name":"HAGA S/A ON","id":343},{"abbreviation":"HBOR3.SA","name":"HELBOR
+        ON","id":344},{"abbreviation":"HBTS6.SA","name":"HABITASUL PNB","id":345},{"abbreviation":"HBTS5.SA","name":"HABITASUL
+        PNA","id":346},{"abbreviation":"HBTS3.SA","name":"HABITASUL ON","id":347},{"abbreviation":"HETA3.SA","name":"HERCULES
+        ON","id":348},{"abbreviation":"HETA4.SA","name":"HERCULES PN","id":349},{"abbreviation":"HGTX3.SA","name":"CIA
+        HERING ON","id":350},{"abbreviation":"HOOT4.SA","name":"HOTEIS OTHON PN","id":351},{"abbreviation":"HOOT3.SA","name":"HOTEIS
+        OTHON ON","id":352},{"abbreviation":"HYPE3.SA","name":"HYPERMARCAS ON","id":353},{"abbreviation":"IGBR3.SA","name":"GRADIENTE
+        ON","id":360},{"abbreviation":"IGTA3.SA","name":"IGUATEMI ON","id":361},{"abbreviation":"INEP4.SA","name":"INEPAR
+        PN","id":369},{"abbreviation":"INEP3.SA","name":"INEPAR ON","id":370},{"abbreviation":"ITSA4.SA","name":"ITAUSA
+        PN","id":376},{"abbreviation":"ITSA3.SA","name":"ITAUSA ON","id":377},{"abbreviation":"JBDU4.SA","name":"J
+        B DUARTE PN","id":379},{"abbreviation":"JBDU3.SA","name":"J B DUARTE ON","id":380},{"abbreviation":"JBSS3.SA","name":"JBS
+        ON","id":381},{"abbreviation":"JFEN3.SA","name":"JOAO FORTES ON","id":382},{"abbreviation":"JHSF3.SA","name":"JHSF
+        PART ON","id":383},{"abbreviation":"JOPA4.SA","name":"JOSAPAR PN","id":384},{"abbreviation":"JOPA3.SA","name":"JOSAPAR
+        ON","id":385},{"abbreviation":"KEPL3.SA","name":"KEPLER WEBER ON","id":386},{"abbreviation":"KLBN4.SA","name":"KLABIN
+        S/A PN","id":387},{"abbreviation":"KLBN3.SA","name":"KLABIN S/A ON","id":388},{"abbreviation":"LAME3.SA","name":"LOJAS
+        AMERIC ON","id":393},{"abbreviation":"LAME4.SA","name":"LOJAS AMERIC PN","id":394},{"abbreviation":"LEVE3.SA","name":"METAL
+        LEVE ON","id":402},{"abbreviation":"LIGT3.SA","name":"LIGHT S/A ON","id":409},{"abbreviation":"LIPR3.SA","name":"ELETROPAR
+        ON","id":410},{"abbreviation":"LLIS3.SA","name":"LE LIS BLANC ON","id":413},{"abbreviation":"LOGN3.SA","name":"LOG-IN
+        ON","id":414},{"abbreviation":"LPSB3.SA","name":"LPS BRASIL ON","id":415},{"abbreviation":"LREN3.SA","name":"LOJAS
+        RENNER ON","id":416},{"abbreviation":"LUPA3.SA","name":"LUPATECH ON","id":417},{"abbreviation":"LUXM3.SA","name":"TREVISA
+        ON","id":418},{"abbreviation":"LUXM4.SA","name":"TREVISA PN","id":419},{"abbreviation":"MAPT4.SA","name":"CEMEPE
+        PN","id":421},{"abbreviation":"MAPT3.SA","name":"CEMEPE ON","id":422},{"abbreviation":"MDIA3.SA","name":"M.DIASBRANCO
+        ON","id":424},{"abbreviation":"MERC4.SA","name":"MERC FINANC PN","id":429},{"abbreviation":"MERC3.SA","name":"MERC
+        FINANC ON","id":430},{"abbreviation":"MGEL4.SA","name":"MANGELS INDL PN","id":431},{"abbreviation":"MGEL3.SA","name":"MANGELS
+        INDL ON","id":432},{"abbreviation":"MMAQ4.SA","name":"MINASMAQUINA PN","id":440},{"abbreviation":"MMAQ3.SA","name":"MINASMAQUINA
+        ON","id":441},{"abbreviation":"MMXM3.SA","name":"MMX MINER ON","id":442},{"abbreviation":"MNDL3.SA","name":"MUNDIAL
+        ON","id":443},{"abbreviation":"MNPR3.SA","name":"MINUPAR ON","id":445},{"abbreviation":"MOAR3.SA","name":"MONT
+        ARANHA ON","id":446},{"abbreviation":"ENEV3.SA","name":"ENEVA ON","id":447},{"abbreviation":"MRFG3.SA","name":"MARFRIG
+        ON","id":448},{"abbreviation":"MRVE3.SA","name":"MRV ON","id":451},{"abbreviation":"MSPA3.SA","name":"MELHOR
+        SP ON","id":452},{"abbreviation":"MSPA4.SA","name":"MELHOR SP PN","id":453},{"abbreviation":"MTIG4.SA","name":"METAL
+        IGUACU PN","id":454},{"abbreviation":"MTIG3.SA","name":"METAL IGUACU ON","id":455},{"abbreviation":"MTSA4.SA","name":"METISA
+        PN","id":456},{"abbreviation":"MTSA3.SA","name":"METISA ON","id":457},{"abbreviation":"MULT3.SA","name":"MULTIPLAN
+        ON","id":458},{"abbreviation":"MWET3.SA","name":"WETZEL S/A ON","id":459},{"abbreviation":"MWET4.SA","name":"WETZEL
+        S/A PN","id":460},{"abbreviation":"MYPK3.SA","name":"IOCHP-MAXION ON","id":461},{"abbreviation":"NEMO3.SA","name":"SUZANO
+        HOLD ON","id":467},{"abbreviation":"NORD3.SA","name":"NORDON MET ON","id":471},{"abbreviation":"ODER4.SA","name":"ODERICH
+        PN","id":472},{"abbreviation":"ODER3.SA","name":"ODERICH ON","id":473},{"abbreviation":"ODPV3.SA","name":"ODONTOPREV
+        ON","id":474},{"abbreviation":"PATI3.SA","name":"PANATLANTICA ON","id":477},{"abbreviation":"PATI4.SA","name":"PANATLANTICA
+        PN","id":478},{"abbreviation":"PCAR3.SA","name":"P.ACUCAR-CBD ON","id":480},{"abbreviation":"PDGR3.SA","name":"PDG
+        REALT ON","id":481},{"abbreviation":"PEAB4.SA","name":"PAR AL BAHIA PN","id":482},{"abbreviation":"PEAB3.SA","name":"PAR
+        AL BAHIA ON","id":483},{"abbreviation":"PETR4.SA","name":"PETROBRAS","id":484},{"abbreviation":"PETR3.SA","name":"PETROBRAS
+        ON","id":485},{"abbreviation":"PFRM3.SA","name":"PROFARMA ON","id":486},{"abbreviation":"PINE3.SA","name":"PINE
+        ON","id":487},{"abbreviation":"PINE4.SA","name":"PINE PN","id":488},{"abbreviation":"PLAS3.SA","name":"PLASCAR
+        PART ON","id":491},{"abbreviation":"PMAM3.SA","name":"PARANAPANEMA ON","id":493},{"abbreviation":"PNVL3.SA","name":"DIMED
+        ON","id":497},{"abbreviation":"PNVL4.SA","name":"DIMED PN","id":498},{"abbreviation":"POMO3.SA","name":"MARCOPOLO
+        ON","id":499},{"abbreviation":"POMO4.SA","name":"MARCOPOLO PN","id":500},{"abbreviation":"POSI3.SA","name":"POSITIVO
+        INF ON","id":501},{"abbreviation":"PPAR3.SA","name":"POLPAR ON","id":502},{"abbreviation":"PSSA3.SA","name":"PORTO
+        SEGURO ON","id":513},{"abbreviation":"PTBL3.SA","name":"PORTOBELLO ON","id":514},{"abbreviation":"PTNT3.SA","name":"PETTENATI
+        ON","id":515},{"abbreviation":"PTNT4.SA","name":"PETTENATI PN","id":516},{"abbreviation":"RANI3.SA","name":"IRANI
+        ON","id":519},{"abbreviation":"RAPT3.SA","name":"RANDON PART ON","id":521},{"abbreviation":"RAPT4.SA","name":"RANDON
+        PART PN","id":522},{"abbreviation":"RCSL3.SA","name":"RECRUSUL ON","id":523},{"abbreviation":"RCSL4.SA","name":"RECRUSUL
+        PN","id":524},{"abbreviation":"RDNI3.SA","name":"RODOBENS ON","id":526},{"abbreviation":"REDE3.SA","name":"REDE
+        ENERGIA ON","id":528},{"abbreviation":"RENT3.SA","name":"LOCALIZA ON","id":531},{"abbreviation":"ROMI3.SA","name":"INDS
+        ROMI ON","id":536},{"abbreviation":"RPAD3.SA","name":"ALFA HOLDING ON","id":537},{"abbreviation":"RPAD5.SA","name":"ALFA
+        HOLDING PNA","id":538},{"abbreviation":"RPAD6.SA","name":"ALFA HOLDING PNB","id":539},{"abbreviation":"RPMG3.SA","name":"PET
+        MANGUINH ON","id":540},{"abbreviation":"RSID3.SA","name":"ROSSI RESID ON","id":542},{"abbreviation":"RSUL4.SA","name":"RIOSULENSE
+        PN","id":545},{"abbreviation":"RSUL3.SA","name":"RIOSULENSE ON","id":546},{"abbreviation":"SANB3.SA","name":"SANTANDER
+        BR ON","id":547},{"abbreviation":"SANB4.SA","name":"SANTANDER BR PN","id":548},{"abbreviation":"SAPR3.SA","name":"SANEPAR
+        ON","id":549},{"abbreviation":"SAPR4.SA","name":"SANEPAR PN","id":550},{"abbreviation":"SBSP3.SA","name":"SABESP
+        ON","id":552},{"abbreviation":"SCAR3.SA","name":"SAO CARLOS ON","id":553},{"abbreviation":"SGPS3.SA","name":"SPRINGS
+        GLB ON","id":568},{"abbreviation":"SHUL3.SA","name":"SCHULZ ON","id":569},{"abbreviation":"SHUL4.SA","name":"SCHULZ
+        PN","id":570},{"abbreviation":"SLCE3.SA","name":"SLC AGRICOLA ON","id":573},{"abbreviation":"SLED3.SA","name":"SARAIVA
+        LIVR ON","id":574},{"abbreviation":"SLED4.SA","name":"SARAIVA LIVR PN","id":575},{"abbreviation":"SMTO3.SA","name":"SAO
+        MARTINHO ON","id":576},{"abbreviation":"SNSY5.SA","name":"SANSUY PNA","id":577},{"abbreviation":"SNSY3.SA","name":"SANSUY
+        ON","id":578},{"abbreviation":"SNSY6.SA","name":"SANSUY PNB","id":579},{"abbreviation":"SOND5.SA","name":"SONDOTECNICA
+        PNA","id":580},{"abbreviation":"SOND6.SA","name":"SONDOTECNICA PNB","id":581},{"abbreviation":"SOND3.SA","name":"SONDOTECNICA
+        ON","id":582},{"abbreviation":"STBP3.SA","name":"SANTOS BRP ON","id":589},{"abbreviation":"SULA4.SA","name":"SULAMERICA
+        PN","id":593},{"abbreviation":"SULA3.SA","name":"SULAMERICA ON","id":594},{"abbreviation":"SULA11.SA","name":"SULAMERICA
+        UNT","id":595},{"abbreviation":"SUZB3.SA","name":"SUZANO ON","id":601},{"abbreviation":"TCNO4.SA","name":"TECNOSOLO
+        PN","id":609},{"abbreviation":"TCNO3.SA","name":"TECNOSOLO ON","id":610},{"abbreviation":"TCSA3.SA","name":"TECNISA
+        ON","id":611},{"abbreviation":"TEKA3.SA","name":"TEKA ON","id":615},{"abbreviation":"TEKA4.SA","name":"TEKA
+        PN","id":616},{"abbreviation":"TELB4.SA","name":"TELEBRAS PN","id":617},{"abbreviation":"TELB3.SA","name":"TELEBRAS
+        ON","id":618},{"abbreviation":"TEND3.SA","name":"TENDA","id":620},{"abbreviation":"TGMA3.SA","name":"TEGMA
+        ON","id":625},{"abbreviation":"TKNO4.SA","name":"TEKNO PN","id":629},{"abbreviation":"TKNO3.SA","name":"TEKNO
+        ON","id":630},{"abbreviation":"TOTS3.SA","name":"TOTVS ON","id":649},{"abbreviation":"TPIS3.SA","name":"TRIUNFO
+        PART ON","id":652},{"abbreviation":"TRIS3.SA","name":"TRISUL ON","id":655},{"abbreviation":"TRPL4.SA","name":"TRAN
+        PAULIST PN","id":661},{"abbreviation":"TRPL3.SA","name":"TRAN PAULIST ON","id":662},{"abbreviation":"TUPY3.SA","name":"TUPY
+        ON","id":663},{"abbreviation":"TXRX3.SA","name":"TEX RENAUX ON","id":665},{"abbreviation":"TXRX4.SA","name":"TEX
+        RENAUX PN","id":666},{"abbreviation":"UGPA3.SA","name":"ULTRAPAR ON","id":674},{"abbreviation":"UNIP6.SA","name":"UNIPAR
+        PNB","id":676},{"abbreviation":"UNIP5.SA","name":"UNIPAR PNA","id":677},{"abbreviation":"UNIP3.SA","name":"UNIPAR
+        ON","id":678},{"abbreviation":"USIM6.SA","name":"USIMINAS PNB","id":681},{"abbreviation":"USIM3.SA","name":"USIMINAS
+        ON","id":682},{"abbreviation":"USIM5.SA","name":"USIMINAS PNA","id":683},{"abbreviation":"VSPT3.SA","name":"FER
+        C ATLANT ON","id":701},{"abbreviation":"VSPT4.SA","name":"FER C ATLANT PN","id":702},{"abbreviation":"VULC3.SA","name":"VULCABRAS
+        ON","id":703},{"abbreviation":"WEGE3.SA","name":"WEG ON","id":704},{"abbreviation":"WHRL4.SA","name":"WHIRPOOL
+        PN","id":705},{"abbreviation":"WHRL3.SA","name":"WHIRPOOL ON","id":706},{"abbreviation":"ABCP11.SA","name":"FII
+        ABC IMOB","id":712},{"abbreviation":"BRPR3.SA","name":"BR PROPERT ON","id":719},{"abbreviation":"EURO11.SA","name":"FII
+        EUROPAR CI","id":726},{"abbreviation":"FLMA11.SA","name":"FII S F LIMA CI","id":729},{"abbreviation":"FNAM11.SA","name":"FINAM
+        CI","id":730},{"abbreviation":"FNOR11.SA","name":"FINOR CI","id":731},{"abbreviation":"FPAB11.SA","name":"FII
+        A BRANCA CI","id":732},{"abbreviation":"FSPE11.SA","name":"FISET PESCA CI","id":735},{"abbreviation":"FSRF11.SA","name":"FISET
+        FL REF CI","id":736},{"abbreviation":"FSTU11.SA","name":"FISET TUR CI","id":737},{"abbreviation":"FVPQ11.SA","name":"FII
+        V PARQUE","id":738},{"abbreviation":"GPAR3.SA","name":"GOIASPAR ON","id":739},{"abbreviation":"HGBS11.SA","name":"FII
+        HEDGEBS","id":740},{"abbreviation":"PABY11.SA","name":"FII PANAMBY","id":744},{"abbreviation":"PIBB11.SA","name":"IT
+        NOW PIBB IBRX","id":745},{"abbreviation":"SCPF11.SA","name":"FII SCP CI","id":748},{"abbreviation":"SHPH11.SA","name":"FII
+        HIGIENOP CI","id":749},{"abbreviation":"BEES4.SA","name":"BANESTES PN","id":763},{"abbreviation":"FMOF11.SA","name":"FII
+        MEMORIAL","id":766},{"abbreviation":"VALE3.SA","name":"VALE ON","id":775},{"abbreviation":"ITUB3.SA","name":"ITAUUNIBANCO
+        ON","id":883},{"abbreviation":"ITUB4.SA","name":"ITAUUNIBANCO PN","id":884},{"abbreviation":"LUPA11.SA","name":"LUPATECH","id":892},{"abbreviation":"SANB11.SA","name":"SANTANDER
+        BR UNT","id":936},{"abbreviation":"DTEX3.SA","name":"DURATEX ON","id":939},{"abbreviation":"OSXB3.SA","name":"OSX
+        BRASIL ON","id":945},{"abbreviation":"ENGI11.SA","name":"ENERGISA UNT","id":950},{"abbreviation":"DIRR3.SA","name":"DIRECIONAL
+        ON","id":956},{"abbreviation":"BEEF11.SA","name":"MINERVA","id":963},{"abbreviation":"BRFS3.SA","name":"BRF
+        FOODS ON","id":964},{"abbreviation":"SFND11.SA","name":"FII SAO FER CI","id":965},{"abbreviation":"CIEL3.SA","name":"CIELO
+        ON","id":966},{"abbreviation":"FLRY3.SA","name":"FLEURY ON","id":967},{"abbreviation":"PQDP11.SA","name":"FII
+        D PEDRO CF","id":976},{"abbreviation":"BRAX11.SA","name":"ISHARES BRAX CI","id":989},{"abbreviation":"RNEW11.SA","name":"RENOVA
+        UNT","id":1000},{"abbreviation":"ECOR3.SA","name":"ECORODOVIAS ON","id":1005},{"abbreviation":"NEMO5.SA","name":"SUZANO
+        HOLD PNA","id":1012},{"abbreviation":"PLAS11.SA","name":"PLASCAR PART RTS","id":1013},{"abbreviation":"MILS3.SA","name":"MILLS
+        ON","id":1014},{"abbreviation":"PRSV11.SA","name":"FII P VARGAS CI","id":1024},{"abbreviation":"BBAS11.SA","name":"BRASIL
+        ON","id":1025},{"abbreviation":"BBAS12.SA","name":"BRASIL ON","id":1026},{"abbreviation":"BOVA11.SA","name":"ISHS
+        IBOVESPA FD","id":1027},{"abbreviation":"HGRE11.SA","name":"FII HG REAL CI","id":1030},{"abbreviation":"SMAL11.SA","name":"ISH
+        BMFBOVESPA S","id":1032},{"abbreviation":"AMAR3.SA","name":"LOJAS MARISA ON","id":1044},{"abbreviation":"HGLG11.SA","name":"FII
+        CSHG LOG CI","id":1045},{"abbreviation":"BMII11.SA","name":"FII BRASILIO CI","id":1076},{"abbreviation":"AFLT3.SA","name":"AFLUENTE
+        T ON","id":1080},{"abbreviation":"VLID3.SA","name":"VALID ON","id":1087},{"abbreviation":"KNRI11.SA","name":"FII
+        KINEA CI","id":1091},{"abbreviation":"RBDS11.SA","name":"FII RBRESID2","id":1093},{"abbreviation":"RBRD11.SA","name":"FII
+        RB II CI","id":1097},{"abbreviation":"ICO211.SA","name":"CE INDEX","id":1101},{"abbreviation":"IGCT11.SA","name":"IND
+        GOV CORP TRA","id":1106},{"abbreviation":"ARZZ3.SA","name":"AREZZO CO ON","id":1110},{"abbreviation":"CEED3.SA","name":"CEEE-D
+        ON","id":1113},{"abbreviation":"CEED4.SA","name":"CEEE D PN","id":1114},{"abbreviation":"EEEL3.SA","name":"CEEE
+        GT ON","id":1115},{"abbreviation":"EEEL4.SA","name":"CEEE GT PN","id":1116},{"abbreviation":"VRTA11.SA","name":"FII
+        FATOR VE CI","id":1131},{"abbreviation":"FIND11.SA","name":"IT NOW IFNC CI","id":1157},{"abbreviation":"SHOW3.SA","name":"SHOW
+        ON","id":1160},{"abbreviation":"IBOV11.SA","name":"IND BOVESPA CI","id":1182},{"abbreviation":"MGLU3.SA","name":"MAG
+        LUIZA ON","id":1183},{"abbreviation":"IBRA11.SA","name":"ISHS BRAZIL BROA","id":1185},{"abbreviation":"IDIV11.SA","name":"ISHS
+        DIV IDX","id":1186},{"abbreviation":"IMAT11.SA","name":"ISHS BASIC MAT I","id":1187},{"abbreviation":"UTIL11.SA","name":"ISHS
+        PUBLIC UTIL","id":1188},{"abbreviation":"VIVR3.SA","name":"VIVER ON","id":1193},{"abbreviation":"NEMO6.SA","name":"SUZANO
+        HOLD PNB","id":1196},{"abbreviation":"MMXM11.SA","name":"MMX MINERACAO E","id":1198},{"abbreviation":"JSRE11.SA","name":"FII
+        JS RL EST MU","id":1202},{"abbreviation":"BBRC11.SA","name":"FII BB CORP CI","id":1205},{"abbreviation":"QUAL3.SA","name":"QUALICORP
+        ON","id":1209},{"abbreviation":"TECN3.SA","name":"TECHNOS ON","id":1211},{"abbreviation":"MBRF11.SA","name":"FII
+        MERC BR","id":1227},{"abbreviation":"RBGS11.SA","name":"FII RB GSB","id":1229},{"abbreviation":"VIVT3.SA","name":"TELEF
+        BRASIL ON","id":1237},{"abbreviation":"GOVE11.SA","name":"IT NOW IGCT CI","id":1242},{"abbreviation":"ISUS11.SA","name":"IT
+        NOW ISE FDO D","id":1243},{"abbreviation":"ESUD11.SA","name":"FIP IE II","id":1250},{"abbreviation":"ESUD12.SA","name":"FDO
+        INV PART IE","id":1251},{"abbreviation":"ESUT11.SA","name":"FDO INV PART IE","id":1252},{"abbreviation":"ESUT12.SA","name":"FIP
+        IE III","id":1253},{"abbreviation":"ESUU11.SA","name":"FIP IE I","id":1254},{"abbreviation":"ESUU12.SA","name":"FDO
+        INV PART IE","id":1255},{"abbreviation":"RADL3.SA","name":"RAIADROGASIL ON","id":1257},{"abbreviation":"FIIB11.SA","name":"FII
+        INDL BR","id":1262},{"abbreviation":"CXTL11.SA","name":"FII CX TRX CI","id":1265},{"abbreviation":"CLSC4.SA","name":"CELESC
+        PN","id":1268},{"abbreviation":"DIVO11.SA","name":"IT NOW IDIV FDO","id":1269},{"abbreviation":"MATB11.SA","name":"IT
+        NOW IMAT FDO","id":1270},{"abbreviation":"ONEF11.SA","name":"FII THE ONE","id":1278},{"abbreviation":"VVAR3.SA","name":"VIA
+        VAREJO ON","id":1284},{"abbreviation":"OIBR3.SA","name":"OI ON","id":1286},{"abbreviation":"OIBR4.SA","name":"OI
+        PN","id":1287},{"abbreviation":"LCAM3.SA","name":"LOCAMERICA ON","id":1294},{"abbreviation":"BPAC3.SA","name":"BTGP
+        BANCO ON","id":1298},{"abbreviation":"BPAC5.SA","name":"BTGP BANCO PN","id":1299},{"abbreviation":"UCAS3.SA","name":"UNICASA
+        ON","id":1303},{"abbreviation":"MXRF11.SA","name":"FII MAXI REN","id":1315},{"abbreviation":"TAEE11.SA","name":"TRANS
+        ALIANCA UN","id":1327},{"abbreviation":"TAEE3.SA","name":"TRANS ALIANCA ON","id":1328},{"abbreviation":"TAEE4.SA","name":"TRANS
+        ALIANCA PN","id":1329},{"abbreviation":"ECOO11.SA","name":"ISH INDICE CARBO","id":1331},{"abbreviation":"PLRI11.SA","name":"FII
+        POLO I","id":1337},{"abbreviation":"RNEW3.SA","name":"RENOVA ON","id":1345},{"abbreviation":"RNEW4.SA","name":"RENOVA
+        PN","id":1346},{"abbreviation":"RNDP11.SA","name":"FII BB R PAP CI","id":1350},{"abbreviation":"RNGO11.SA","name":"FII
+        RIONEGRO","id":1351},{"abbreviation":"KNRE11.SA","name":"FII KII REAL","id":1356},{"abbreviation":"VLOL11.SA","name":"FII
+        OLIMPIA","id":1358},{"abbreviation":"IGNM11.SA","name":"INDICE GOVER COR","id":1361},{"abbreviation":"BNFS11.SA","name":"FII
+        BANRISUL","id":1367},{"abbreviation":"BRCR11.SA","name":"FII BC FUND CI","id":1368},{"abbreviation":"KNCR11.SA","name":"FII
+        KINEA RI","id":1376},{"abbreviation":"SDIL11.SA","name":"FII SDI LOG","id":1378},{"abbreviation":"XBOV11.SA","name":"CAIXAETFXBOV","id":1380},{"abbreviation":"XTED11.SA","name":"FII
+        TRXE COR","id":1381},{"abbreviation":"BBPO11.SA","name":"FII BB PRGII","id":1385},{"abbreviation":"CTXT11.SA","name":"FII
+        C TEXTIL CI","id":1386},{"abbreviation":"RBVO11.SA","name":"FII RIOBCRI2","id":1391},{"abbreviation":"HGCR11.SA","name":"FII
+        CSHG CRI CI","id":1401},{"abbreviation":"LINX3.SA","name":"LINX ON","id":1404},{"abbreviation":"ENGI12.SA","name":"ENERGISA","id":1410},{"abbreviation":"XPCM11.SA","name":"FII
+        XP MACAE CI","id":1412},{"abbreviation":"SPTW11.SA","name":"FII SP DOWNT CI","id":1414},{"abbreviation":"PORD11.SA","name":"FII
+        POLO CRI","id":1415},{"abbreviation":"BPFF11.SA","name":"FII ABSOLUTO","id":1421},{"abbreviation":"BSEV3.SA","name":"BIOSEV
+        ON","id":1422},{"abbreviation":"ALUP11.SA","name":"ALUPAR UNT","id":1423},{"abbreviation":"ALUP3.SA","name":"ALUPAR
+        ON","id":1424},{"abbreviation":"ALUP4.SA","name":"ALUPAR PN","id":1425},{"abbreviation":"BBSE3.SA","name":"BBSEGURIDADE
+        ON","id":1427},{"abbreviation":"JPPC11.SA","name":"FII JPP CAPI","id":1434},{"abbreviation":"TBOF11.SA","name":"FII
+        TBOFFICE CI","id":1438},{"abbreviation":"FIGS11.SA","name":"FII GEN SHOP CI","id":1439},{"abbreviation":"MFII11.SA","name":"FII
+        MERITO I","id":1446},{"abbreviation":"RBBV11.SA","name":"FII JHSF FBV","id":1448},{"abbreviation":"AAPL34.SA","name":"APPLE","id":1454},{"abbreviation":"ABTT34.SA","name":"ABBOTT","id":1455},{"abbreviation":"AMGN34.SA","name":"AMGEN","id":1456},{"abbreviation":"AMZO34.SA","name":"AMAZON","id":1457},{"abbreviation":"ARMT34.SA","name":"ARCELOR","id":1458},{"abbreviation":"ATTB34.SA","name":"ATT
+        INC","id":1459},{"abbreviation":"AXPB34.SA","name":"AMERICAN EXP","id":1461},{"abbreviation":"BMYB34.SA","name":"BRISTOLMYERS","id":1462},{"abbreviation":"BOAC34.SA","name":"BANK
+        AMERICA","id":1463},{"abbreviation":"BOEI34.SA","name":"BOEING","id":1464},{"abbreviation":"CATP34.SA","name":"CATERPILLAR","id":1465},{"abbreviation":"CHVX34.SA","name":"CHEVRON","id":1466},{"abbreviation":"CMCS34.SA","name":"COMCAST","id":1467},{"abbreviation":"COCA34.SA","name":"COCA
+        COLA","id":1468},{"abbreviation":"COLG34.SA","name":"COLGATE","id":1469},{"abbreviation":"COPH34.SA","name":"COPHILLIPS","id":1470},{"abbreviation":"CSCO34.SA","name":"CISCO","id":1471},{"abbreviation":"CTGP34.SA","name":"CITIGROUP","id":1472},{"abbreviation":"DISB34.SA","name":"WALT
+        DISNEY","id":1474},{"abbreviation":"EBAY34.SA","name":"EBAY","id":1477},{"abbreviation":"EXXO34.SA","name":"EXXON
+        MOBIL","id":1478},{"abbreviation":"FCXO34.SA","name":"FREEPORT","id":1479},{"abbreviation":"FDMO34.SA","name":"FORD
+        MOTORS","id":1480},{"abbreviation":"FDXB34.SA","name":"FEDEX CORP","id":1481},{"abbreviation":"GEOO34.SA","name":"GE","id":1482},{"abbreviation":"GSGI34.SA","name":"GOLDMANSACHS","id":1484},{"abbreviation":"HALI34.SA","name":"HALLIBURTON","id":1485},{"abbreviation":"HOME34.SA","name":"HOME
+        DEPOT","id":1486},{"abbreviation":"HONB34.SA","name":"HONEYWELL","id":1487},{"abbreviation":"HPQB34.SA","name":"HP
+        COMPANY","id":1488},{"abbreviation":"IBMB34.SA","name":"IBM","id":1489},{"abbreviation":"ITLC34.SA","name":"INTEL","id":1490},{"abbreviation":"JNJB34.SA","name":"JOHNSON","id":1491},{"abbreviation":"JPMC34.SA","name":"JPMORGAN","id":1492},{"abbreviation":"LILY34.SA","name":"LILLY","id":1494},{"abbreviation":"LMTB34.SA","name":"LOCKHEED","id":1495},{"abbreviation":"MCDC34.SA","name":"MCDONALDS","id":1497},{"abbreviation":"MMMC34.SA","name":"3M","id":1498},{"abbreviation":"MRCK34.SA","name":"MERCK","id":1499},{"abbreviation":"MSBR34.SA","name":"MORGAN
+        STAN","id":1500},{"abbreviation":"MSCD34.SA","name":"MASTERCARD","id":1501},{"abbreviation":"MSFT34.SA","name":"MICROSOFT","id":1502},{"abbreviation":"NFLX34.SA","name":"NETFLIX","id":1504},{"abbreviation":"NIKE34.SA","name":"NIKE","id":1505},{"abbreviation":"ORCL34.SA","name":"ORACLE","id":1506},{"abbreviation":"PEPB34.SA","name":"PEPSICO
+        INC","id":1507},{"abbreviation":"PFIZ34.SA","name":"PFIZER","id":1508},{"abbreviation":"PGCO34.SA","name":"PG","id":1509},{"abbreviation":"PHMO34.SA","name":"PHILIP
+        MORRI","id":1510},{"abbreviation":"QCOM34.SA","name":"QUALCOMM","id":1511},{"abbreviation":"SBUB34.SA","name":"STARBUCKS","id":1512},{"abbreviation":"SLBG34.SA","name":"SCHLUMBERGER","id":1513},{"abbreviation":"UPSS34.SA","name":"UPS","id":1515},{"abbreviation":"USSX34.SA","name":"US
+        STEEL","id":1516},{"abbreviation":"VERZ34.SA","name":"VERIZON","id":1517},{"abbreviation":"VISA34.SA","name":"VISA
+        INC","id":1518},{"abbreviation":"WALM34.SA","name":"WAL MART","id":1519},{"abbreviation":"WFCO34.SA","name":"WELLS
+        FARGO","id":1520},{"abbreviation":"XRXB34.SA","name":"XEROX CORP","id":1521},{"abbreviation":"GPIV33.SA","name":"GP
+        INVEST","id":1528},{"abbreviation":"WSON33.SA","name":"WILSON SONS","id":1533},{"abbreviation":"ATCR11.SA","name":"FII
+        ATICO CI","id":1535},{"abbreviation":"ANIM3.SA","name":"ANIMA ON","id":1541},{"abbreviation":"AQLL11.SA","name":"FII
+        AQUILLA CI","id":1542},{"abbreviation":"BERK34.SA","name":"BERKSHIRE BDR","id":1543},{"abbreviation":"SEER3.SA","name":"SER
+        EDUCA ON","id":1544},{"abbreviation":"ABEV3.SA","name":"AMBEV ON","id":1545},{"abbreviation":"KLBN11.SA","name":"KLABIN
+        UNT","id":1547},{"abbreviation":"VLJS11.SA","name":"FII VQ LAJES","id":1548},{"abbreviation":"CVCB3.SA","name":"CVC
+        BRASIL","id":1550},{"abbreviation":"BDRX11.SA","name":"GLOBAL BDRX","id":1553},{"abbreviation":"CXRI11.SA","name":"FII
+        CX RBRAV","id":1554},{"abbreviation":"VERE11.SA","name":"FII VEREDA CI","id":1563},{"abbreviation":"NRTQ3.SA","name":"NORTCQUIMICA
+        ON","id":1571},{"abbreviation":"QUSW3.SA","name":"QUALITY SOFT ON","id":1573},{"abbreviation":"FCCQ11.SA","name":"FIP
+        CONQUEST","id":1574},{"abbreviation":"CBOP11.SA","name":"FII C BRANCO CI","id":1576},{"abbreviation":"FBOK34.SA","name":"FACEBOOK","id":1577},{"abbreviation":"IVVB11.SA","name":"FDO
+        DE INV ISH S","id":1585},{"abbreviation":"VPSI11.SA","name":"FII POLO SHOP","id":1589},{"abbreviation":"FIVN11.SA","name":"FII
+        VIDANOVA","id":1609},{"abbreviation":"BPAN4.SA","name":"BCO PAN","id":1612},{"abbreviation":"TWTR34.SA","name":"TWITTER
+        INC","id":1614},{"abbreviation":"FINF11.SA","name":"FII INFRA RE","id":1620},{"abbreviation":"NVHO11.SA","name":"FII
+        NOVOHORI CI","id":1624},{"abbreviation":"KEPL11.SA","name":"KEPLER WEBER","id":1627},{"abbreviation":"OFSA3.SA","name":"OURO
+        FINO","id":1628},{"abbreviation":"TSNC11.SA","name":"FII TRANSINC","id":1635},{"abbreviation":"BBSD11.SA","name":"BB
+        ETF SP DV","id":1636},{"abbreviation":"USBC34.SA","name":"US BANCORP","id":1644},{"abbreviation":"SPXI11.SA","name":"IT
+        NOW S&P500 TR","id":1665},{"abbreviation":"FPOR11.SA","name":"FIP PORT SUD
+        CI","id":1669},{"abbreviation":"PSVM11.SA","name":"PORTO VM","id":1670},{"abbreviation":"ENMT3.SA","name":"ENERGISA
+        MT ON","id":1671},{"abbreviation":"ENMT4.SA","name":"ENERGISA MT PN","id":1672},{"abbreviation":"MEAL3.SA","name":"IMC
+        S/A ON","id":1674},{"abbreviation":"BVAR11.SA","name":"FII B VAREJO CI","id":1677},{"abbreviation":"BCIA11.SA","name":"FII
+        BCIA","id":1681},{"abbreviation":"MSRO3.SA","name":"MAESTROLOC ON","id":1684},{"abbreviation":"PRIO3.SA","name":"PETRORIO
+        ON","id":1686},{"abbreviation":"BCRI11.SA","name":"FII BEES CRI","id":1687},{"abbreviation":"BOXP34.SA","name":"BOSTON
+        PROP BDR","id":1690},{"abbreviation":"COTY34.SA","name":"COTY INC BDR","id":1691},{"abbreviation":"DHER34.SA","name":"DANAHER
+        CORP BDR","id":1692},{"abbreviation":"HSHY34.SA","name":"HERSHEY CO BDR","id":1694},{"abbreviation":"LBRN34.SA","name":"L
+        BRANDS BDR","id":1695},{"abbreviation":"MDLZ34.SA","name":"MONDELEZ INT BDR","id":1696},{"abbreviation":"MOSC34.SA","name":"MOSAIC
+        CO BDR","id":1697},{"abbreviation":"UPAC34.SA","name":"UNIONPACIFIC BDR","id":1698},{"abbreviation":"WUNI34.SA","name":"WESTERNUNION
+        BDR","id":1699},{"abbreviation":"STKF3.SA","name":"STATKRAFT ON","id":1702},{"abbreviation":"ACNB34.SA","name":"ACCENTURE","id":1703},{"abbreviation":"BONY34.SA","name":"BNY
+        MELLON","id":1704},{"abbreviation":"FMXB34.SA","name":"FEMSA","id":1705},{"abbreviation":"GDBR34.SA","name":"GEN
+        DYNAMICS","id":1706},{"abbreviation":"KMBB34.SA","name":"KIMBERLY CL","id":1707},{"abbreviation":"METB34.SA","name":"METLIFE
+        INC","id":1708},{"abbreviation":"TEXA34.SA","name":"TEXAS INC","id":1709},{"abbreviation":"TGTB34.SA","name":"TARGET
+        CORP","id":1710},{"abbreviation":"CRPG3.SA","name":"CRISTAL ON","id":1711},{"abbreviation":"CRPG5.SA","name":"CRISTAL
+        PNA","id":1712},{"abbreviation":"CRPG6.SA","name":"CRISTAL PNB","id":1713},{"abbreviation":"BBIM11.SA","name":"FII
+        BB RECIM","id":1715},{"abbreviation":"KHCB34.SA","name":"KRAFT","id":1717},{"abbreviation":"ATOM3.SA","name":"ATOMPAR
+        ON","id":1723},{"abbreviation":"FDES11.SA","name":"FUNDES","id":1728},{"abbreviation":"FRTA3.SA","name":"POMIFRUTAS","id":1734},{"abbreviation":"BRQB3.SA","name":"BRQ
+        ON","id":1742},{"abbreviation":"FPNG11.SA","name":"FII PEDRA NEGRA","id":1756},{"abbreviation":"CARE11.SA","name":"FII
+        DEA CARE","id":1761},{"abbreviation":"ABBV34.SA","name":"ABBVIE","id":1764},{"abbreviation":"BIIB34.SA","name":"BIOGEN","id":1765},{"abbreviation":"BLAK34.SA","name":"BLACKROCK","id":1766},{"abbreviation":"COWC34.SA","name":"COSTCO","id":1767},{"abbreviation":"CTSH34.SA","name":"COGNIZANT","id":1768},{"abbreviation":"CVSH34.SA","name":"CVS
+        HEALTH","id":1769},{"abbreviation":"DEAI34.SA","name":"DELTA","id":1770},{"abbreviation":"GILD34.SA","name":"GILEAD","id":1773},{"abbreviation":"GPSI34.SA","name":"GAP","id":1774},{"abbreviation":"MACY34.SA","name":"MACYS","id":1775},{"abbreviation":"MDTC34.SA","name":"MEDTRONIC","id":1776},{"abbreviation":"ROST34.SA","name":"ROSS
+        STORES","id":1777},{"abbreviation":"SCHW34.SA","name":"SCHWAB","id":1778},{"abbreviation":"SSFO34.SA","name":"SALESFORCE","id":1779},{"abbreviation":"TMOS34.SA","name":"THERMFISHER","id":1780},{"abbreviation":"TRVC34.SA","name":"TRAVELERS","id":1781},{"abbreviation":"GOGL34.SA","name":"ALPHABET","id":1784},{"abbreviation":"GOGL35.SA","name":"ALPHABET","id":1785},{"abbreviation":"EGIE3.SA","name":"ENGIE
+        BRASIL","id":1802},{"abbreviation":"AALL34.SA","name":"AMERICAN AIR","id":1806},{"abbreviation":"BBYY34.SA","name":"BEST
+        BUY","id":1807},{"abbreviation":"FSLR34.SA","name":"FIRST SOLAR","id":1809},{"abbreviation":"GMCO34.SA","name":"GENERAL
+        MOT","id":1810},{"abbreviation":"GPRO34.SA","name":"GOPRO","id":1811},{"abbreviation":"RIGG34.SA","name":"TRANSOCEAN","id":1813},{"abbreviation":"TSLA34.SA","name":"TESLA
+        MOTORS","id":1816},{"abbreviation":"UBSG34.SA","name":"UBS GROUP","id":1818},{"abbreviation":"VLOE34.SA","name":"VALERO
+        ENER","id":1819},{"abbreviation":"BOVV11.SA","name":"IT NOW IBOV","id":1820},{"abbreviation":"CNSY3.SA","name":"CINESYSTEM
+        ON","id":1826},{"abbreviation":"CTCA3.SA","name":"CTC ON","id":1828},{"abbreviation":"VLJS12.SA","name":"FII
+        VQ LAJES","id":1831},{"abbreviation":"KNIP11.SA","name":"FII KINEA IP","id":1835},{"abbreviation":"AIGB34.SA","name":"AIG
+        GROUP","id":1842},{"abbreviation":"DUKB34.SA","name":"DUKE ENERGY","id":1843},{"abbreviation":"AALR3.SA","name":"ALLIAR","id":1846},{"abbreviation":"TESA3.SA","name":"TERRA
+        SANTA","id":1849},{"abbreviation":"ARNC34.SA","name":"HOWMET AERO","id":1850},{"abbreviation":"SPAF11.SA","name":"FII
+        SPA","id":1855},{"abbreviation":"MOVI3.SA","name":"MOVIDA","id":1867},{"abbreviation":"PARD3.SA","name":"HERMES
+        PARDINI","id":1868},{"abbreviation":"BPAC11.SA","name":"BTGP BANCO","id":1872},{"abbreviation":"RAIL3.SA","name":"RUMO","id":1877},{"abbreviation":"GPCP4.SA","name":"GPC
+        PART","id":1880},{"abbreviation":"AZUL4.SA","name":"AZUL","id":1881},{"abbreviation":"ALMI11.SA","name":"FII
+        TORRE AL","id":1882},{"abbreviation":"CNES11.SA","name":"FII CENESP","id":1883},{"abbreviation":"EDGA11.SA","name":"FII
+        GALERIA","id":1884},{"abbreviation":"FAED11.SA","name":"FII ANH EDUC","id":1885},{"abbreviation":"FEXC11.SA","name":"FII
+        EXCELLEN","id":1886},{"abbreviation":"FLRP11.SA","name":"FII FLORIPA","id":1887},{"abbreviation":"HCRI11.SA","name":"FII
+        CRIANCA","id":1889},{"abbreviation":"HTMX11.SA","name":"FII HOTEL MX","id":1890},{"abbreviation":"JRDM11.SA","name":"FII
+        SHOPJSUL","id":1891},{"abbreviation":"MAXR11.SA","name":"FII MAX RET","id":1892},{"abbreviation":"NCHB11.SA","name":"FII
+        NCH BRA","id":1893},{"abbreviation":"NSLU11.SA","name":"FII LOURDES","id":1894},{"abbreviation":"TRNT11.SA","name":"FII
+        TORRE NO","id":1896},{"abbreviation":"WIZS3.SA","name":"WIZ","id":1897},{"abbreviation":"GGRC11.SA","name":"FII
+        GGRCOVEP","id":1898},{"abbreviation":"CEOC11.SA","name":"FII CEO CCP","id":1899},{"abbreviation":"FCFL11.SA","name":"FII
+        CAMPUSFL","id":1900},{"abbreviation":"OUJP11.SA","name":"FII OURI JPP","id":1901},{"abbreviation":"THRA11.SA","name":"FII
+        BM THERA","id":1902},{"abbreviation":"KINP11.SA","name":"FII EV KINEA","id":1903},{"abbreviation":"WLMM3.SA","name":"WLM
+        IND COM ON","id":1904},{"abbreviation":"WLMM4.SA","name":"WLM IND COM PN","id":1905},{"abbreviation":"NVRP11.SA","name":"FIP
+        NVRAPOSO","id":1906},{"abbreviation":"CRFB3.SA","name":"CARREFOUR ON","id":1909},{"abbreviation":"IRBR3.SA","name":"IRBBRASIL","id":1914},{"abbreviation":"OMGE3.SA","name":"OMEGA
+        GER","id":1915},{"abbreviation":"JTPR11.SA","name":"FII JT PREV","id":1919},{"abbreviation":"PPLA11.SA","name":"PPLA
+        UNT","id":1920},{"abbreviation":"RBRF11.SA","name":"FII RBRALPHA","id":1923},{"abbreviation":"DMMO3.SA","name":"DOMMO","id":1925},{"abbreviation":"CAML3.SA","name":"CAMIL","id":1926},{"abbreviation":"STTR3.SA","name":"STARA","id":1927},{"abbreviation":"IGSN3.SA","name":"IGUA
+        SA","id":1930},{"abbreviation":"SMLS3.SA","name":"SMILES","id":1932},{"abbreviation":"VISC11.SA","name":"FII
+        VINCI SC","id":1935},{"abbreviation":"FISD11.SA","name":"FII DOMINGOS","id":1936},{"abbreviation":"SAPR11.SA","name":"SANEPAR
+        UNT","id":1938},{"abbreviation":"PRNR3.SA","name":"PRINER","id":1939},{"abbreviation":"BCFF11.SA","name":"FII
+        BC FFII","id":1941},{"abbreviation":"BRDT3.SA","name":"PETROBRAS BR","id":1945},{"abbreviation":"BKBR3.SA","name":"BK
+        BRASIL","id":1947},{"abbreviation":"MALL11.SA","name":"FII  MALLS BP","id":1948},{"abbreviation":"BZLI11.SA","name":"FII
+        BRREALTY","id":1949},{"abbreviation":"PRTS11.SA","name":"FII MULTPROP","id":1953},{"abbreviation":"XPML11.SA","name":"FII
+        XP MALLS","id":1954},{"abbreviation":"REIT11.SA","name":"FII REIT RIV","id":1956},{"abbreviation":"SHOP11.SA","name":"FII
+        MULTSHOP","id":1957},{"abbreviation":"ALZR11.SA","name":"FII ALIANZA","id":1958},{"abbreviation":"NPAR11.SA","name":"FII
+        NESTPAR","id":1961},{"abbreviation":"JPSA3.SA","name":"JEREISSATI","id":1962},{"abbreviation":"SMFT3.SA","name":"SMART
+        FIT ON","id":1969},{"abbreviation":"INNT3.SA","name":"INTER SA","id":1972},{"abbreviation":"HFOF11.SA","name":"FII
+        HEDGEFOF","id":1973},{"abbreviation":"FLEX3.SA","name":"FLEX S/A","id":1975},{"abbreviation":"IRDM11.SA","name":"FII
+        IRIDIUM","id":1976},{"abbreviation":"B3SA3.SA","name":"B3 SA","id":1978},{"abbreviation":"MGFF11.SA","name":"FII
+        MOGNO","id":1979},{"abbreviation":"GNDI3.SA","name":"INTERMEDICA","id":1981},{"abbreviation":"VTLT11.SA","name":"FII
+        VOT LOG","id":1982},{"abbreviation":"HAPV3.SA","name":"HAPVIDA","id":1983},{"abbreviation":"BIDI11.SA","name":"BANCO
+        INTER","id":1984},{"abbreviation":"WPLZ11.SA","name":"FII W PLAZA","id":1985},{"abbreviation":"RDPD11.SA","name":"FII
+        BB PAPII","id":1987},{"abbreviation":"RBRR11.SA","name":"FII RBRHGRAD","id":1988},{"abbreviation":"BIDI4.SA","name":"INTER
+        BANCO","id":1990},{"abbreviation":"ORPD11.SA","name":"FII OURO PRT","id":1992},{"abbreviation":"XPLG11.SA","name":"FII
+        XP LOG","id":1996},{"abbreviation":"HUSC11.SA","name":"FII H UNIMED","id":2004},{"abbreviation":"VOTS11.SA","name":"FII
+        V MASTER","id":2010},{"abbreviation":"HGRU11.SA","name":"FII CSHG URB","id":2013},{"abbreviation":"RBRP11.SA","name":"FII
+        RBR PROP","id":2014},{"abbreviation":"VGIR11.SA","name":"FII VALREIII","id":2015},{"abbreviation":"KNHY11.SA","name":"FII
+        KINEA HY","id":2017},{"abbreviation":"BTCR11.SA","name":"FII BTG CRI","id":2021},{"abbreviation":"TGAR11.SA","name":"FII
+        TG ATIVO","id":2023},{"abbreviation":"PTCA11.SA","name":"PRATICA","id":2024},{"abbreviation":"PTCA3.SA","name":"PRATICA","id":2025},{"abbreviation":"ATSA11.SA","name":"FII
+        CSHGATSA","id":2027},{"abbreviation":"XPIN11.SA","name":"FII XP INDL","id":2028},{"abbreviation":"LVBI11.SA","name":"FII
+        VBI LOG","id":2036},{"abbreviation":"VSHO11.SA","name":"FII VOT SHOP","id":2042},{"abbreviation":"DMAC11.SA","name":"FII
+        MAC","id":2044},{"abbreviation":"FISC11.SA","name":"FII SC 401","id":2048},{"abbreviation":"LOGG3.SA","name":"LOG
+        COM PROP","id":2049},{"abbreviation":"STRX11.SA","name":"FII STARX","id":2050},{"abbreviation":"APER3.SA","name":"ALPER","id":2051},{"abbreviation":"DMMO11.SA","name":"DOMMO","id":2055},{"abbreviation":"TORM13.SA","name":"FII
+        TOURMALE","id":2057},{"abbreviation":"TOUR11.SA","name":"FII TOUR II","id":2058},{"abbreviation":"TOUR12.SA","name":"FII
+        TOUR II","id":2059},{"abbreviation":"TOUR13.SA","name":"FII TOUR II","id":2060},{"abbreviation":"SQIA3.SA","name":"SINQIA
+        ON","id":2063},{"abbreviation":"KFOF11.SA","name":"FII KINEAFOF","id":2064},{"abbreviation":"BBML3.SA","name":"BBM
+        LOGISTICA","id":2065},{"abbreviation":"VILG11.SA","name":"FII VINCILOG","id":2067},{"abbreviation":"PATC11.SA","name":"FII
+        PATRIA","id":2069},{"abbreviation":"BKOI11.SA","name":"FIP BKO I","id":2071},{"abbreviation":"PBLV11.SA","name":"FII
+        PROLOGIS","id":2073},{"abbreviation":"ENAT3.SA","name":"ENAUTA PART","id":2074},{"abbreviation":"XPHT11.SA","name":"FII
+        XP HOT","id":2076},{"abbreviation":"XPHT12.SA","name":"FII XP HOT","id":2077},{"abbreviation":"ADBE34.SA","name":"ADOBE
+        INC","id":2079},{"abbreviation":"ADPR34.SA","name":"AUTOMATIC DT","id":2080},{"abbreviation":"APTV34.SA","name":"APTIV
+        PLC","id":2081},{"abbreviation":"ATVI34.SA","name":"ACTIVISION","id":2082},{"abbreviation":"AVGO34.SA","name":"BROADCOM
+        INC","id":2083},{"abbreviation":"AWII34.SA","name":"ARMSTRONG","id":2084},{"abbreviation":"AZOI34.SA","name":"AUTOZONE
+        INC","id":2085},{"abbreviation":"BKNG34.SA","name":"BOOKING","id":2086},{"abbreviation":"CAON34.SA","name":"CAPITAL
+        ONE","id":2087},{"abbreviation":"CAPH34.SA","name":"CAPRI HOLDI","id":2088},{"abbreviation":"CHCM34.SA","name":"CHARTER
+        COMM","id":2089},{"abbreviation":"CHDC34.SA","name":"CHURCH DWIGH","id":2090},{"abbreviation":"CHME34.SA","name":"CME
+        GROUP","id":2091},{"abbreviation":"CINF34.SA","name":"CINCINNATI","id":2092},{"abbreviation":"CLXC34.SA","name":"CLOROX
+        CO","id":2093},{"abbreviation":"CNIC34.SA","name":"CANAD NATION","id":2094},{"abbreviation":"CPRL34.SA","name":"CANAD
+        PACIFI","id":2095},{"abbreviation":"CRDA34.SA","name":"CREDIT ACCEP","id":2096},{"abbreviation":"CRIN34.SA","name":"CARTERS
+        INC","id":2097},{"abbreviation":"CSXC34.SA","name":"CSX CORP","id":2098},{"abbreviation":"DBAG34.SA","name":"DEUTSCHE
+        AK","id":2099},{"abbreviation":"DCVY34.SA","name":"DISCOVERY IN","id":2100},{"abbreviation":"DEEC34.SA","name":"DEERE
+        CO","id":2101},{"abbreviation":"DGCO34.SA","name":"DOLLAR GENER","id":2102},{"abbreviation":"DLTR34.SA","name":"DOLLAR
+        TREE","id":2103},{"abbreviation":"DVAI34.SA","name":"DAVITA INC","id":2104},{"abbreviation":"EAIN34.SA","name":"ELECTR
+        ARTS","id":2105},{"abbreviation":"ELCI34.SA","name":"ESTEE LAUDER","id":2106},{"abbreviation":"EQIX34.SA","name":"EQUINIX
+        INC","id":2107},{"abbreviation":"EXGR34.SA","name":"EXPEDIA GROU","id":2108},{"abbreviation":"FASL34.SA","name":"FASTENAL","id":2109},{"abbreviation":"FFTD34.SA","name":"FIFTH
+        THIRD","id":2110},{"abbreviation":"FLTC34.SA","name":"FLEETCOR TEC","id":2111},{"abbreviation":"GPRK34.SA","name":"GEOPARK
+        LTD","id":2112},{"abbreviation":"INTU34.SA","name":"INTUIT INC","id":2113},{"abbreviation":"ISBC34.SA","name":"INVEST
+        BCORP","id":2114},{"abbreviation":"KMIC34.SA","name":"KINDER MORGA","id":2115},{"abbreviation":"KMPR34.SA","name":"KEMPER
+        CORP","id":2116},{"abbreviation":"LBRD34.SA","name":"LIBERTY BROA","id":2117},{"abbreviation":"LOWC34.SA","name":"LOWES
+        COMPA","id":2118},{"abbreviation":"LSXM34.SA","name":"LIBERTY MEDI","id":2119},{"abbreviation":"MCOR34.SA","name":"MOODYS
+        CORP","id":2120},{"abbreviation":"MELI34.SA","name":"MERCADOLIBRE","id":2121},{"abbreviation":"MKLC34.SA","name":"MARKEL
+        CORP","id":2122},{"abbreviation":"MOOO34.SA","name":"ALTRIA GROUP","id":2123},{"abbreviation":"MUTC34.SA","name":"MICRON
+        TECHN","id":2124},{"abbreviation":"NEXT34.SA","name":"NEXTERA ENER","id":2125},{"abbreviation":"NOCG34.SA","name":"NORTHROP
+        GRU","id":2126},{"abbreviation":"NVDC34.SA","name":"NVIDIA CORP","id":2127},{"abbreviation":"ORLY34.SA","name":"OREILLY
+        AUT","id":2128},{"abbreviation":"OXYP34.SA","name":"OCCIDENT PTR","id":2129},{"abbreviation":"PNCS34.SA","name":"PNCFNANCIAL","id":2130},{"abbreviation":"PYPL34.SA","name":"PAYPAL
+        HOLD","id":2131},{"abbreviation":"RECT11.SA","name":"FII UBSOFFIC","id":2132},{"abbreviation":"REGN34.SA","name":"REGENERON
+        PH","id":2133},{"abbreviation":"SBNY34.SA","name":"SIGNATURE BK","id":2134},{"abbreviation":"SIMN34.SA","name":"SIMON
+        PROP","id":2135},{"abbreviation":"SLBC34.SA","name":"STERLING BNC","id":2136},{"abbreviation":"SPGI34.SA","name":"SP
+        GLOBAL","id":2137},{"abbreviation":"SRXM34.SA","name":"SIRIUS XM HD","id":2138},{"abbreviation":"STZB34.SA","name":"CONSTELLATIO","id":2139},{"abbreviation":"THGI34.SA","name":"HANOVER
+        INSU","id":2140},{"abbreviation":"TJXC34.SA","name":"TJX COMPANIE","id":2141},{"abbreviation":"TPRY34.SA","name":"TAPESTRY
+        INC","id":2142},{"abbreviation":"TSNF34.SA","name":"TYSON FOODS","id":2143},{"abbreviation":"UNHH34.SA","name":"UNITEDHEALTH","id":2144},{"abbreviation":"VFCO34.SA","name":"VF
+        CORP","id":2145},{"abbreviation":"VLYB34.SA","name":"VALLEY NTION","id":2147},{"abbreviation":"VRSN34.SA","name":"VERISIGN
+        INC","id":2148},{"abbreviation":"VRTX34.SA","name":"VERTEX PHARM","id":2149},{"abbreviation":"WABC34.SA","name":"WESTERN
+        BCOR","id":2150},{"abbreviation":"WATC34.SA","name":"WATERS CORP","id":2151},{"abbreviation":"WGBA34.SA","name":"WALGREENS","id":2152},{"abbreviation":"XRAY34.SA","name":"DENTSPLY
+        SIR","id":2153},{"abbreviation":"YUMR34.SA","name":"YUM BRANDS","id":2154},{"abbreviation":"GSFI11.SA","name":"FII
+        GENERAL","id":2155},{"abbreviation":"RBED11.SA","name":"FII RIOB ED","id":2158},{"abbreviation":"RBVA11.SA","name":"FII
+        RIOB VA","id":2159},{"abbreviation":"RBRY11.SA","name":"FII RBR PCRI","id":2162},{"abbreviation":"GOLL12.SA","name":"GOL","id":2163},{"abbreviation":"RCFA11.SA","name":"FII
+        GP RCFA","id":2164},{"abbreviation":"CRFF11.SA","name":"FII CX RBRA2","id":2165},{"abbreviation":"DDNB34.SA","name":"DUPONT
+        N INC","id":2169},{"abbreviation":"HGPO11.SA","name":"FII CSHGPRIM","id":2170},{"abbreviation":"BARI11.SA","name":"FII
+        BARIGUI","id":2173},{"abbreviation":"GTWR11.SA","name":"FII G TOWERS","id":2174},{"abbreviation":"TESA12.SA","name":"TERRA
+        SANTA","id":2175},{"abbreviation":"BOVB11.SA","name":"BOVB ETF","id":2177},{"abbreviation":"NEOE3.SA","name":"NEOENERGIA","id":2178},{"abbreviation":"FOXC34.SA","name":"FOX
+        CORP","id":2185},{"abbreviation":"HCTR11.SA","name":"FII HECTARE","id":2318},{"abbreviation":"OUFF11.SA","name":"FII
+        OURI FOF","id":2319},{"abbreviation":"XPIE11.SA","name":"FIP XP INFRA","id":2320},{"abbreviation":"BIDI3.SA","name":"BANCO
+        INTER","id":2323},{"abbreviation":"YDUQ3.SA","name":"YDUQS PART","id":2324},{"abbreviation":"GOLL11.SA","name":"GOL
+        LINHAS PRF","id":2327},{"abbreviation":"HABT11.SA","name":"FII HABIT II","id":2328},{"abbreviation":"ALSO3.SA","name":"ALIANSCE
+        ON","id":2329},{"abbreviation":"SADI11.SA","name":"FII SANT PAP","id":2332},{"abbreviation":"HSML11.SA","name":"FII
+        HSI MALL","id":2333},{"abbreviation":"HGFF11.SA","name":"FII CSHG FOF","id":2336},{"abbreviation":"RBFF11.SA","name":"FII
+        RIOB FF","id":2337},{"abbreviation":"BPRP11.SA","name":"FII BRLPROP","id":2338},{"abbreviation":"ERPA11.SA","name":"FII
+        EUROPA","id":2342},{"abbreviation":"ABUD34.SA","name":"AB INBEV","id":2344},{"abbreviation":"ASML34.SA","name":"ASML
+        HOLD","id":2345},{"abbreviation":"BABA34.SA","name":"ALIBABAGR","id":2346},{"abbreviation":"BCSA34.SA","name":"SANTANDER","id":2347},{"abbreviation":"BHPG34.SA","name":"BHP
+        GROUP","id":2348},{"abbreviation":"BIDU34.SA","name":"BAIDU INC","id":2349},{"abbreviation":"BILB34.SA","name":"BILBAOVIZ","id":2350},{"abbreviation":"CAJI34.SA","name":"CANON
+        INC","id":2351},{"abbreviation":"CRHP34.SA","name":"CRH PLC","id":2352},{"abbreviation":"CRIP34.SA","name":"CTRIPCOM","id":2353},{"abbreviation":"DEOP34.SA","name":"DIAGEO
+        PL","id":2354},{"abbreviation":"FMSC34.SA","name":"FRESENIUS","id":2356},{"abbreviation":"HOND34.SA","name":"HONDA
+        MO","id":2357},{"abbreviation":"INGG34.SA","name":"ING GROEP","id":2358},{"abbreviation":"JDCO34.SA","name":"JD
+        COM","id":2359},{"abbreviation":"NETE34.SA","name":"NETEASE","id":2360},{"abbreviation":"NMRH34.SA","name":"NOMURA
+        HO","id":2361},{"abbreviation":"NOKI34.SA","name":"NOKIA CORP","id":2362},{"abbreviation":"PHGN34.SA","name":"KOPHILIPS","id":2364},{"abbreviation":"PTCH34.SA","name":"PETROCHIN","id":2365},{"abbreviation":"RDSA34.SA","name":"RD
+        SHELL","id":2367},{"abbreviation":"RIOT34.SA","name":"RIO TINTO","id":2368},{"abbreviation":"SAPP34.SA","name":"SAP
+        SE","id":2369},{"abbreviation":"SNEC34.SA","name":"SONY CORP","id":2370},{"abbreviation":"STMN34.SA","name":"STMICROEL","id":2372},{"abbreviation":"TAKP34.SA","name":"TAKEDAPH","id":2373},{"abbreviation":"TLNC34.SA","name":"TELEFONIC","id":2374},{"abbreviation":"TMCO34.SA","name":"TOYOTAMO","id":2375},{"abbreviation":"TSMC34.SA","name":"TAIWANSMFAC","id":2376},{"abbreviation":"TXSA34.SA","name":"TERNIUMSA","id":2378},{"abbreviation":"ULEV34.SA","name":"UNILEVER","id":2379},{"abbreviation":"CVBI11.SA","name":"FII
+        VBI CRI","id":2381},{"abbreviation":"HRDF11.SA","name":"FII HREALTY","id":2385},{"abbreviation":"TCPF11.SA","name":"FII
+        TREECORP","id":2386},{"abbreviation":"VIVA3.SA","name":"VIVARA NM","id":2388},{"abbreviation":"COGN3.SA","name":"COGNA
+        ON","id":2391},{"abbreviation":"IBFF11.SA","name":"FII FOF BREI","id":2392},{"abbreviation":"RBCO11.SA","name":"FII
+        R INCOME","id":2393},{"abbreviation":"CEAB3.SA","name":"C A MODAS ON","id":2395},{"abbreviation":"RSPD11.SA","name":"FII
+        RBRESID","id":2398},{"abbreviation":"BPML11.SA","name":"FII BTG SHOP","id":2401},{"abbreviation":"VIGT11.SA","name":"FIP
+        VINCI IE","id":2402},{"abbreviation":"RCRB11.SA","name":"FII RIOB RC","id":2403},{"abbreviation":"ARRI11.SA","name":"FII
+        ATRIO","id":2404},{"abbreviation":"SLED12.SA","name":"SARAIVA LIVR","id":2406},{"abbreviation":"PLCR11.SA","name":"FII
+        PLURAL R","id":2408},{"abbreviation":"QAGR11.SA","name":"FII QUASAR A","id":2409},{"abbreviation":"TASA13.SA","name":"TAURUS","id":2410},{"abbreviation":"TASA15.SA","name":"TAURUS","id":2411},{"abbreviation":"TASA17.SA","name":"TAURUS","id":2412},{"abbreviation":"TASA3.SA","name":"TAURUS","id":2413},{"abbreviation":"TASA4.SA","name":"TAURUS","id":2414},{"abbreviation":"JPPA11.SA","name":"FII
+        JPPMOGNO","id":2416},{"abbreviation":"VINO11.SA","name":"FII VINC COR","id":2418},{"abbreviation":"BMGB4.SA","name":"BANCO
+        BMG PN","id":2419},{"abbreviation":"BTLG11.SA","name":"FII BTLG","id":2420},{"abbreviation":"BRCO11.SA","name":"FII
+        BRESCO","id":2421},{"abbreviation":"XPPR11.SA","name":"FII XP PROP","id":2425},{"abbreviation":"MCCI11.SA","name":"FII
+        MAUA","id":2428},{"abbreviation":"A1OS34.SA","name":"AO SMITH COR","id":2436},{"abbreviation":"A1PA34.SA","name":"APACHE
+        CORP","id":2437},{"abbreviation":"B1BT34.SA","name":"TRUIST FINAN BDR","id":2438},{"abbreviation":"B1KR34.SA","name":"BAKER
+        HUGHES","id":2439},{"abbreviation":"B1SX34.SA","name":"BOSTON SCIEN","id":2440},{"abbreviation":"C1AG34.SA","name":"CONAGRA
+        BRAN","id":2441},{"abbreviation":"C1AH34.SA","name":"CARDINAL HEA","id":2442},{"abbreviation":"C1BS34.SA","name":"CBS
+        CORP","id":2443},{"abbreviation":"C1CL34.SA","name":"CARNIVAL COR","id":2444},{"abbreviation":"C1FG34.SA","name":"CITIZENS
+        FIN","id":2445},{"abbreviation":"C1FI34.SA","name":"CF INDUSTRIE","id":2446},{"abbreviation":"C1NC34.SA","name":"CENTENE
+        CORP","id":2447},{"abbreviation":"C1NP34.SA","name":"CENTERPOINT","id":2448},{"abbreviation":"C1OG34.SA","name":"CABOT
+        OIL","id":2449},{"abbreviation":"C1TX34.SA","name":"CITRIX SYSTE","id":2451},{"abbreviation":"D1EL34.SA","name":"DELL
+        TECHNOL","id":2453},{"abbreviation":"D1HI34.SA","name":"DR HORTON IN","id":2454},{"abbreviation":"D1IS34.SA","name":"DISH
+        NETWORK","id":2455},{"abbreviation":"D1OM34.SA","name":"DOMINION ENE","id":2456},{"abbreviation":"D1VN34.SA","name":"DEVON
+        ENERGY","id":2457},{"abbreviation":"D1XC34.SA","name":"DXC TECHNOLO","id":2458},{"abbreviation":"E1IX34.SA","name":"EDISON
+        INTER","id":2459},{"abbreviation":"E1OG34.SA","name":"EOG RESOURCE","id":2460},{"abbreviation":"E1XC34.SA","name":"EXELON
+        CORP","id":2462},{"abbreviation":"F1EC34.SA","name":"FIRSTENERGY","id":2463},{"abbreviation":"F1IS34.SA","name":"FISERV
+        INC","id":2464},{"abbreviation":"F1NI34.SA","name":"FIDELITY NAT","id":2465},{"abbreviation":"G1LW34.SA","name":"CORNING
+        INC","id":2466},{"abbreviation":"H1BA34.SA","name":"HUNTINGTON B","id":2467},{"abbreviation":"H1CA34.SA","name":"HCA
+        HEALTHCA","id":2468},{"abbreviation":"H1LT34.SA","name":"HILTON WORLD","id":2469},{"abbreviation":"H1PE34.SA","name":"HEWLETT
+        PACK","id":2470},{"abbreviation":"H1RL34.SA","name":"HORMEL FOODS","id":2471},{"abbreviation":"H1ST34.SA","name":"HOST
+        HOTELS","id":2472},{"abbreviation":"I1PC34.SA","name":"INTERNATIONA","id":2473},{"abbreviation":"I1VZ34.SA","name":"INVESCO
+        LTD","id":2474},{"abbreviation":"J1CI34.SA","name":"JOHNSON CONT","id":2475},{"abbreviation":"J1WN34.SA","name":"NORDSTROM
+        IN","id":2476},{"abbreviation":"K1EY34.SA","name":"KEYCORP","id":2477},{"abbreviation":"K1RC34.SA","name":"KROGER
+        CO","id":2478},{"abbreviation":"K1SS34.SA","name":"KOHLS CORP","id":2479},{"abbreviation":"L1BT34.SA","name":"LIBERTY
+        GLOB","id":2480},{"abbreviation":"L1EN34.SA","name":"LENNAR CORP","id":2481},{"abbreviation":"M1AS34.SA","name":"MASCO
+        CORP","id":2482},{"abbreviation":"M1CH34.SA","name":"MICROCHIP TE","id":2483},{"abbreviation":"M1GM34.SA","name":"MGM
+        RESORTS","id":2484},{"abbreviation":"M1PC34.SA","name":"MARATHON PET","id":2485},{"abbreviation":"M1RO34.SA","name":"MARATHON
+        OIL","id":2486},{"abbreviation":"N1CL34.SA","name":"NORWEGIAN CR","id":2488},{"abbreviation":"N1EM34.SA","name":"NEWMONT
+        GOLD","id":2489},{"abbreviation":"N1IS34.SA","name":"NISOURCE INC","id":2490},{"abbreviation":"N1RG34.SA","name":"NRG
+        ENERGY I","id":2491},{"abbreviation":"N1TA34.SA","name":"NETAPP INC","id":2492},{"abbreviation":"N1WL34.SA","name":"NEWELL
+        BRAND","id":2493},{"abbreviation":"N1XP34.SA","name":"NXP SEMICOND","id":2494},{"abbreviation":"P1HM34.SA","name":"PULTEGROUP
+        I","id":2495},{"abbreviation":"P1PL34.SA","name":"PPL CORP","id":2496},{"abbreviation":"P1SX34.SA","name":"PHILLIPS
+        66","id":2497},{"abbreviation":"R1FC34.SA","name":"REGIONS FINA","id":2498},{"abbreviation":"RBRM11.SA","name":"FI
+        IMOBILIARIO","id":2499},{"abbreviation":"S1TT34.SA","name":"STATE STREET","id":2500},{"abbreviation":"S1TX34.SA","name":"SEAGATE
+        TECH","id":2501},{"abbreviation":"S1YF34.SA","name":"SYNCHRONY FI","id":2502},{"abbreviation":"S1YM34.SA","name":"SYMANTEC
+        COR","id":2503},{"abbreviation":"S1YY34.SA","name":"SYSCO CORP","id":2504},{"abbreviation":"T1MU34.SA","name":"T-MOBILE
+        US","id":2505},{"abbreviation":"T1SO34.SA","name":"THE SOUTHERN","id":2506},{"abbreviation":"U1AL34.SA","name":"UNITED
+        AIRLI","id":2507},{"abbreviation":"U1BE34.SA","name":"UBER TECH IN","id":2508},{"abbreviation":"W1DC34.SA","name":"WESTERN
+        DIG","id":2509},{"abbreviation":"W1MB34.SA","name":"WILLIAMS COS","id":2510},{"abbreviation":"W1MC34.SA","name":"WASTE
+        MANAG","id":2511},{"abbreviation":"W1YN34.SA","name":"WYNN RESORTS","id":2512},{"abbreviation":"X1EL34.SA","name":"XCEL
+        ENERGY","id":2513},{"abbreviation":"X1LN34.SA","name":"XILINX INC","id":2514},{"abbreviation":"Z1IO34.SA","name":"ZIONSBANCORP","id":2515},{"abbreviation":"RBTS11.SA","name":"FII
+        RB TFO","id":2516},{"abbreviation":"XPCI11.SA","name":"FII XP CRED","id":2517},{"abbreviation":"EQPA3.SA","name":"EQTL
+        PARA ON","id":2518},{"abbreviation":"EQPA5.SA","name":"EQTL PARA PNA","id":2519},{"abbreviation":"EQPA6.SA","name":"EQTL
+        PARA PNB","id":2520},{"abbreviation":"EQPA7.SA","name":"EQTL PARA PNC","id":2521},{"abbreviation":"NTCO3.SA","name":"GRUPO
+        NATURA ON","id":2522},{"abbreviation":"HLOG11.SA","name":"FII HEDGELOG","id":2524},{"abbreviation":"HPDP11.SA","name":"FII
+        HEDGE RE CI","id":2525},{"abbreviation":"LGCP11.SA","name":"FII LGCP INT","id":2526},{"abbreviation":"BICR11.SA","name":"FII
+        INTER","id":2527},{"abbreviation":"NEWL11.SA","name":"FII NEWPORT","id":2528},{"abbreviation":"RBIV11.SA","name":"FII
+        RBCRI IV CF","id":2529},{"abbreviation":"LUGG11.SA","name":"FII LUGGO CI","id":2530},{"abbreviation":"CPFF11.SA","name":"FII
+        CAP REIT","id":2531},{"abbreviation":"VVPR11.SA","name":"FII V2 PROP ETF","id":2532},{"abbreviation":"LMED3.SA","name":"LIFEMED
+        ORD","id":2534},{"abbreviation":"SARE11.SA","name":"FII SANT REN","id":2536},{"abbreviation":"SLED11.SA","name":"SARAIVA
+        LIVR","id":2537},{"abbreviation":"R1IN34.SA","name":"REALTY INCOM","id":2538},{"abbreviation":"PFIN11.SA","name":"FIP
+        PERFIN","id":2540},{"abbreviation":"BREV11.SA","name":"FII BRE VIC","id":2541},{"abbreviation":"TRXF11.SA","name":"FII
+        TRX REAL","id":2542},{"abbreviation":"A1BM34.SA","name":"ABIOMED INC","id":2545},{"abbreviation":"A1NE34.SA","name":"ARISTA
+        NETWO","id":2561},{"abbreviation":"A1NS34.SA","name":"ANSYS INC","id":2562},{"abbreviation":"A1NT34.SA","name":"ANTHEM
+        INC","id":2563},{"abbreviation":"A1ON34.SA","name":"AON PLC","id":2564},{"abbreviation":"A1PD34.SA","name":"AIR
+        PRODUCTS","id":2565},{"abbreviation":"A1PH34.SA","name":"AMPHENOL COR","id":2566},{"abbreviation":"A1RE34.SA","name":"ALEXANDRIA
+        R","id":2567},{"abbreviation":"A1SU34.SA","name":"ASSURANT INC","id":2568},{"abbreviation":"A1TM34.SA","name":"ATMOS
+        ENERGY","id":2569},{"abbreviation":"A1TT34.SA","name":"ALLSTATE COR","id":2570},{"abbreviation":"A1UT34.SA","name":"AUTODESK
+        INC","id":2571},{"abbreviation":"A1VB34.SA","name":"AVALONBAY CO","id":2572},{"abbreviation":"A1VY34.SA","name":"AVERY
+        DENNIS","id":2573},{"abbreviation":"A1WK34.SA","name":"AMERICAN WAT","id":2574},{"abbreviation":"B1AX34.SA","name":"BAXTER
+        INTER","id":2575},{"abbreviation":"B1DX34.SA","name":"BECTON DICKI","id":2576},{"abbreviation":"B1FC34.SA","name":"BROWN
+        FORMAN","id":2577},{"abbreviation":"B1LL34.SA","name":"BALL CORP","id":2578},{"abbreviation":"B1MR34.SA","name":"BIOMARIN
+        PHA","id":2579},{"abbreviation":"B1RF34.SA","name":"BROADRIDGE F","id":2580},{"abbreviation":"B1WA34.SA","name":"BORGWARNER
+        I","id":2581},{"abbreviation":"C1BL34.SA","name":"CHUBB LTD","id":2582},{"abbreviation":"C1BO34.SA","name":"CBOE
+        GLOBAL","id":2583},{"abbreviation":"C1BR34.SA","name":"CBRE GROUP I","id":2584},{"abbreviation":"C1CI34.SA","name":"CROWN
+        CASTLE","id":2585},{"abbreviation":"C1DN34.SA","name":"CADENCE DESI","id":2586},{"abbreviation":"C1ER34.SA","name":"CERNER
+        CORP","id":2587},{"abbreviation":"C1HK34.SA","name":"CHECK POINT","id":2588},{"abbreviation":"C1HR34.SA","name":"CH
+        ROBINSON","id":2589},{"abbreviation":"C1IC34.SA","name":"CIGNA CORP","id":2590},{"abbreviation":"C1MA34.SA","name":"COMERICA
+        INC","id":2591},{"abbreviation":"C1MG34.SA","name":"CHIPOTLE MEX","id":2592},{"abbreviation":"C1MI34.SA","name":"CUMMINS
+        INC","id":2593},{"abbreviation":"C1MS34.SA","name":"CMS ENERGY C","id":2594},{"abbreviation":"C1NS34.SA","name":"CELANESE
+        COR","id":2595},{"abbreviation":"C1OO34.SA","name":"COOPER COMPA","id":2596},{"abbreviation":"C1PB34.SA","name":"CAMPBELL
+        SOU","id":2597},{"abbreviation":"C1PR34.SA","name":"COPART INC","id":2598},{"abbreviation":"C1TA34.SA","name":"CINTAS
+        CORP","id":2599},{"abbreviation":"D1FS34.SA","name":"DISCOVER FIN","id":2600},{"abbreviation":"D1LR34.SA","name":"DIGITAL
+        REAL","id":2601},{"abbreviation":"D1OV34.SA","name":"DOVER CORP","id":2602},{"abbreviation":"D1RE34.SA","name":"DUKE
+        REALTY","id":2603},{"abbreviation":"D1RI34.SA","name":"DARDEN RESTA","id":2604},{"abbreviation":"D1TE34.SA","name":"DTE
+        ENERGY C","id":2605},{"abbreviation":"DCVY35.SA","name":"DISCOVERY INC","id":2606},{"abbreviation":"E1CL34.SA","name":"ECOLAB
+        INC","id":2607},{"abbreviation":"E1DI34.SA","name":"CONSOLIDATED","id":2608},{"abbreviation":"E1FX34.SA","name":"EQUIFAX
+        INC","id":2609},{"abbreviation":"E1MN34.SA","name":"EASTMAN CHEM","id":2610},{"abbreviation":"E1MR34.SA","name":"EMERSON
+        ELEC","id":2611},{"abbreviation":"E1QR34.SA","name":"EQUITY RESID","id":2612},{"abbreviation":"E1SE34.SA","name":"EVERSOURCE
+        E","id":2613},{"abbreviation":"E1SS34.SA","name":"ESSEX PROPER","id":2614},{"abbreviation":"E1TN34.SA","name":"EATON
+        CORP P","id":2615},{"abbreviation":"E1TR34.SA","name":"ENTERGY CORP","id":2616},{"abbreviation":"E1VE34.SA","name":"EVEREST
+        RE G","id":2617},{"abbreviation":"E1VR34.SA","name":"EVERGY INC","id":2618},{"abbreviation":"E1WL34.SA","name":"EDWARDS
+        LIFE","id":2619},{"abbreviation":"E1XP34.SA","name":"EXPEDITORS I","id":2620},{"abbreviation":"E1XR34.SA","name":"EXTRA
+        SPACE","id":2621},{"abbreviation":"F1AN34.SA","name":"DIAMONDBACK","id":2622},{"abbreviation":"F1BH34.SA","name":"FORTUNE
+        BRAN","id":2623},{"abbreviation":"F1FI34.SA","name":"F5 NETWORKS","id":2624},{"abbreviation":"F1LI34.SA","name":"FLIR
+        SYSTEMS","id":2625},{"abbreviation":"F1LS34.SA","name":"FLOWSERVE CO","id":2626},{"abbreviation":"F1MC34.SA","name":"FMC
+        CORP","id":2627},{"abbreviation":"F1RA34.SA","name":"FRANKLIN RES","id":2628},{"abbreviation":"F1RC34.SA","name":"FIRST
+        REPUBL","id":2629},{"abbreviation":"F1RI34.SA","name":"FEDERAL REAL","id":2630},{"abbreviation":"F1TN34.SA","name":"FORTINET
+        INC","id":2631},{"abbreviation":"F1TV34.SA","name":"FORTIVE CORP","id":2632},{"abbreviation":"G1AR34.SA","name":"GARTNER
+        INC","id":2633},{"abbreviation":"G1LL34.SA","name":"GLOBE LIFE I","id":2634},{"abbreviation":"G1MI34.SA","name":"GENERAL
+        MILL","id":2635},{"abbreviation":"G1PC34.SA","name":"GENUINE PART","id":2636},{"abbreviation":"G1PI34.SA","name":"GLOBAL
+        PAYME","id":2637},{"abbreviation":"G1RM34.SA","name":"GARMIN LTD","id":2638},{"abbreviation":"G1WW34.SA","name":"WW
+        GRAINGER","id":2639},{"abbreviation":"H1AS34.SA","name":"HASBRO INC","id":2640},{"abbreviation":"H1BI34.SA","name":"HANESBRANDS","id":2641},{"abbreviation":"H1ES34.SA","name":"HESS
+        CORP","id":2642},{"abbreviation":"H1FC34.SA","name":"HOLLYFRONTIE","id":2643},{"abbreviation":"H1IG34.SA","name":"HARTFORD
+        FIN","id":2644},{"abbreviation":"H1II34.SA","name":"HUNTINGTON I","id":2645},{"abbreviation":"H1OG34.SA","name":"HARLEY-DAVID","id":2646},{"abbreviation":"H1OL34.SA","name":"HOLOGIC
+        INC","id":2647},{"abbreviation":"H1RB34.SA","name":"HER BLOCK IN","id":2648},{"abbreviation":"H1SI34.SA","name":"HENRY
+        SCHEIN","id":2649},{"abbreviation":"H1UM34.SA","name":"HUMANA INC","id":2650},{"abbreviation":"I1CE34.SA","name":"INTERCONTINE","id":2651},{"abbreviation":"I1DX34.SA","name":"IDEXX
+        LABORA","id":2652},{"abbreviation":"I1FF34.SA","name":"FLAVOR FLAGR","id":2653},{"abbreviation":"I1LM34.SA","name":"ILLUMINA
+        INC","id":2654},{"abbreviation":"I1NC34.SA","name":"INCYTE CORP","id":2655},{"abbreviation":"I1NF34.SA","name":"IHS
+        MARKIT L","id":2656},{"abbreviation":"I1PG34.SA","name":"IPG PHOTONIC","id":2657},{"abbreviation":"I1PH34.SA","name":"INTERPUBLIC","id":2658},{"abbreviation":"I1QV34.SA","name":"IQVIA
+        HOLDIN","id":2659},{"abbreviation":"I1RM34.SA","name":"IRON MOUNTAI","id":2660},{"abbreviation":"I1RP34.SA","name":"TRANE
+        TECH","id":2661},{"abbreviation":"I1SR34.SA","name":"INTUITIVE SU","id":2662},{"abbreviation":"I1TW34.SA","name":"ILLINOIS
+        TOO","id":2663},{"abbreviation":"J1BH34.SA","name":"JB HUNT TRAN","id":2664},{"abbreviation":"J1EF34.SA","name":"JEFFERIES
+        FI","id":2665},{"abbreviation":"J1EG34.SA","name":"JACOBS ENGIN","id":2666},{"abbreviation":"J1KH34.SA","name":"JACK
+        HENRY","id":2667},{"abbreviation":"J1NP34.SA","name":"JUNIPER NETW","id":2668},{"abbreviation":"K1CS34.SA","name":"KANSAS
+        CITY","id":2669},{"abbreviation":"K1EL34.SA","name":"KELLOGG CO","id":2670},{"abbreviation":"K1IM34.SA","name":"KIMCO
+        REALTY","id":2671},{"abbreviation":"K1LA34.SA","name":"KLA CORP","id":2672},{"abbreviation":"K1MX34.SA","name":"CARMAX
+        INC","id":2673},{"abbreviation":"K1SG34.SA","name":"KEYSIGHT TEC","id":2674},{"abbreviation":"L1CA34.SA","name":"LABORATORY
+        C","id":2675},{"abbreviation":"L1EG34.SA","name":"LEGGETT PL","id":2676},{"abbreviation":"L1HX34.SA","name":"L3HARRIS
+        TEC","id":2677},{"abbreviation":"L1IN34.SA","name":"LINDE PLC","id":2678},{"abbreviation":"L1KQ34.SA","name":"LKQ
+        CORP","id":2679},{"abbreviation":"L1NC34.SA","name":"LINCOLN NATI","id":2680},{"abbreviation":"L1OE34.SA","name":"LOEWS
+        CORP","id":2681},{"abbreviation":"L1RC34.SA","name":"LAM RESEARCH","id":2682},{"abbreviation":"L1UL34.SA","name":"LULULEMON
+        AT","id":2683},{"abbreviation":"L1WH34.SA","name":"LAMB WESTON","id":2684},{"abbreviation":"L1YB34.SA","name":"LYONDELLBASE","id":2685},{"abbreviation":"M1AA34.SA","name":"MID-AMERICA","id":2686},{"abbreviation":"M1CB34.SA","name":"MOLSON
+        COORS","id":2687},{"abbreviation":"M1CK34.SA","name":"MCKESSON COR","id":2688},{"abbreviation":"M1HK34.SA","name":"MOHAWK
+        INDUS","id":2689},{"abbreviation":"M1KC34.SA","name":"MCCORMICK","id":2690},{"abbreviation":"M1LM34.SA","name":"MARTIN
+        MARIE","id":2691},{"abbreviation":"M1MC34.SA","name":"MARSH E MCLE","id":2692},{"abbreviation":"M1NS34.SA","name":"MONSTER
+        BEVE","id":2693},{"abbreviation":"M1SC34.SA","name":"MSCI INC","id":2694},{"abbreviation":"M1SI34.SA","name":"MOTOROLA
+        SOL","id":2695},{"abbreviation":"M1TB34.SA","name":"MT BANK COR","id":2696},{"abbreviation":"M1TD34.SA","name":"METTLER-TOLE","id":2697},{"abbreviation":"M1TT34.SA","name":"MARRIOTT
+        INT","id":2698},{"abbreviation":"M1XI34.SA","name":"MAXIM INTEGR","id":2699},{"abbreviation":"N1DA34.SA","name":"NASDAQ
+        INC","id":2700},{"abbreviation":"N1LS34.SA","name":"NIELSEN HOLD","id":2701},{"abbreviation":"N1OV34.SA","name":"NATIONAL
+        OIL","id":2702},{"abbreviation":"N1SC34.SA","name":"NORFOLK SOUT","id":2703},{"abbreviation":"N1TR34.SA","name":"NORTHERN
+        TRU","id":2704},{"abbreviation":"N1UE34.SA","name":"NUCOR CORP","id":2705},{"abbreviation":"N1VR34.SA","name":"NVR
+        INC","id":2706},{"abbreviation":"N1WS34.SA","name":"NEWS CORP","id":2707},{"abbreviation":"O1KE34.SA","name":"ONEOK
+        INC","id":2708},{"abbreviation":"O1MC34.SA","name":"OMNICOM GROU","id":2709},{"abbreviation":"P1AC34.SA","name":"PACCAR
+        INC","id":2710},{"abbreviation":"P1AY34.SA","name":"PAYCHEX INC","id":2711},{"abbreviation":"P1BC34.SA","name":"PEOPLES
+        UNIT","id":2712},{"abbreviation":"P1DT34.SA","name":"PRUDENTIAL F","id":2713},{"abbreviation":"P1EA34.SA","name":"HEALTHPEAK
+        P","id":2714},{"abbreviation":"P1EG34.SA","name":"PUBLIC SERVI","id":2715},{"abbreviation":"P1FG34.SA","name":"PRINCIPAL
+        FI","id":2716},{"abbreviation":"P1GR34.SA","name":"THE PROGRESS","id":2717},{"abbreviation":"P1HC34.SA","name":"PARKER-HANNI","id":2718},{"abbreviation":"P1IO34.SA","name":"PIONEER
+        NATU","id":2719},{"abbreviation":"P1KG34.SA","name":"PACKAGING CO","id":2720},{"abbreviation":"P1KI34.SA","name":"PERKINELMER","id":2721},{"abbreviation":"P1LD34.SA","name":"PROLOGIS
+        INC","id":2722},{"abbreviation":"P1NR34.SA","name":"PENTAIR PLC","id":2723},{"abbreviation":"P1NW34.SA","name":"PINNACLE
+        WES","id":2724},{"abbreviation":"P1PG34.SA","name":"PPG INDUSTRI","id":2725},{"abbreviation":"P1RG34.SA","name":"PERRIGO
+        CO P","id":2726},{"abbreviation":"P1SA34.SA","name":"PUBLIC STORA","id":2727},{"abbreviation":"P1VH34.SA","name":"PVH
+        CORP","id":2728},{"abbreviation":"Q1RV34.SA","name":"QORVO INC","id":2729},{"abbreviation":"Q1UA34.SA","name":"QUANTA
+        SERVI","id":2730},{"abbreviation":"Q1UE34.SA","name":"QUEST DIAGNO","id":2731},{"abbreviation":"R1CL34.SA","name":"ROYAL
+        CARIBB","id":2732},{"abbreviation":"R1EG34.SA","name":"REGENCY CENT","id":2733},{"abbreviation":"R1HI34.SA","name":"ROBERT
+        HALF","id":2734},{"abbreviation":"R1JF34.SA","name":"RAYMOND JAME","id":2735},{"abbreviation":"R1LC34.SA","name":"RALPH
+        LAUREN","id":2736},{"abbreviation":"R1MD34.SA","name":"RESMED INC","id":2737},{"abbreviation":"R1OK34.SA","name":"ROCKWELL
+        AUT","id":2738},{"abbreviation":"R1OL34.SA","name":"ROLLINS INC","id":2739},{"abbreviation":"R1OP34.SA","name":"ROPER
+        TECHNO","id":2740},{"abbreviation":"R1SG34.SA","name":"REPUBLIC SER","id":2741},{"abbreviation":"S1BA34.SA","name":"SBA
+        COMMUNIC","id":2742},{"abbreviation":"S1EA34.SA","name":"SEALED AIR C","id":2743},{"abbreviation":"S1HW34.SA","name":"THE
+        SHERWIN","id":2744},{"abbreviation":"S1IV34.SA","name":"SVB FINANCIA","id":2745},{"abbreviation":"S1JM34.SA","name":"THE
+        JM SMUCK","id":2746},{"abbreviation":"S1LG34.SA","name":"SL GREEN REA","id":2747},{"abbreviation":"S1NA34.SA","name":"SNAP-ON
+        INC","id":2748},{"abbreviation":"S1NP34.SA","name":"SYNOPSYS INC","id":2749},{"abbreviation":"S1OU34.SA","name":"SOUTHWEST
+        AI","id":2750},{"abbreviation":"S1PO34.SA","name":"SPOTIFY TECH","id":2751},{"abbreviation":"S1RE34.SA","name":"SEMPRA
+        ENERG","id":2752},{"abbreviation":"S1SL34.SA","name":"SKYWORKS SOL","id":2753},{"abbreviation":"S1WK34.SA","name":"STANLEY
+        BLAC","id":2754},{"abbreviation":"S1YK34.SA","name":"STRYKER CORP","id":2755},{"abbreviation":"T1DG34.SA","name":"TRANSDIGM
+        GR","id":2756},{"abbreviation":"T1EC34.SA","name":"TECHNIPFMC P","id":2757},{"abbreviation":"T1EL34.SA","name":"TE
+        CONNECTIV","id":2758},{"abbreviation":"T1FX34.SA","name":"TELEFLEX INC","id":2759},{"abbreviation":"T1OW34.SA","name":"AMERICAN
+        TOW","id":2760},{"abbreviation":"T1RI34.SA","name":"TRIPADVISOR","id":2761},{"abbreviation":"T1RO34.SA","name":"T
+        ROWE PRICE","id":2762},{"abbreviation":"T1SC34.SA","name":"TRACTOR SUPP","id":2763},{"abbreviation":"T1TW34.SA","name":"TAKE-TWO
+        INT","id":2764},{"abbreviation":"T1XT34.SA","name":"TEXTRON INC","id":2765},{"abbreviation":"U1AI34.SA","name":"UNDER
+        ARMOUR","id":2766},{"abbreviation":"U1DR34.SA","name":"UDR INC","id":2767},{"abbreviation":"U1HS34.SA","name":"UNIVERSAL
+        HE","id":2768},{"abbreviation":"U1LT34.SA","name":"ULTA BEAUTY","id":2769},{"abbreviation":"U1NM34.SA","name":"UNUM
+        GROUP","id":2770},{"abbreviation":"U1RI34.SA","name":"UNITED RENTA","id":2771},{"abbreviation":"V1MC34.SA","name":"VULCAN
+        MATER","id":2773},{"abbreviation":"V1NO34.SA","name":"VORNADO REAL","id":2774},{"abbreviation":"V1RS34.SA","name":"VERISK
+        ANALY","id":2775},{"abbreviation":"V1TA34.SA","name":"VENTAS INC","id":2776},{"abbreviation":"W1AB34.SA","name":"WABTEC
+        CORP","id":2777},{"abbreviation":"W1DA34.SA","name":"WORKDAY INC","id":2778},{"abbreviation":"W1EC34.SA","name":"WEC
+        ENERGY G","id":2779},{"abbreviation":"W1EL34.SA","name":"WELLTOWER IN","id":2780},{"abbreviation":"W1HR34.SA","name":"WHIRLPOOL
+        CO","id":2781},{"abbreviation":"W1LT34.SA","name":"WILLIS TOWER","id":2782},{"abbreviation":"W1RK34.SA","name":"WESTROCK
+        CO","id":2783},{"abbreviation":"W1YC34.SA","name":"WEYERHAEUSER","id":2784},{"abbreviation":"X1YL34.SA","name":"XYLEM
+        INC","id":2785},{"abbreviation":"Z1BH34.SA","name":"ZIMMER BIOME","id":2786},{"abbreviation":"Z1TS34.SA","name":"ZOETIS
+        INC","id":2787},{"abbreviation":"VCJR11.SA","name":"FII VECTIS","id":2788},{"abbreviation":"SMAC11.SA","name":"IT
+        NOW SMALL","id":2790},{"abbreviation":"MTRE3.SA","name":"MITRE REALTY","id":2794},{"abbreviation":"LWSA3.SA","name":"LOCAWEB
+        ON","id":2795},{"abbreviation":"RVBI11.SA","name":"FII VBI REIT","id":2797},{"abbreviation":"MDNE3.SA","name":"MOURA
+        DUBEUX ON","id":2798},{"abbreviation":"XPSF11.SA","name":"FII XP SELEC","id":2799},{"abbreviation":"BRZP11.SA","name":"FIP
+        BRZ IE","id":2800},{"abbreviation":"HOSI11.SA","name":"FII HOUSI","id":2804},{"abbreviation":"RFOF11.SA","name":"FII
+        RB CFOF","id":2805},{"abbreviation":"RBIR11.SA","name":"FII RBRES IV","id":2806},{"abbreviation":"HUSI11.SA","name":"FII
+        HUSI","id":2811},{"abbreviation":"VGIP11.SA","name":"FII VALORAIP","id":2814},{"abbreviation":"NEWU11.SA","name":"FII
+        NEWRU","id":2815},{"abbreviation":"ATMP3.SA","name":"ATMASA ON","id":2816},{"abbreviation":"AFCR11.SA","name":"FII
+        AFINVCR","id":2817},{"abbreviation":"OULG11.SA","name":"FII OURILOG","id":2820},{"abbreviation":"BLMO11.SA","name":"FII
+        BLUEMAC","id":2821},{"abbreviation":"TORD11.SA","name":"FII TORDE EI","id":2822},{"abbreviation":"MGHT11.SA","name":"FII
+        MOGNO HT","id":2824},{"abbreviation":"RYTT34.SA","name":"RAYTHEONTECH","id":2825},{"abbreviation":"RBRL11.SA","name":"FII
+        RBR LOG","id":2826},{"abbreviation":"LASC11.SA","name":"FII LEGATUS","id":2827},{"abbreviation":"MORE11.SA","name":"FII
+        MORE RE","id":2828},{"abbreviation":"TEPP11.SA","name":"FII TEL PROP","id":2829},{"abbreviation":"ALPK3.SA","name":"ESTAPAR
+        ON","id":2831},{"abbreviation":"HBRH11.SA","name":"FII MULT REN","id":2833},{"abbreviation":"BLCP11.SA","name":"FII
+        BLUECAP","id":2834},{"abbreviation":"FATN11.SA","name":"FII ATHENA I","id":2836},{"abbreviation":"VIFI11.SA","name":"FII
+        VINCI IF","id":2837},{"abbreviation":"RCFF11.SA","name":"FII RBR FEED","id":2839},{"abbreviation":"VXXV11.SA","name":"FII
+        VX XVI","id":2840},{"abbreviation":"CPTS11.SA","name":"FII CAPI SEC","id":2844},{"abbreviation":"VSEC11.SA","name":"FII
+        VOT SEC","id":2846},{"abbreviation":"BBVH11.SA","name":"FDC INFRA","id":2848},{"abbreviation":"BBVH12.SA","name":"FDC
+        INFRA","id":2849},{"abbreviation":"IFRA11.SA","name":"FDC ITAU IE","id":2850},{"abbreviation":"KDIF11.SA","name":"FDC
+        KINEAINF","id":2851},{"abbreviation":"PLPF11.SA","name":"FDC POLO","id":2852},{"abbreviation":"UNAG11.SA","name":"FDC
+        UNION AG","id":2853},{"abbreviation":"UNAG12.SA","name":"FDC UNION AG","id":2854},{"abbreviation":"DCDI11.SA","name":"FDC
+        INFI DI","id":2857},{"abbreviation":"SAIF11.SA","name":"FDC SANT IE","id":2859},{"abbreviation":"SAIF12.SA","name":"FDC
+        SANT IE","id":2860},{"abbreviation":"SAIF13.SA","name":"FDC SANT IE","id":2861},{"abbreviation":"SAIF14.SA","name":"FDC
+        SANT IE","id":2862},{"abbreviation":"SAIF15.SA","name":"FDC SANT IE","id":2863},{"abbreviation":"SAIF16.SA","name":"FDC
+        SANT IE","id":2864},{"abbreviation":"SAIF17.SA","name":"FDC SANT IE","id":2865},{"abbreviation":"SAIF18.SA","name":"FDC
+        SANT IE","id":2866},{"abbreviation":"SAIF19.SA","name":"FDC SANT IE","id":2867},{"abbreviation":"SAIF20.SA","name":"FDC
+        SANT IE","id":2868},{"abbreviation":"SAIF21.SA","name":"FDC SANT IE","id":2869},{"abbreviation":"SAIF22.SA","name":"FDC
+        SANT IE","id":2870},{"abbreviation":"SAIF23.SA","name":"FDC SANT IE","id":2871},{"abbreviation":"MFAI11.SA","name":"FII
+        MERITOFA","id":2872},{"abbreviation":"PDTC3.SA","name":"PADTEC ON","id":2873},{"abbreviation":"RELG11.SA","name":"FII
+        REC LOG CI","id":2877},{"abbreviation":"BRIM11.SA","name":"FII BRIO II CI","id":2879},{"abbreviation":"MBBI11.SA","name":"FII
+        MB BI CI ER","id":2881},{"abbreviation":"SOMA3.SA","name":"GRUPO SOMA ON NM","id":2883},{"abbreviation":"AFOF11.SA","name":"FII
+        ALIANZFFCI ER","id":2885},{"abbreviation":"HSRE11.SA","name":"FII HSIRENDACI","id":2889},{"abbreviation":"MDSI3.SA","name":"MUNDIAL
+        ASIAON","id":2893},{"abbreviation":"MDIN3.SA","name":"MUNDIAL INC ON","id":2895},{"abbreviation":"LJQQ3.SA","name":"QUERO-QUERO
+        ON NM","id":2911},{"abbreviation":"DMVF3.SA","name":"D1000VFARMA ON NM","id":2929},{"abbreviation":"MAQN4.SA","name":"MAQBRASIL
+        PN","id":2933},{"abbreviation":"MAQN3.SA","name":"VENDA BRASILON","id":2935},{"abbreviation":"HSAF11.SA","name":"FII
+        HSI CRI CI ER","id":2937},{"abbreviation":"RVRA11.SA","name":"FII RIOQUENTCI","id":2941},{"abbreviation":"PGMN3.SA","name":"PAGUE
+        MENOS ON NM","id":2945},{"abbreviation":"MAQN11.SA","name":"MAQBRASIL BNS
+        ORD","id":2959},{"abbreviation":"RBRS11.SA","name":"FII RIOB RR CI","id":2961},{"abbreviation":"PLSP3.SA","name":"PLASCORP
+        ON","id":2963},{"abbreviation":"BTSG21.SA","name":"FII BTSP I REC","id":2965},{"abbreviation":"TCIN11.SA","name":"FII
+        TOUR V CI","id":2973},{"abbreviation":"TCIN12.SA","name":"FII TOUR V CI","id":2977},{"abbreviation":"PLSP11.SA","name":"PLASCORP
+        BNS ORD","id":2981},{"abbreviation":"BLMR11.SA","name":"FII BLUE FOFCI","id":2983},{"abbreviation":"BRIP11.SA","name":"FII
+        BRIO IIICI","id":2987},{"abbreviation":"DOVL11B.SA","name":"FII DOVEL CI MB","id":2989},{"abbreviation":"CRTE3B.SA","name":"CONC
+        RIO TERON MB","id":2993},{"abbreviation":"CRTE5B.SA","name":"CONC RIO TERPNA
+        MB","id":3001},{"abbreviation":"LTLA3B.SA","name":"LITELA ON EDJ MB","id":3003},{"abbreviation":"RVBR11.SA","name":"FII
+        RIVBRLOGCI","id":3005},{"abbreviation":"CEAL11.SA","name":"CEAL UNT","id":3007},{"abbreviation":"LAVV3.SA","name":"LAVVI
+        ON NM","id":3009},{"abbreviation":"CFHO4.SA","name":"CARVALHO HLDPN","id":3017},{"abbreviation":"CFHO3.SA","name":"CARVALHO
+        HLDON","id":3019},{"abbreviation":"CFHI11.SA","name":"FII CF2 CI","id":3023},{"abbreviation":"VIDS14.SA","name":"FII
+        VIC DES REC","id":3029},{"abbreviation":"KEVE11.SA","name":"FII EVEN II CI","id":3031},{"abbreviation":"PETZ3.SA","name":"PETZ
+        ON NM","id":3035},{"abbreviation":"NELO11.SA","name":"FII NE LOG CI ER","id":3039},{"abbreviation":"DEVA11.SA","name":"FII
+        DEVANT CI","id":3041},{"abbreviation":"NOVI3.SA","name":"NORTIS INC ON","id":3045},{"abbreviation":"RNOV12.SA","name":"FII
+        RENOVA CI EA","id":3051},{"abbreviation":"JPPV11.SA","name":"FII JPPVALUECI","id":3055},{"abbreviation":"CXTL12.SA","name":"FII
+        CX TRX DM 480,00","id":3059},{"abbreviation":"GALG11.SA","name":"FII GUARDIANCI","id":3061},{"abbreviation":"RSPD15.SA","name":"FII
+        RBRESID3REC","id":3063},{"abbreviation":"LATR11B.SA","name":"FII LATERES CI
+        MB","id":3065},{"abbreviation":"PLPL3.SA","name":"PLANOEPLANO ON NM","id":3071},{"abbreviation":"PPEI11.SA","name":"FIP
+        PRISMA CI","id":3073},{"abbreviation":"VIDS15.SA","name":"FII VIC DES REC","id":3075},{"abbreviation":"CURY3.SA","name":"CURY
+        S/A ON NM","id":3083},{"abbreviation":"MGCR11.SA","name":"FII MOGNO HGCI","id":3097},{"abbreviation":"HERM11.SA","name":"FII
+        HERMES CI ER","id":3099},{"abbreviation":"AMZG9.SA","name":"AMAZONAS ENEON
+        REC","id":3101},{"abbreviation":"AMZG11.SA","name":"AMAZONAS ENEUNT","id":3105},{"abbreviation":"PQAG11.SA","name":"FII
+        PARQ ANHCI ER","id":3107},{"abbreviation":"NVIF11B.SA","name":"FII NOVA I
+        CI ER MB","id":3111},{"abbreviation":"DLMT11.SA","name":"FII DEL MONTCI ER","id":3113},{"abbreviation":"SPVJ11.SA","name":"FII
+        S VAREJOCI ER","id":3115},{"abbreviation":"FAMB11B.SA","name":"FII ALMIRANTCI
+        ER MB","id":3117},{"abbreviation":"FIIP11B.SA","name":"FII RB CAP ICI ER MB","id":3119},{"abbreviation":"TRXB11.SA","name":"FII
+        TRX R IICI ER","id":3129},{"abbreviation":"PATL11.SA","name":"FII PATR LOGCI
+        ER","id":3131},{"abbreviation":"GESE11B.SA","name":"FII GEN SEV CI ER MB","id":3135},{"abbreviation":"BBFI11B.SA","name":"FII
+        BB PROGRCI ER MB","id":3147},{"abbreviation":"CXCE11B.SA","name":"FII CX CEDAECI
+        ER MB","id":3153},{"abbreviation":"EDFO11B.SA","name":"FII OURINVESCI ER MB","id":3155},{"abbreviation":"CACO3B.SA","name":"CACONDE
+        PARTON MB","id":3157},{"abbreviation":"CABI3B.SA","name":"CABINDA PARTON MB","id":3159},{"abbreviation":"BRPR11.SA","name":"BR
+        PROPERT ON P NM","id":3167},{"abbreviation":"VAMO3.SA","name":"VAMOS ON","id":3169},{"abbreviation":"BOAS3.SA","name":"BOA
+        VISTA ON NM","id":3171},{"abbreviation":"MELK3.SA","name":"MELNICK ON NM","id":3173},{"abbreviation":"BRBI3.SA","name":"BR
+        ADVISORY ON","id":3175},{"abbreviation":"BRBI4.SA","name":"BR ADVISORY PN","id":3183},{"abbreviation":"BBOV11.SA","name":"BB
+        ETF IBOV CI","id":3191},{"abbreviation":"DRIT11B.SA","name":"FII MTGESTAOCI
+        ER MB","id":3193},{"abbreviation":"BRBI11.SA","name":"BR ADVISORY UNT","id":3195},{"abbreviation":"ESGB11.SA","name":"ETF
+        ESG BTG CI","id":3205},{"abbreviation":"RECR11.SA","name":"FII REC RECECI
+        ERS","id":3207},{"abbreviation":"IFID11.SA","name":"FII IFI-D CI","id":3209},{"abbreviation":"AIEC11.SA","name":"FII
+        AUTONOMYCI EG","id":3219},{"abbreviation":"HCST11.SA","name":"FII HECT DESCI","id":3227},{"abbreviation":"PASS3.SA","name":"COMPASS
+        GAS ON","id":3231},{"abbreviation":"RZTR11.SA","name":"FII RIZA TX CI","id":3233},{"abbreviation":"KLAS3.SA","name":"KALLAS
+        ON","id":3237},{"abbreviation":"SHDP11B.SA","name":"FII SHOP PDPCI MB","id":3243},{"abbreviation":"MOFF13.SA","name":"FII
+        MULT OF2REC","id":3245},{"abbreviation":"GCFF11.SA","name":"FII GALAPAGOCI","id":3249},{"abbreviation":"PCBU3.SA","name":"PACAEMBU
+        CONON","id":3253},{"abbreviation":"JBFO11.SA","name":"FII JBFO FOFCI","id":3255},{"abbreviation":"ELDO11B.SA","name":"FII
+        ELDORADOCI ER MB","id":3261},{"abbreviation":"WTSP11B.SA","name":"FII WTC
+        SP CI MB","id":3263},{"abbreviation":"ARCT11.SA","name":"FII ARCTIUM CI","id":3269},{"abbreviation":"URPR11.SA","name":"FII
+        URCA RENCI ER","id":3271},{"abbreviation":"CONX3.SA","name":"TRIPLE PLAY ON","id":3281},{"abbreviation":"SIMH3.SA","name":"SIMPAR
+        ON NM","id":3283},{"abbreviation":"SEQL3.SA","name":"SEQUOIA LOG ON NM","id":3285},{"abbreviation":"IMMO12.SA","name":"FII
+        IMMOB IIREC","id":3293},{"abbreviation":"003H11.SA","name":"FII KINEA COCI","id":3295},{"abbreviation":"GRRO11.SA","name":"FII
+        GREEN ROCI","id":3297},{"abbreviation":"FPOR12.SA","name":"FIP PORT SUDCI
+        EG","id":3299},{"abbreviation":"LOFT12B.SA","name":"FII LOFT I CI MB","id":3301},{"abbreviation":"RGLO11.SA","name":"FIA
+        REGILO CI","id":3303},{"abbreviation":"IMMO13.SA","name":"FII IMMOB IICI","id":3305},{"abbreviation":"MTRS11.SA","name":"FII
+        MTRS CI","id":3307},{"abbreviation":"BETP3B.SA","name":"BETAPART ON MB","id":3309},{"abbreviation":"DNEN3B.SA","name":"DINAMICA
+        ENEON EDJ MB","id":3311},{"abbreviation":"GGRF11.SA","name":"FII GGRSTRATCI","id":3315},{"abbreviation":"FIGV11.SA","name":"FII
+        GV BLUE CI","id":3317},{"abbreviation":"PATB13.SA","name":"FII PTO BANDREC","id":3321},{"abbreviation":"FAVM11.SA","name":"FII
+        AVM CI","id":3323},{"abbreviation":"OPHE3B.SA","name":"OPPORT ENERGON MB","id":3325},{"abbreviation":"MFII18.SA","name":"FII
+        MERITO IREC","id":3327},{"abbreviation":"PTSL4.SA","name":"PORTOSUL PARPN","id":3329},{"abbreviation":"PTSL3.SA","name":"PORTOSUL
+        PARON","id":3331},{"abbreviation":"FLCR11.SA","name":"FII FL RECEBCI","id":3333},{"abbreviation":"KNHY12.SA","name":"FII
+        KINEA HYREC","id":3335},{"abbreviation":"VINO12.SA","name":"FII VINC CORREC","id":3337},{"abbreviation":"BSAN11.SA","name":"BANSANTANDERREC","id":3339},{"abbreviation":"MFII19.SA","name":"FII
+        MERITO IREC","id":3341},{"abbreviation":"MFII20.SA","name":"FII MERITO IREC","id":3343},{"abbreviation":"MFII21.SA","name":"FII
+        MERITO IREC","id":3345},{"abbreviation":"MFII17.SA","name":"FII MERITO IREC","id":3347},{"abbreviation":"HAAA11.SA","name":"FII
+        HEDGEAAACI","id":3349},{"abbreviation":"PRPT3B.SA","name":"PROMPT PART ON
+        MB","id":3351},{"abbreviation":"OPSE3B.SA","name":"SUDESTE S/A ON MB","id":3353},{"abbreviation":"MFII22.SA","name":"FII
+        MERITO IREC","id":3355},{"abbreviation":"MFII16.SA","name":"FII MERITO IREC","id":3357},{"abbreviation":"MFII15.SA","name":"FII
+        MERITO IREC","id":3361},{"abbreviation":"FMOB12.SA","name":"FII IMOB IIICI","id":3363},{"abbreviation":"FMOB11.SA","name":"FII
+        IMOB IIICI","id":3365},{"abbreviation":"BMYB11.SA","name":"BRISTOLMYERSREC","id":3369},{"abbreviation":"EZTB11.SA","name":"FII
+        EZTB CI","id":3371},{"abbreviation":"TMFI11.SA","name":"FII TM CI","id":3373},{"abbreviation":"CJFI11.SA","name":"FII
+        CJ CI","id":3375},{"abbreviation":"JKEF11.SA","name":"FII JKE CI","id":3377},{"abbreviation":"SFFI11.SA","name":"FII
+        SF CI","id":3379},{"abbreviation":"MVFI11.SA","name":"FII MV9 CI","id":3381},{"abbreviation":"JKDF11.SA","name":"FII
+        JKD CI","id":3383},{"abbreviation":"FTCE11B.SA","name":"FII OPPORTUNCI MB","id":3387},{"abbreviation":"FTCE13B.SA","name":"FII
+        OPPORTUNREC MB","id":3389},{"abbreviation":"ETRO9B.SA","name":"ELETRON ON
+        REC MB","id":3391},{"abbreviation":"VTPL11.SA","name":"FII PLUS CI ER","id":3393},{"abbreviation":"XPCE11.SA","name":"FII
+        XPCE RE CI","id":3395},{"abbreviation":"BLAU3.SA","name":"BLAUFARMA ON","id":3397},{"abbreviation":"PRTS13.SA","name":"FII
+        MULTPROPREC","id":3399},{"abbreviation":"MOFF11.SA","name":"FII MULT OF2CI","id":3401},{"abbreviation":"MTOF11.SA","name":"FII
+        MULT OF1CI","id":3407},{"abbreviation":"LTEL3B.SA","name":"LITEL ON EJ MB","id":3409},{"abbreviation":"ORNA4B.SA","name":"ORNATO
+        PN * MB","id":3411},{"abbreviation":"HREC11.SA","name":"FII HEDGERECCI","id":3413},{"abbreviation":"CRPM11.SA","name":"FII
+        CARDIOP CI","id":3415},{"abbreviation":"CRPM12.SA","name":"FII CARDIOP CI","id":3417},{"abbreviation":"ISSH11.SA","name":"FII
+        INTER SHCI","id":3419},{"abbreviation":"RHPY3.SA","name":"RI HAPPY ON","id":3421},{"abbreviation":"RNOV11.SA","name":"FII
+        RENOVA CI ERA","id":3423},{"abbreviation":"IMMO11.SA","name":"FII IMMOB IICI
+        ERA","id":3425},{"abbreviation":"PLFS11.SA","name":"POLO FILMS BNS ORD","id":3427},{"abbreviation":"CMIG15.SA","name":"CEMIG
+        REC N1","id":3429},{"abbreviation":"PLFS3.SA","name":"POLO FILMS ON","id":3431},{"abbreviation":"ANCR11B.SA","name":"FII
+        ANCAR ICCI MB","id":3435},{"abbreviation":"VTXI11.SA","name":"FII VOTP XIICI","id":3437},{"abbreviation":"SMFT21.SA","name":"SMART
+        FIT REC M2","id":3439},{"abbreviation":"VTVI11.SA","name":"FII PARK PARCI","id":3441},{"abbreviation":"VTPA11.SA","name":"FII
+        VOTP V CI","id":3443},{"abbreviation":"DASS3.SA","name":"GRUPO DASS ON","id":3445},{"abbreviation":"VIDS11.SA","name":"FII
+        VIC DES CI","id":3447},{"abbreviation":"RRCI11.SA","name":"FII RBCAP RICI","id":3451},{"abbreviation":"RSPD13.SA","name":"FII
+        RBRESID3REC","id":3453},{"abbreviation":"INNT11.SA","name":"INTER SA BNS ORD
+        MA","id":3459},{"abbreviation":"RSPD14.SA","name":"FII RBRESID3REC","id":3461},{"abbreviation":"BRHT12B.SA","name":"FII
+        BRHOTEISDM 90,81","id":3463},{"abbreviation":"BRHT11B.SA","name":"FII BRHOTEISCI
+        MB","id":3465},{"abbreviation":"HBSA3.SA","name":"HIDROVIAS ON NM","id":3467},{"abbreviation":"XPHT13.SA","name":"FII
+        XP HOT CI ES","id":3469},{"abbreviation":"VIDS13.SA","name":"FII VIC DES REC","id":3471},{"abbreviation":"ALEF3B.SA","name":"ALEF
+        S/A ON MB","id":3473},{"abbreviation":"QVQP3B.SA","name":"524 PARTICIPON MB","id":3475},{"abbreviation":"BTSG13.SA","name":"FII
+        BTSP I REC","id":3479},{"abbreviation":"BUHY11.SA","name":"FIA CAMBUHY CI","id":3481},{"abbreviation":"BTSG11.SA","name":"FII
+        BTSP I CI","id":3483},{"abbreviation":"AGBK10.SA","name":"AGIBANKBC PN REC","id":3485},{"abbreviation":"AGBK11.SA","name":"AGIBANKBC
+        UNT","id":3487},{"abbreviation":"AGBK4.SA","name":"AGIBANKBC PN","id":3489},{"abbreviation":"UBSF12.SA","name":"FII
+        UBSFOFI REC","id":3491},{"abbreviation":"UBSF11.SA","name":"FII UBSFOFI CI","id":3493},{"abbreviation":"ANGC11.SA","name":"FII
+        ANGICO CI","id":3495},{"abbreviation":"IMIV13.SA","name":"FII IMMOB IVCI","id":3497},{"abbreviation":"IMIV11.SA","name":"FII
+        IMMOB IVCI","id":3499},{"abbreviation":"GTIS11.SA","name":"FIP GTIS IE CI","id":3505},{"abbreviation":"TORM14.SA","name":"FII
+        TOURMALECI","id":3507},{"abbreviation":"MINT11.SA","name":"FII MINT EDUCI","id":3509},{"abbreviation":"PATB11.SA","name":"FII
+        PTO BANDCI ERS","id":3513},{"abbreviation":"BVEN3.SA","name":"B. VISTA ENEON","id":3515},{"abbreviation":"AMZG3.SA","name":"AMAZONAS
+        ENEON","id":3519},{"abbreviation":"QNTS11.SA","name":"FII QUINTAS CI","id":3523},{"abbreviation":"FBTS11.SA","name":"FII
+        VBII BTSCI","id":3525},{"abbreviation":"OPGM3B.SA","name":"GAMA PART ON MB","id":3527},{"abbreviation":"VLPN3.SA","name":"ELETR
+        VALE PON","id":3529},{"abbreviation":"ESSD3.SA","name":"ENERG SUL SUON","id":3531},{"abbreviation":"IRBL11.SA","name":"FII
+        IRB INT CI","id":3533},{"abbreviation":"INNT12.SA","name":"INTER SA BNS ORD
+        MA","id":3535},{"abbreviation":"EPCO19.SA","name":"ENCALSO PARTPNA A5A","id":3537},{"abbreviation":"EPCO21.SA","name":"ENCALSO
+        PARTPNA A5C","id":3541},{"abbreviation":"CPIS11.SA","name":"CEPISA UNT","id":3543},{"abbreviation":"BTSG16.SA","name":"FII
+        BTSP I REC","id":3545},{"abbreviation":"BTSG19.SA","name":"FII BTSP I REC","id":3547},{"abbreviation":"BTSG17.SA","name":"FII
+        BTSP I REC","id":3549},{"abbreviation":"BTSG14.SA","name":"FII BTSP I REC","id":3551},{"abbreviation":"BTSG15.SA","name":"FII
+        BTSP I REC","id":3553},{"abbreviation":"BTSG20.SA","name":"FII BTSP I REC","id":3555},{"abbreviation":"BTSG18.SA","name":"FII
+        BTSP I REC","id":3557},{"abbreviation":"TGAR13B.SA","name":"FII TG ATIVOREC
+        MB","id":3559},{"abbreviation":"CPIS12.SA","name":"CEPISA UNT","id":3561},{"abbreviation":"MAQN12.SA","name":"MAQBRASIL
+        BNS PRE","id":3565},{"abbreviation":"FRRN3B.SA","name":"ALL NORTE ON MB","id":3567},{"abbreviation":"VLJS13.SA","name":"FII
+        VQ LAJESCI","id":3569},{"abbreviation":"FRRN6B.SA","name":"ALL NORTE PNB MB","id":3571},{"abbreviation":"AGRA4.SA","name":"AGRALE
+        PN *EG","id":3573},{"abbreviation":"BEGB4.SA","name":"BERJ BANCO PN *","id":3575},{"abbreviation":"OPHF11B.SA","name":"FIP
+        OPP HOLDCI MB","id":3579},{"abbreviation":"FRRN5B.SA","name":"ALL NORTE PNA
+        MB","id":3581},{"abbreviation":"CTBA11B.SA","name":"CEPAC - CTBACPA MB","id":3583},{"abbreviation":"KNFF11.SA","name":"FII
+        KINEA FFCI","id":3607},{"abbreviation":"UPKP3B.SA","name":"UPTICK ON MB","id":3609},{"abbreviation":"SAIC11B.SA","name":"FII
+        SIA CORPCI MB","id":3611},{"abbreviation":"MCRJ11B.SA","name":"CEPAC - MCRJCPA
+        MB","id":3613},{"abbreviation":"MGFB3.SA","name":"M G FIBRAS ON","id":3615},{"abbreviation":"OPEQ11B.SA","name":"FIP
+        INSTITUTCI MB","id":3619},{"abbreviation":"PMSP12B.SA","name":"CEPAC - PMSPCPA
+        FLI MB","id":3621},{"abbreviation":"PMSP11B.SA","name":"CEPAC - PMSPCPA AEP
+        MB","id":3623},{"abbreviation":"PRMN3B.SA","name":"PROMAN ON MB","id":3625},{"abbreviation":"DXXI3.SA","name":"DUXXI
+        ON *","id":3635},{"abbreviation":"TELD11.SA","name":"FII TELLUS CI","id":3637},{"abbreviation":"CERO9.SA","name":"ELE
+        RONDONIAON REC","id":3639},{"abbreviation":"IVPR4B.SA","name":"INVEPAR PN
+        MB","id":3641},{"abbreviation":"IVPR3B.SA","name":"INVEPAR ON MB","id":3643},{"abbreviation":"VPSI13.SA","name":"FII
+        POLO SHOREC","id":3645},{"abbreviation":"TXRX11.SA","name":"TEX RENAUX ON
+        P","id":3649},{"abbreviation":"OPTS3B.SA","name":"SUL 116 PARTON MB","id":3651},{"abbreviation":"NIPL3.SA","name":"NIPLAN
+        ON","id":3653},{"abbreviation":"CGOS3.SA","name":"CELG ON","id":3655},{"abbreviation":"LATR12B.SA","name":"FII
+        LATERES DM 1.010","id":3657},{"abbreviation":"EMBP4.SA","name":"EMBRAPAR PN","id":3659},{"abbreviation":"EMBP3.SA","name":"EMBRAPAR
+        ON","id":3661},{"abbreviation":"MMCF4.SA","name":"COFAP PECAS PN *","id":3663},{"abbreviation":"MMCF3.SA","name":"COFAP
+        PECAS ON *","id":3665},{"abbreviation":"BCPS4.SA","name":"CLAROSA PN","id":3667},{"abbreviation":"BCPS3.SA","name":"CLAROSA
+        ON","id":3669},{"abbreviation":"INTI11.SA","name":"FII INTERMEDCI","id":3671},{"abbreviation":"PMSP13B.SA","name":"CEPAC
+        - PMSPCPA ABR MB","id":3673},{"abbreviation":"EGCE3.SA","name":"ENERGISA EOLON","id":3675},{"abbreviation":"SPCR3.SA","name":"SPE
+        CRISTINAON","id":3677},{"abbreviation":"ARFI11B.SA","name":"FII AQUIL RDCI
+        MB","id":3679},{"abbreviation":"LCII11.SA","name":"FII LCI PRE2CI","id":3681},{"abbreviation":"EQMA5B.SA","name":"EQTLMARANHAOPNA
+        MB","id":3685},{"abbreviation":"EQMA3B.SA","name":"EQTLMARANHAOON MB","id":3687},{"abbreviation":"EQMA6B.SA","name":"EQTLMARANHAOPNB
+        MB","id":3689},{"abbreviation":"DAMT11B.SA","name":"FII DIAMANTECI MB","id":3691},{"abbreviation":"BPAN11.SA","name":"BANCO
+        PAN PNR N1","id":3693},{"abbreviation":"TREG3.SA","name":"TANGARA ON","id":3697},{"abbreviation":"VLJS15.SA","name":"FII
+        VQ LAJESREC","id":3699},{"abbreviation":"FKEN11B.SA","name":"FII KENNEDY CI
+        MB","id":3701},{"abbreviation":"CEAC11.SA","name":"ENERGISAACREUNT","id":3703},{"abbreviation":"BVEN11.SA","name":"B.
+        VISTA ENEUNT","id":3705},{"abbreviation":"BVEN9.SA","name":"B. VISTA ENEON
+        REC","id":3707},{"abbreviation":"INNT13.SA","name":"INTER SA BNS ORD MA","id":3711},{"abbreviation":"EPCO15.SA","name":"ENCALSO
+        PARTBNS","id":3713},{"abbreviation":"EPCO3.SA","name":"ENCALSO PARTON","id":3715},{"abbreviation":"FGRT5.SA","name":"FRIG
+        REDENT PNA* MB","id":3719},{"abbreviation":"SIMR7.SA","name":"SIMARA PNC*
+        MB","id":3721},{"abbreviation":"MNBI3.SA","name":"MANABI ON ES","id":3723},{"abbreviation":"OPDL3B.SA","name":"DALETH
+        PART ON ER MB","id":3725},{"abbreviation":"AFCV12.SA","name":"A F CINEMA CI
+        MORT","id":3729},{"abbreviation":"AFCF11.SA","name":"AFRICA FILMECI *","id":3731},{"abbreviation":"BBFP11.SA","name":"BANG
+        BANG CI *","id":3733},{"abbreviation":"CEAC3.SA","name":"ENERGISAACREON","id":3735},{"abbreviation":"CCAT3.SA","name":"COMFIO
+        ON *","id":3737},{"abbreviation":"BIGD11.SA","name":"BIGDENI CI","id":3739},{"abbreviation":"CEAC4.SA","name":"ENERGISAACREPN","id":3741},{"abbreviation":"CCAT4.SA","name":"COMFIO
+        PN *","id":3743},{"abbreviation":"CERO3.SA","name":"ELE RONDONIAON","id":3745},{"abbreviation":"CEAL3.SA","name":"CEAL
+        ON","id":3747},{"abbreviation":"CESA3.SA","name":"SILOS ARMAZ ON *","id":3749},{"abbreviation":"CEAL4.SA","name":"CEAL
+        PN","id":3751},{"abbreviation":"CEAG3.SA","name":"ARMAZENS SP ON *","id":3753},{"abbreviation":"CPNO7.SA","name":"COPENOR
+        PNC*","id":3755},{"abbreviation":"CRML4.SA","name":"CARBOMIL PN *","id":3757},{"abbreviation":"CPIS4.SA","name":"CEPISA
+        PN","id":3759},{"abbreviation":"CNRT5.SA","name":"CICANORTE PNA*","id":3761},{"abbreviation":"CPIS3.SA","name":"CEPISA
+        ON","id":3763},{"abbreviation":"COCN5.SA","name":"CIA COCOS NEPNA*","id":3765},{"abbreviation":"CPCH3.SA","name":"CAPIT
+        CENTERON *","id":3767},{"abbreviation":"CPCH7.SA","name":"CAPIT CENTERPNC*","id":3769},{"abbreviation":"DANA11.SA","name":"DANA
+        INDL PNV","id":3771},{"abbreviation":"CSAM3.SA","name":"COSAMA ON *","id":3773},{"abbreviation":"CSAM4.SA","name":"COSAMA
+        PN *","id":3775},{"abbreviation":"CRPC4.SA","name":"CRP CADERI PN *","id":3777},{"abbreviation":"CSAL4.SA","name":"CASAL
+        PN *","id":3779},{"abbreviation":"DTEN3.SA","name":"DETEN ON *","id":3781},{"abbreviation":"ENAC3.SA","name":"ARMAZEM
+        ACREON *","id":3783},{"abbreviation":"EBTL3.SA","name":"EMBRATEL ON *EDS","id":3785},{"abbreviation":"ETGO3.SA","name":"TRANSP
+        GOIASON *","id":3787},{"abbreviation":"EPTR4.SA","name":"EMPETUR PN *","id":3789},{"abbreviation":"DTEN6.SA","name":"DETEN
+        PNB*","id":3791},{"abbreviation":"ELBR4.SA","name":"ELEBRA PN *","id":3793},{"abbreviation":"FNUV3.SA","name":"FENAUVA
+        ON *","id":3795},{"abbreviation":"FRNV3.SA","name":"FRANAVE ON *","id":3797},{"abbreviation":"FAEL6.SA","name":"FAE
+        PNB*","id":3799},{"abbreviation":"ETGO4.SA","name":"TRANSP GOIASPN *","id":3801},{"abbreviation":"FAEL7.SA","name":"FAE
+        PNC*","id":3803},{"abbreviation":"FLCT11.SA","name":"FILMES CURTOCI","id":3805},{"abbreviation":"FTRO3.SA","name":"FRUTOS
+        TROPION *","id":3807},{"abbreviation":"GNTV11.SA","name":"GRUPO NOVO CI","id":3809},{"abbreviation":"HOAM5.SA","name":"HOT
+        AMAZONIAPNA*","id":3811},{"abbreviation":"GTPC11.SA","name":"GT PRODUCOESCI","id":3813},{"abbreviation":"GPLA5.SA","name":"GEPLAN
+        PNA*","id":3815},{"abbreviation":"HLJP3.SA","name":"LAJE PEDRA ON *","id":3817},{"abbreviation":"HOAM6.SA","name":"HOT
+        AMAZONIAPNB*","id":3819},{"abbreviation":"GLAZ11.SA","name":"GLAZ CIN VIDCI","id":3821},{"abbreviation":"JCBA6.SA","name":"JC
+        BARRETTO PNB","id":3823},{"abbreviation":"IVLG3B.SA","name":"INVIT LEGACYON
+        *","id":3825},{"abbreviation":"KALS5.SA","name":"LAUNDRY SERVPNA*","id":3827},{"abbreviation":"LAUP11.SA","name":"LAUPER
+        FILMSCI","id":3829},{"abbreviation":"MPBH11.SA","name":"MARINA PORTOON *B","id":3831},{"abbreviation":"LOGS4.SA","name":"LOGASA
+        PN *","id":3833},{"abbreviation":"MTAL6.SA","name":"CIMETAL PNB*","id":3835},{"abbreviation":"LOGS3.SA","name":"LOGASA
+        ON *","id":3837},{"abbreviation":"MMCA3.SA","name":"COFAP AUTOP ON *","id":3839},{"abbreviation":"MMCA4.SA","name":"COFAP
+        AUTOP PN *","id":3841},{"abbreviation":"MMBR4.SA","name":"MAGNETI BR PN *","id":3843},{"abbreviation":"MTAL3.SA","name":"CIMETAL
+        ON *","id":3845},{"abbreviation":"MMBR3.SA","name":"MAGNETI BR ON *","id":3847},{"abbreviation":"MTNR5.SA","name":"METANOR
+        PNA*","id":3849},{"abbreviation":"MTNR7.SA","name":"METANOR PNC*","id":3851},{"abbreviation":"MWIS6.SA","name":"MWI
+        PNB","id":3853},{"abbreviation":"NODA3.SA","name":"NOVADATA ON *","id":3855},{"abbreviation":"NESB3.SA","name":"NESBER
+        ON *","id":3857},{"abbreviation":"NODA6.SA","name":"NOVADATA PNB*","id":3859},{"abbreviation":"NXVL4.SA","name":"NOXVILLE
+        PN *","id":3861},{"abbreviation":"NXVL3.SA","name":"NOXVILLE ON *","id":3863},{"abbreviation":"PCFV4.SA","name":"FERVEDOURO
+        PN *","id":3865},{"abbreviation":"RFAG3.SA","name":"ARMAZENS FERON *","id":3867},{"abbreviation":"REFC4.SA","name":"REF
+        CATARINEPN *","id":3869},{"abbreviation":"PTBP4.SA","name":"PORTOBEL PARPN
+        *","id":3871},{"abbreviation":"RHED4.SA","name":"RHEDE PN *","id":3873},{"abbreviation":"RLTM11.SA","name":"RELASTOMER
+        ON P","id":3875},{"abbreviation":"ROOS12.SA","name":"ROOSTER ON B","id":3877},{"abbreviation":"RIBC8.SA","name":"RIB
+        CORDEIROPND*","id":3879},{"abbreviation":"SDRM6.SA","name":"SIDERAMA PNB*","id":3881},{"abbreviation":"SDRM3.SA","name":"SIDERAMA
+        ON *","id":3883},{"abbreviation":"SANY6.SA","name":"SANYO AM PNB*","id":3885},{"abbreviation":"STDS11.SA","name":"START
+        DESENHCI","id":3887},{"abbreviation":"STAL6.SA","name":"SETAL PNB*","id":3889},{"abbreviation":"SILO4.SA","name":"CASEMG
+        PN *","id":3891},{"abbreviation":"SPCI6.SA","name":"CIMBRASIL PNB","id":3893},{"abbreviation":"SILO3.SA","name":"CASEMG
+        ON *","id":3895},{"abbreviation":"SPFM12.SA","name":"SP FILMES CI","id":3897},{"abbreviation":"TCQC3.SA","name":"CARBOQUIMICAON
+        *","id":3899},{"abbreviation":"TIPR11.SA","name":"TIETE PROD CI VIVA","id":3901},{"abbreviation":"SUPF12.SA","name":"SUPERFILMES
+        CI MEMO","id":3903},{"abbreviation":"SVPH7.SA","name":"SALVADOR P&HPNC*","id":3905},{"abbreviation":"TCQC4.SA","name":"CARBOQUIMICAPN
+        *","id":3907},{"abbreviation":"TRBR3.SA","name":"TRANSBRASIL ON","id":3909},{"abbreviation":"TOGA11.SA","name":"TOGA
+        EMPR ON *B","id":3911},{"abbreviation":"TRBR4.SA","name":"TRANSBRASIL PN","id":3913},{"abbreviation":"TVOP11.SA","name":"TVO
+        AUDIOVISCI","id":3915},{"abbreviation":"TXBZ11.SA","name":"TBM ON *P MB","id":3917},{"abbreviation":"TXBZ5.SA","name":"TBM
+        PNA* MB","id":3919},{"abbreviation":"VECF3.SA","name":"VALEC ON *","id":3921},{"abbreviation":"USAT4.SA","name":"USATI
+        PN *","id":3923},{"abbreviation":"YPEA11.SA","name":"YPEARTS CI","id":3925},{"abbreviation":"WIRE3.SA","name":"WIREX
+        ON *","id":3927},{"abbreviation":"NAII3.SA","name":"NAI HOLDING ON","id":3929},{"abbreviation":"CMNS3.SA","name":"CMN
+        AO8 ON","id":3931},{"abbreviation":"NAII4.SA","name":"NAI HOLDING PN","id":3933},{"abbreviation":"IBFF13.SA","name":"FII
+        FOF BREIREC","id":3935},{"abbreviation":"ARMT11.SA","name":"ARCELOR DM 9,53","id":3937},{"abbreviation":"MSRO17.SA","name":"MAESTROLOC
+        BNS ORDCMA","id":3939},{"abbreviation":"ESTQ12.SA","name":"FII POLO II CI","id":3941},{"abbreviation":"MSRO11.SA","name":"MAESTROLOC
+        BNS ORDAMA","id":3943},{"abbreviation":"MSRO14.SA","name":"MAESTROLOC BNS
+        ORDBMA","id":3945},{"abbreviation":"ESTQ11.SA","name":"FII POLO II CI","id":3947},{"abbreviation":"MSRO16.SA","name":"MAESTROLOC
+        REC MA","id":3949},{"abbreviation":"MSRO13.SA","name":"MAESTROLOC REC MA","id":3951},{"abbreviation":"MSRO19.SA","name":"MAESTROLOC
+        REC MA","id":3953},{"abbreviation":"MRSA3B.SA","name":"MRS LOGIST ON MB","id":3955},{"abbreviation":"MRSA6B.SA","name":"MRS
+        LOGIST PNB MB","id":3957},{"abbreviation":"MRSA5B.SA","name":"MRS LOGIST PNA
+        MB","id":3959},{"abbreviation":"PVBI11.SA","name":"FII VBI PRI CI ER","id":3961},{"abbreviation":"AMBP3.SA","name":"AMBIPAR
+        ON NM","id":3963},{"abbreviation":"RIVA3.SA","name":"RIVA SA ON","id":3965},{"abbreviation":"YOUC3.SA","name":"YOU
+        INC ON","id":3967},{"abbreviation":"MNZC3B.SA","name":"MENEZES CORTON MB","id":3971},{"abbreviation":"LOFT13B.SA","name":"FII
+        LOFT I CI ER MB","id":3973},{"abbreviation":"RCRI11B.SA","name":"FII RB CRI
+        CI MB","id":3977},{"abbreviation":"LECA11B.SA","name":"FDC LECCA FIDC MB","id":3979},{"abbreviation":"OPIM11B.SA","name":"FDC
+        BURITI FIDC MB","id":3981},{"abbreviation":"LFTT12.SA","name":"FII LOFT II
+        CI","id":3983},{"abbreviation":"LFTT11.SA","name":"FII LOFT II CI ER","id":3985},{"abbreviation":"IFIE11.SA","name":"FII
+        IFI-E CI","id":3987},{"abbreviation":"PRSN11B.SA","name":"FII PERSONALCI MB","id":3989},{"abbreviation":"TFCO4.SA","name":"TRACK
+        FIELD PN","id":5573},{"abbreviation":"GMAT3.SA","name":"GRUPO MATEUSON","id":5575},{"abbreviation":"PNDL11.SA","name":"FII
+        PANORAMACI","id":6763},{"abbreviation":"KNSC11.SA","name":"FII KINEA SCCI","id":9087},{"abbreviation":"IMMV11.SA","name":"FII
+        IMMOB V CI","id":10255},{"abbreviation":"IMMV13.SA","name":"FII IMMOB V CI","id":10257},{"abbreviation":"L1MN34.SA","name":"LUMEN
+        TECH DRN","id":10263},{"abbreviation":"RBLG11.SA","name":"FII RBCAP LGCI ER","id":11407},{"abbreviation":"EVBI11.SA","name":"FII
+        VBI CON CI","id":12533},{"abbreviation":"KISU11.SA","name":"FII KILIMA CI","id":12535},{"abbreviation":"MGIM11.SA","name":"FII
+        MOGNO IDCI","id":12537},{"abbreviation":"JBFO13.SA","name":"FII JBFO FOFREC","id":15903},{"abbreviation":"BLMG11.SA","name":"FII
+        BLUE LOGCI","id":17011},{"abbreviation":"EGYR13.SA","name":"FII ENERGY REC","id":17015},{"abbreviation":"EGYR11.SA","name":"FII
+        ENERGY CI","id":17017},{"abbreviation":"D1EX34.SA","name":"DEXCOM INC DRN","id":18119},{"abbreviation":"C1RR34.SA","name":"CARRIER
+        GLOBDRN","id":18121},{"abbreviation":"O1DF34.SA","name":"OLD DOMINIONDRN","id":18123},{"abbreviation":"B1AM34.SA","name":"BROOKFIELD
+        ADRN","id":18125},{"abbreviation":"A1LN34.SA","name":"ALNYLAM PHARDRN","id":18127},{"abbreviation":"Z1BR34.SA","name":"ZEBRA
+        TECHNODRN","id":18129},{"abbreviation":"C1GP34.SA","name":"COSTAR GROUPDRN","id":18131},{"abbreviation":"W1SO34.SA","name":"WATSCO
+        INC DRN","id":18135},{"abbreviation":"N1OW34.SA","name":"SERVICENOW DRN","id":18137},{"abbreviation":"C1TV34.SA","name":"CORTEVA
+        INC DRN","id":18139},{"abbreviation":"L1BT35.SA","name":"LIBERTY GLOBDRN","id":18141},{"abbreviation":"C1OU34.SA","name":"COUPA
+        SOFTWADRN","id":18143},{"abbreviation":"S1PL34.SA","name":"SPLUNK INC DRN","id":18145},{"abbreviation":"BRLA11.SA","name":"FII
+        BRLPROIICI","id":18147},{"abbreviation":"T1WL34.SA","name":"TWILIO INC DRN","id":18149},{"abbreviation":"BTSG22.SA","name":"FII
+        BTSP I REC","id":18151},{"abbreviation":"D1OC34.SA","name":"DOCUSIGN INCDRN","id":18153},{"abbreviation":"I1EX34.SA","name":"IDEX
+        CORP DRN","id":18155},{"abbreviation":"F1SL34.SA","name":"FASTLY INC DRN","id":18157},{"abbreviation":"D1DG34.SA","name":"DATADOG
+        INC DRN","id":18159},{"abbreviation":"H1EI34.SA","name":"HEICO CORP DRN","id":18161},{"abbreviation":"D1OW34.SA","name":"DOW
+        INC DRN","id":18163},{"abbreviation":"W1IX34.SA","name":"WIX.COM LTD DRN","id":18165},{"abbreviation":"S1TE34.SA","name":"STERIS
+        PLC DRN","id":18167},{"abbreviation":"C1DW34.SA","name":"CDW CORP DRN","id":18169},{"abbreviation":"N1BI34.SA","name":"NEUROCRINE
+        BDRN","id":18171},{"abbreviation":"O1TI34.SA","name":"OTIS WORLDWIDRN","id":18173},{"abbreviation":"M1RN34.SA","name":"MODERNA
+        INC DRN","id":18175},{"abbreviation":"W1RB34.SA","name":"WR BERKLEY CDRN","id":18177},{"abbreviation":"S1GE34.SA","name":"SEATTLE
+        GENEDRN","id":18179},{"abbreviation":"H1ZN34.SA","name":"HORIZON THERDRN","id":18181},{"abbreviation":"L1DO34.SA","name":"LEIDOS
+        HOLDIDRN","id":18183},{"abbreviation":"LSXM35.SA","name":"LIBERTY MEDIDRN","id":18185},{"abbreviation":"M1TC34.SA","name":"MATCH
+        GROUP DRN","id":18187},{"abbreviation":"S1RP34.SA","name":"SAREPTA THERDRN","id":18189},{"abbreviation":"W1MG34.SA","name":"WARNER
+        MUSICDRN","id":18191},{"abbreviation":"I1AC34.SA","name":"IAC INTERACTDRN","id":18193},{"abbreviation":"P1YC34.SA","name":"PAYCOM
+        SOFTWDRN","id":18195},{"abbreviation":"M1KT34.SA","name":"MARKETAXESS DRN","id":18197},{"abbreviation":"T1CH34.SA","name":"BIO-TECHNE
+        CDRN","id":18199},{"abbreviation":"A1CR34.SA","name":"AMCOR PLC DRN","id":18201},{"abbreviation":"O1KT34.SA","name":"OKTA
+        INC DRN","id":18203},{"abbreviation":"T1AM34.SA","name":"ATLASSIAN CODRN","id":18205},{"abbreviation":"L1VS34.SA","name":"LAS
+        VEGAS SADRN","id":18207},{"abbreviation":"C1AB34.SA","name":"CABLE ONE INDRN","id":18209},{"abbreviation":"A1YX34.SA","name":"ALTERYX
+        INC DRN","id":18211},{"abbreviation":"L1YV34.SA","name":"LIVE NATION DRN","id":18213},{"abbreviation":"S1SN34.SA","name":"SSC
+        TECHNOL DRN","id":18215},{"abbreviation":"M1DB34.SA","name":"MONGODB INC DRN","id":18217},{"abbreviation":"Z1OM34.SA","name":"ZOOM
+        VIDEO DRN","id":18219},{"abbreviation":"AVLL3.SA","name":"ALPHA ON","id":19321},{"abbreviation":"BDIV11.SA","name":"FIP
+        BTGDV IECI","id":19323},{"abbreviation":"R1KU34.SA","name":"ROKU INC DRN","id":19327},{"abbreviation":"WNBR3.SA","name":"WINE
+        ON","id":19329},{"abbreviation":"RECH11.SA","name":"FII REC HTL CI","id":19331},{"abbreviation":"N1WS35.SA","name":"NEWS
+        CORP DRN","id":19333},{"abbreviation":"MGIM13.SA","name":"FII MOGNO IDREC","id":19335},{"abbreviation":"ENJU3.SA","name":"ENJOEI
+        ON","id":19337},{"abbreviation":"CASH3.SA","name":"MELIUZ ON","id":20443},{"abbreviation":"K1TC34.SA","name":"KT
+        CORP DRN","id":20445},{"abbreviation":"L1FC34.SA","name":"CHINA LIFE IDRN","id":20447},{"abbreviation":"K1BF34.SA","name":"KB
+        FINANCIALDRN","id":20449},{"abbreviation":"TIMS3.SA","name":"TIM ON","id":20451},{"abbreviation":"I1QY34.SA","name":"IQIYI
+        INC DRN","id":20455},{"abbreviation":"I1XC34.SA","name":"ORIX CORP DRN","id":20457},{"abbreviation":"I1FO34.SA","name":"INFOSYS
+        LTD DRN","id":20459},{"abbreviation":"G1FI34.SA","name":"GOLD FIELDS DRN","id":22747},{"abbreviation":"E1RI34.SA","name":"ERICSSON
+        LM DRN","id":22749},{"abbreviation":"G1LP34.SA","name":"GALAPAGOS NVDRN","id":22751},{"abbreviation":"H1DB34.SA","name":"HDFC
+        BANK LTDRN","id":22753},{"abbreviation":"M1LC34.SA","name":"MELCO RESORTDRN","id":22755},{"abbreviation":"G1SK34.SA","name":"GLAXOSMITHKLDRN","id":22757},{"abbreviation":"G1DS34.SA","name":"GDS
+        HOLDINGSDRN","id":22759},{"abbreviation":"H1TH34.SA","name":"HUAZHU GROUPDRN","id":22761},{"abbreviation":"RMAI11.SA","name":"REAGMULT
+        FIICI","id":22763},{"abbreviation":"E1QN34.SA","name":"EQUINOR ASA DRN","id":22767},{"abbreviation":"M1BT34.SA","name":"MOBILE
+        TELESDRN","id":22771},{"abbreviation":"L1YG34.SA","name":"LLOYDS BANKIDRN","id":22773},{"abbreviation":"I1BN34.SA","name":"ICICI
+        BANK LDRN","id":22777},{"abbreviation":"I1HG34.SA","name":"INT EXCHANGEDRN","id":22779},{"abbreviation":"H1SB34.SA","name":"HSBC
+        HOLDINGDRN","id":22781},{"abbreviation":"T1EV34.SA","name":"TEVA PHARMACDRN","id":23924},{"abbreviation":"N1GG34.SA","name":"NATIONAL
+        GRIDRN","id":23926},{"abbreviation":"E1CO34.SA","name":"ECOPETROL SADRN","id":23932},{"abbreviation":"A1TH34.SA","name":"AUTOHOME
+        INCDRN","id":23934},{"abbreviation":"A1ZN34.SA","name":"ASTRAZENECA DRN","id":23936},{"abbreviation":"P1UK34.SA","name":"PRUDENTIAL
+        PDRN","id":23938},{"abbreviation":"A1RG34.SA","name":"ARGENX SE DRN","id":23940},{"abbreviation":"N1VS34.SA","name":"NOVARTIS
+        AG DRN","id":23942},{"abbreviation":"E1DU34.SA","name":"NEW ORIENTALDRN","id":23944},{"abbreviation":"A1BB34.SA","name":"ABB
+        LTD DRN","id":23946},{"abbreviation":"R1YA34.SA","name":"RYANAIR HOLDDRN","id":23948},{"abbreviation":"V1IP34.SA","name":"VIPSHOP
+        HOLDDRN","id":23950},{"abbreviation":"B1SA34.SA","name":"BANCO SANTANDRN","id":23952},{"abbreviation":"A1MX34.SA","name":"AMERICAMOVILDRN","id":23956},{"abbreviation":"W1PP34.SA","name":"WPP
+        PLC DRN","id":23958},{"abbreviation":"S1NN34.SA","name":"SMITH & NEPHDRN","id":23960},{"abbreviation":"P1KX34.SA","name":"POSCO
+        DRN","id":23962},{"abbreviation":"C1SU34.SA","name":"CREDIT SUISSDRN","id":23964},{"abbreviation":"S1BS34.SA","name":"SIBANYE
+        STILDRN","id":23966},{"abbreviation":"A1UA34.SA","name":"ANGLOGOLD ASDRN","id":23968},{"abbreviation":"B1NT34.SA","name":"BIONTECH
+        SE DRN","id":23970},{"abbreviation":"R1EL34.SA","name":"RELX PLC DRN","id":23972},{"abbreviation":"B1IL34.SA","name":"BILIBILI
+        INCDRN","id":23974},{"abbreviation":"C1HT34.SA","name":"CHUNGHWA TELDRN","id":23976},{"abbreviation":"P1DD34.SA","name":"PINDUODUO
+        INDRN","id":23978},{"abbreviation":"B1PP34.SA","name":"BP PLC DRN","id":23980},{"abbreviation":"N1WG34.SA","name":"NATWEST
+        GROUDRN","id":23982},{"abbreviation":"B1TI34.SA","name":"BRITISH AMERDRN","id":23984},{"abbreviation":"C1HI34.SA","name":"CHINA
+        PETROLDRN","id":23986},{"abbreviation":"W1BK34.SA","name":"WESTPAC BANKDRN","id":23988},{"abbreviation":"V1OD34.SA","name":"VODAFONE
+        GRODRN","id":23990},{"abbreviation":"A1SN34.SA","name":"ASCENDIS PHADRN","id":23992},{"abbreviation":"A1EG34.SA","name":"AEGON
+        NV DRN","id":23994},{"abbreviation":"S1KM34.SA","name":"SK TELECOM CDRN","id":23996},{"abbreviation":"W1BO34.SA","name":"WEIBO
+        CORP DRN","id":23998},{"abbreviation":"T1AL34.SA","name":"TAL EDUCATIODRN","id":24000},{"abbreviation":"E1NI34.SA","name":"ENEL
+        AMERICADRN","id":24004},{"abbreviation":"Z1TO34.SA","name":"ZTO EXPRESS DRN","id":24006},{"abbreviation":"C1HL34.SA","name":"CHINA
+        MOBILEDRN","id":24008},{"abbreviation":"S1MF34.SA","name":"SUMITOMO MITDRN","id":24010},{"abbreviation":"R1DY34.SA","name":"DR
+        REDDYS LADRN","id":24012},{"abbreviation":"B1CS34.SA","name":"BARCLAYS PLCDRN","id":24014},{"abbreviation":"B1BL34.SA","name":"BHP
+        GROUP PLDRN","id":24016},{"abbreviation":"RDSA35.SA","name":"RD SHELL DRN","id":24018},{"abbreviation":"N1IC34.SA","name":"NICE
+        LTD DRN","id":24022},{"abbreviation":"T1SS34.SA","name":"TENARIS SA DRN","id":24024},{"abbreviation":"B1GN34.SA","name":"BEIGENE
+        LTD DRN","id":24026},{"abbreviation":"N1VO34.SA","name":"NOVO NORDISKDRN","id":24028},{"abbreviation":"M1UF34.SA","name":"MITSUBISHI
+        UDRN","id":24030},{"abbreviation":"T1LK34.SA","name":"PT TELEKOMUNDRN","id":24032},{"abbreviation":"RZAK11.SA","name":"FII
+        RIZA AKNCI","id":25174},{"abbreviation":"VIDS16.SA","name":"FII VIC DES REC","id":26326},{"abbreviation":"MGIM14.SA","name":"FII
+        MOGNO IDREC","id":26330},{"abbreviation":"RRRP3.SA","name":"3R PETROLEUMON","id":28562},{"abbreviation":"AERI3.SA","name":"AERISENERGIAON","id":28564},{"abbreviation":"YUFI11B.SA","name":"FII
+        YUCA CI","id":30848},{"abbreviation":"SOLR11.SA","name":"FII SOLARIUMCI","id":30854},{"abbreviation":"BNRG3.SA","name":"BRAZILENERGYON","id":32000},{"abbreviation":"FATN13.SA","name":"FII
+        ATHENA IREC","id":32002},{"abbreviation":"ERCR11.SA","name":"FII ESTOQ RJCI","id":33188},{"abbreviation":"SJAU11.SA","name":"FII
+        SJ AU CI","id":35612},{"abbreviation":"PLOG11.SA","name":"FII PLURAL LCI","id":35614},{"abbreviation":"MADS11.SA","name":"FII
+        MAUA DESCI","id":40480},{"abbreviation":"XPID11.SA","name":"FIRF XP IE CI","id":40488},{"abbreviation":"JFLL11.SA","name":"FII
+        JFL LIV CI","id":41710},{"abbreviation":"BTSG23.SA","name":"FII BTSP I REC","id":41716},{"abbreviation":"HSLG11.SA","name":"FII
+        HSI LOG CI","id":42940},{"abbreviation":"RECH13.SA","name":"FII REC HTL REC","id":42942},{"abbreviation":"EVHF11.SA","name":"FII
+        EV HOTELCI","id":42950},{"abbreviation":"DOVL13B.SA","name":"FII DOVEL REC
+        MB","id":42956},{"abbreviation":"CJCT11.SA","name":"FII CJCTOWERCI","id":44182},{"abbreviation":"AURA33.SA","name":"AURA
+        360 DR3 ATZ","id":46698},{"abbreviation":"KNRI13.SA","name":"FII KINEA REC","id":47900},{"abbreviation":"YUFI13B.SA","name":"FII
+        YUCA REC","id":49112},{"abbreviation":"HREC13.SA","name":"FII HEDGERECREC","id":51516},{"abbreviation":"SPVJ13.SA","name":"FII
+        S VAREJOREC","id":51520},{"abbreviation":"MOSI3.SA","name":"MOSAICO SA ON","id":52784},{"abbreviation":"RDOR3.SA","name":"REDE
+        D OR ON","id":54074},{"abbreviation":"GUNI3.SA","name":"GRUPOUNICO ON","id":55360},{"abbreviation":"OBIO3.SA","name":"OLEOPLAN
+        ON","id":55362},{"abbreviation":"OBAH3.SA","name":"OBAHORTIFRUTON","id":55366},{"abbreviation":"STOK3.SA","name":"TOK
+        STOK ON","id":55368},{"abbreviation":"BBFO11.SA","name":"FII BB FOF CI","id":56652},{"abbreviation":"BIEU39.SA","name":"COREMSCI
+        EURDRN","id":60190},{"abbreviation":"BDVY39.SA","name":"SELECT DIVIDDRN","id":60192},{"abbreviation":"BACW39.SA","name":"MSCI
+        ACWI DRN","id":60194},{"abbreviation":"BIXJ39.SA","name":"GLOBALHEALTHDRN","id":60196},{"abbreviation":"BCHI39.SA","name":"MSCI
+        CHINA DRN","id":60198},{"abbreviation":"BEWZ39.SA","name":"MSCI BRAZIL DRN","id":60202},{"abbreviation":"BEGU39.SA","name":"TRUSTMSCI
+        USDRN","id":60204},{"abbreviation":"BIEF39.SA","name":"COREMSCIEAFEDRN","id":60206},{"abbreviation":"BITO39.SA","name":"CORE
+        SP TOTADRN","id":60208},{"abbreviation":"BIEM39.SA","name":"COREMSCI EMKDRN","id":60210},{"abbreviation":"BPRS39.SA","name":"PREFERINCOMEDRN","id":60212},{"abbreviation":"BAAX39.SA","name":"MSCI
+        ASIA JPDRN","id":60214},{"abbreviation":"BIWM39.SA","name":"RUSSELL 2000DRN","id":60216},{"abbreviation":"BIYW39.SA","name":"US
+        TECHNOLOGDRN","id":60218},{"abbreviation":"BIVB39.SA","name":"CORE SP 500
+        DRN","id":60220},{"abbreviation":"BEZU39.SA","name":"MSCIEUROZONEDRN","id":60222},{"abbreviation":"BXTC39.SA","name":"EXPON
+        TECHNLDRN","id":60224},{"abbreviation":"BIGF39.SA","name":"GLOBAL INFRADRN","id":60226},{"abbreviation":"BEGD39.SA","name":"TRTMSCI
+        EAFEDRN","id":60228},{"abbreviation":"BEWY39.SA","name":"MSCISOUTHKORDRN","id":60230},{"abbreviation":"BEWT39.SA","name":"MSCI
+        TAIWAN DRN","id":60232},{"abbreviation":"BAER39.SA","name":"US AEROSPACEDRN","id":60234},{"abbreviation":"BEWW39.SA","name":"MSCI
+        MEXICO DRN","id":60236},{"abbreviation":"BIYF39.SA","name":"US FINANCIALDRN","id":60240},{"abbreviation":"ENDD11.SA","name":"FII
+        END DEBTCI","id":60242},{"abbreviation":"BIJR39.SA","name":"CORESMALLCAPDRN","id":60244},{"abbreviation":"BEFA39.SA","name":"MSCI
+        EAFE DRN","id":60248},{"abbreviation":"BEWP39.SA","name":"MSCI SPAIN DRN","id":60250},{"abbreviation":"BIAU39.SA","name":"GOLD
+        TRUST DRN","id":60252},{"abbreviation":"BUSM39.SA","name":"MSCI US MVOLDRN","id":60254},{"abbreviation":"BSLV39.SA","name":"SILVER
+        TRUSTDRN","id":60256},{"abbreviation":"BNDA39.SA","name":"MSCI INDIA DRN","id":60258},{"abbreviation":"BIJH39.SA","name":"CORE
+        MIDCAP DRN","id":60260},{"abbreviation":"BEWG39.SA","name":"MSCI GERMANYDRN","id":60262},{"abbreviation":"BEWJ39.SA","name":"MSCI
+        JAPAN DRN","id":60264},{"abbreviation":"BILF39.SA","name":"LATIN AMER40DRN","id":60266},{"abbreviation":"BEEM39.SA","name":"MSCI
+        EMGMARKDRN","id":60268},{"abbreviation":"BEWU39.SA","name":"MSCI UK DRN","id":60270},{"abbreviation":"BIBB39.SA","name":"NASDAQ
+        BIOTCDRN","id":60272},{"abbreviation":"BEGE39.SA","name":"INC ESG AWARDRN","id":60274},{"abbreviation":"BIXN39.SA","name":"GLOBAL
+        TECH DRN","id":60278},{"abbreviation":"BEWH39.SA","name":"MSCIHONGKONGDRN","id":60280},{"abbreviation":"BMLC11.SA","name":"FII
+        BMBRC LCCI ATZ MB","id":61586},{"abbreviation":"HBCR11.SA","name":"FII HBC
+        REN CI","id":62890},{"abbreviation":"NGRD3.SA","name":"NEOGRID ON","id":62896},{"abbreviation":"TSER11.SA","name":"FII
+        TISHMAN CI","id":62900},{"abbreviation":"RBED13.SA","name":"FII RIOB ED REC","id":68050},{"abbreviation":"NEWL13.SA","name":"FII
+        NEWPORT REC","id":68054},{"abbreviation":"RBHY11.SA","name":"FII RB YIELDCI","id":69362},{"abbreviation":"RBRU11.SA","name":"FII
+        RB REN CI","id":70686},{"abbreviation":"RBED14.SA","name":"FII RIOB ED REC","id":72014},{"abbreviation":"BICE11.SA","name":"FII
+        BRIO CRECI","id":73330},{"abbreviation":"EURP11.SA","name":"TREND EUROPACI","id":75994},{"abbreviation":"AVLL11.SA","name":"ALPHAVILLE
+        BNS ORD NM","id":75996},{"abbreviation":"XINA11.SA","name":"TREND CHINA CI","id":75998},{"abbreviation":"ACWI11.SA","name":"TREND
+        ACWI CI","id":76000},{"abbreviation":"GCRI11.SA","name":"FII GLPG CRICI","id":76002},{"abbreviation":"KNOX11.SA","name":"FIP
+        IE KNOX CI","id":77332},{"abbreviation":"ERCR13.SA","name":"FII ESTOQ RJCI","id":78704},{"abbreviation":"HGIC11.SA","name":"FII
+        HGI CRI CI","id":78706},{"abbreviation":"VIDS17.SA","name":"FII VIC DES REC","id":80114},{"abbreviation":"MGIM15.SA","name":"FII
+        MOGNO IDREC","id":84220},{"abbreviation":"BTAL11.SA","name":"FII BTG AGROCI","id":85530},{"abbreviation":"VSLH11.SA","name":"FII
+        VERS CRICI","id":85536},{"abbreviation":"SEQR11.SA","name":"FII SEQUOIA CI","id":86892},{"abbreviation":"PORD13.SA","name":"FII
+        POLO CRIREC","id":92366},{"abbreviation":"HBCR13.SA","name":"FII HBC REN REC","id":92368},{"abbreviation":"CXCO11.SA","name":"FII
+        CEF CORPCI","id":92370},{"abbreviation":"ATWN11.SA","name":"FII A TOWN CI","id":92372},{"abbreviation":"FGPM11.SA","name":"FII
+        GRPLMALLCI","id":93754},{"abbreviation":"NKEP4.SA","name":"NK031EMPRPARPN","id":97838},{"abbreviation":"NKEP3.SA","name":"NK031EMPRPARON","id":97842},{"abbreviation":"OURE11.SA","name":"FII
+        OU RENDACI","id":97844},{"abbreviation":"RJSA3.SA","name":"RJSA ON","id":97850},{"abbreviation":"STRX13.SA","name":"FII
+        STARX REC","id":102104},{"abbreviation":"HBRE3.SA","name":"HBR REALTY ON","id":103528},{"abbreviation":"SALI11.SA","name":"FII
+        VENUS CI","id":103530},{"abbreviation":"CEED9.SA","name":"CEEE-D ON REC N1","id":103532},{"abbreviation":"PICE13.SA","name":"FIP
+        PATR INFCI","id":104988},{"abbreviation":"PICE12.SA","name":"FIP PATR INFCI","id":104990},{"abbreviation":"PICE11.SA","name":"FIP
+        PATR INFCI","id":104996},{"abbreviation":"RECX11.SA","name":"FII REC FOF CI","id":106424},{"abbreviation":"INTB3.SA","name":"INTELBRAS
+        ON","id":106432},{"abbreviation":"ESPA3.SA","name":"ESPACOLASER ON","id":106434},{"abbreviation":"CEBD3.SA","name":"CEBDISTRIBUION","id":109482},{"abbreviation":"HBCR14.SA","name":"FII
+        HBC REN REC","id":109486},{"abbreviation":"BMOB3.SA","name":"BEMOBI ON","id":111028},{"abbreviation":"POWE3.SA","name":"FOCUS
+        ON ON","id":111032},{"abbreviation":"JALL3.SA","name":"JALLESMACHADON","id":112600},{"abbreviation":"KALU3.SA","name":"KALUNGA
+        ON","id":114174},{"abbreviation":"WEST3.SA","name":"WESTWING ON","id":114180},{"abbreviation":"QIFF11.SA","name":"FII
+        QUATA CI","id":115774},{"abbreviation":"VGHF11.SA","name":"FII VALOR HECI","id":117374},{"abbreviation":"ZIFI11.SA","name":"FII
+        ZION CI","id":117380},{"abbreviation":"CPTI11.SA","name":"FIC IE CAP CI","id":118962},{"abbreviation":"BICE13.SA","name":"FII
+        BRIO CREREC","id":118968},{"abbreviation":"CSED3.SA","name":"CRUZEIRO EDUON","id":118972},{"abbreviation":"MBLY3.SA","name":"MOBLY
+        ON","id":122142},{"abbreviation":"BTWR11.SA","name":"FII BTOWERS CI","id":122144},{"abbreviation":"VIDS18.SA","name":"FII
+        VIC DES REC","id":122152},{"abbreviation":"CMIN3.SA","name":"CSN MINERACAON","id":123698},{"abbreviation":"RSPD16.SA","name":"FII
+        RBRESID3REC","id":123700},{"abbreviation":"AIRB34.SA","name":"AIRBNB DRN","id":125242},{"abbreviation":"OPCT3.SA","name":"OCEANPACT
+        ON","id":125244},{"abbreviation":"PAGS34.SA","name":"PAGSEGURO DRN","id":125246},{"abbreviation":"ORVR3.SA","name":"ORIZON
+        ON","id":125250},{"abbreviation":"AFHI11.SA","name":"FII AF CRI CI","id":125258},{"abbreviation":"ELMD3.SA","name":"ELETROMIDIA
+        ON","id":128386},{"abbreviation":"BLMC11.SA","name":"FII BLUE CRICI","id":129932},{"abbreviation":"RJSA9.SA","name":"RJSA
+        ON REC","id":129936},{"abbreviation":"QAMI11.SA","name":"FII QUASAR CCI","id":132776},{"abbreviation":"QIFF12.SA","name":"FII
+        QUATA DM 98,76","id":134366},{"abbreviation":"CPTI13.SA","name":"FIC IE CAP
+        REC","id":139256},{"abbreviation":"PNPR11.SA","name":"FII PAN PROPCI","id":139258},{"abbreviation":"VLID11.SA","name":"VALID
+        BNS ORD NM","id":142296},{"abbreviation":"MGIM16.SA","name":"FII MOGNO IDREC","id":142302},{"abbreviation":"AGXY3.SA","name":"AGROGALAXY
+        ON","id":149762},{"abbreviation":"MOFF14.SA","name":"FII MULT OF2REC","id":149764},{"abbreviation":"SBCL11.SA","name":"FII
+        SBCLOG CI","id":149768},{"abbreviation":"HCHG11.SA","name":"FII HECT CRICI","id":149774},{"abbreviation":"BDIF11.SA","name":"FIC
+        INFR BTGCI","id":151356},{"abbreviation":"IFIL11.SA","name":"IFIX L B3 IFI","id":151358},{"abbreviation":"CORM11.SA","name":"FII
+        CORE METCI","id":152946},{"abbreviation":"NAVT11.SA","name":"FII NAVI TOTCI","id":152948},{"abbreviation":"ALLD3.SA","name":"ALLIED
+        ON","id":154542},{"abbreviation":"CPTI14.SA","name":"FIC IE CAP REC","id":154556},{"abbreviation":"LKDV11.SA","name":"FII
+        DEV ONE CI","id":156098},{"abbreviation":"PCAR99.SA","name":"P.ACUCAR-CBDUNT
+        NM","id":157648},{"abbreviation":"TSNM11.SA","name":"FII TS NEW CI","id":159210},{"abbreviation":"ASAI3.SA","name":"ASSAI
+        ON NM","id":159214},{"abbreviation":"BZEL11.SA","name":"FII BARZEL CI","id":160844},{"abbreviation":"OUJP14.SA","name":"FII
+        OURI JPPREC","id":162504},{"abbreviation":"LSPA11.SA","name":"FII LESTE PACI","id":164146},{"abbreviation":"SAIF26.SA","name":"FDC
+        SANT IE REC","id":165780},{"abbreviation":"SAIF25.SA","name":"FDC SANT IE
+        REC","id":165782},{"abbreviation":"SAIF29.SA","name":"FDC SANT IE REC","id":165784},{"abbreviation":"FDHY11.SA","name":"FII
+        FED HY CI","id":165786},{"abbreviation":"SAIF24.SA","name":"FDC SANT IE REC","id":165790},{"abbreviation":"SAIF27.SA","name":"FDC
+        SANT IE REC","id":165792},{"abbreviation":"SAIF28.SA","name":"FDC SANT IE
+        REC","id":165794},{"abbreviation":"PNDL13.SA","name":"FII PANORAMAREC","id":165800},{"abbreviation":"PEMA11.SA","name":"FII
+        PERFORMACI","id":165802},{"abbreviation":"PNPR13.SA","name":"FII PAN PROPREC","id":167506},{"abbreviation":"VCRR11.SA","name":"FII
+        VECT RENCI","id":169230},{"abbreviation":"VCRR13.SA","name":"FII VECT RENREC","id":169232},{"abbreviation":"MGLG11.SA","name":"FII
+        MOGNO LGCI","id":169236},{"abbreviation":"BLCP14.SA","name":"FII BLUECAP REC","id":170956},{"abbreviation":"2WAV3.SA","name":"2W
+        ENERGIA ON","id":170958},{"abbreviation":"JBFO14.SA","name":"FII JBFO FOFREC","id":170966},{"abbreviation":"BLCP15.SA","name":"FII
+        BLUECAP REC","id":174350},{"abbreviation":"ROOF11.SA","name":"FII ROOFTOPICI","id":176006},{"abbreviation":"SPVJ14.SA","name":"FII
+        S VAREJOREC","id":176012},{"abbreviation":"GENT3.SA","name":"LUGAR DE GNTON","id":177722},{"abbreviation":"MGLC11.SA","name":"FII
+        MOGNO PRCI","id":184724},{"abbreviation":"CBOH3.SA","name":"CBO ON","id":186484},{"abbreviation":"LKDV13.SA","name":"FII
+        DEV ONE REC","id":186490},{"abbreviation":"GTLG13.SA","name":"FII GTIS LG
+        REC","id":186492},{"abbreviation":"GTLG11.SA","name":"FII GTIS LG CI","id":186494},{"abbreviation":"VVEO3.SA","name":"CMHOSPITSA
+        ON","id":186496},{"abbreviation":"MGCR16.SA","name":"FII MOGNO HGREC","id":188260},{"abbreviation":"T2DH34.SA","name":"TELADOCHEALTDRN","id":188264},{"abbreviation":"MATD3.SA","name":"MATER
+        DEI ON","id":188266},{"abbreviation":"T2TD34.SA","name":"TRADE DESK DRN","id":188272},{"abbreviation":"S2EA34.SA","name":"SEA
+        LTD DRN","id":190095},{"abbreviation":"S2QU34.SA","name":"SQUARE INC DRN","id":190097},{"abbreviation":"SNFF11.SA","name":"FII
+        SUNOFOFICI","id":190099},{"abbreviation":"P2EN34.SA","name":"PENN NATIONLDRN","id":190103},{"abbreviation":"S2UI34.SA","name":"SUN
+        COMMUN DRN","id":190113},{"abbreviation":"HCHG13.SA","name":"FII HECT CRIREC","id":190115},{"abbreviation":"S2NW34.SA","name":"SNOWFLAKE
+        DRN","id":191997},{"abbreviation":"M2PW34.SA","name":"MEDICAL P TRDRN","id":192001},{"abbreviation":"D2KN34.SA","name":"DRAFTKINGS
+        DRN","id":192003},{"abbreviation":"C2ON34.SA","name":"CYRUSONE INCDRN","id":192005},{"abbreviation":"ROOF13.SA","name":"FII
+        ROOFTOPIREC","id":192007},{"abbreviation":"K2CG34.SA","name":"KINGSOFT CHLDRN","id":192009},{"abbreviation":"S2HO34.SA","name":"SHOPIFY
+        INC DRN","id":192011},{"abbreviation":"Z2NG34.SA","name":"ZYNGA INC DRN","id":192013},{"abbreviation":"B2YN34.SA","name":"BEYOND
+        MEAT DRN","id":192015},{"abbreviation":"C2ZR34.SA","name":"CAESARS ENTTDRN","id":192017},{"abbreviation":"U2ST34.SA","name":"UNITY
+        SOFTWRDRN","id":192021},{"abbreviation":"C2HD34.SA","name":"CHURCHILL DWDRN","id":192023},{"abbreviation":"AESB3.SA","name":"AES
+        BRASIL ON NM","id":193927},{"abbreviation":"GGPS3.SA","name":"GPS PARTICIPON","id":195889},{"abbreviation":"BLMC13.SA","name":"FII
+        BLUE CRIREC","id":197843},{"abbreviation":"JBFO15.SA","name":"FII JBFO FOFREC","id":197845},{"abbreviation":"SBFG3.SA","name":"GRUPO
+        SBF ON NM","id":197847},{"abbreviation":"MORC11.SA","name":"FII MORE CRICI","id":199721},{"abbreviation":"BCFF13.SA","name":"FII
+        BC FFII REC","id":199727},{"abbreviation":"XBXO11.SA","name":"FII RCAP FOFCI","id":199731},{"abbreviation":"HCAR3.SA","name":"HOSPITALCAREON","id":199735},{"abbreviation":"STOC31.SA","name":"STONE
+        CO DR1","id":203571},{"abbreviation":"CCRF11.SA","name":"FII CANVAS CI","id":203573},{"abbreviation":"CORM13.SA","name":"FII
+        CORE METREC","id":205537},{"abbreviation":"RIOS3.SA","name":"RIO ALTO ON","id":205541},{"abbreviation":"BCFF14.SA","name":"FII
+        BC FFII REC","id":207443},{"abbreviation":"OUJP15.SA","name":"FII OURI JPPREC","id":207445},{"abbreviation":"RZTR14.SA","name":"FII
+        RIZA TX REC","id":207447},{"abbreviation":"CXSE3.SA","name":"CAIXA SEGURION","id":207449},{"abbreviation":"IFCM3.SA","name":"INFRACOMM
+        ON","id":209351},{"abbreviation":"BLMG14.SA","name":"FII BLUE LOGREC","id":209357},{"abbreviation":"MODL11.SA","name":"BCO
+        MODAL UNT","id":211287},{"abbreviation":"MODL4.SA","name":"BCO MODAL PN","id":211291},{"abbreviation":"MODL10.SA","name":"BCO
+        MODAL PN REC","id":211293},{"abbreviation":"BCFF15.SA","name":"FII BC FFII
+        REC","id":211295},{"abbreviation":"KRSA3.SA","name":"KORA SAUDE ON","id":211297},{"abbreviation":"MODL3.SA","name":"BCO
+        MODAL ON","id":211299},{"abbreviation":"VITT3.SA","name":"VITTIA ON","id":211303},{"abbreviation":"MODL12.SA","name":"BCO
+        MODAL REC UNT","id":211309},{"abbreviation":"OUJP16.SA","name":"FII OURI JPPREC","id":213205},{"abbreviation":"MCHF11.SA","name":"FII
+        MAUA HF CI","id":213209},{"abbreviation":"BRIP14.SA","name":"FII BRIO IIIREC","id":213211},{"abbreviation":"HCHG14.SA","name":"FII
+        HECT CRIREC","id":215007},{"abbreviation":"KNSC12.SA","name":"FII KINEA SCDM
+        98,24","id":215013},{"abbreviation":"SOJA3.SA","name":"BOA SAFRA ON","id":215019},{"abbreviation":"VXXV13.SA","name":"FII
+        VX XVI REC","id":216793},{"abbreviation":"MORC13.SA","name":"FII MORE CRIREC","id":216801},{"abbreviation":"RECV3.SA","name":"PETRORECONCAON","id":218539},{"abbreviation":"HGPO12.SA","name":"FII
+        CSHGPRIMDM 206,82","id":218541},{"abbreviation":"CEEP3.SA","name":"CEEE-PAR
+        ON","id":218543},{"abbreviation":"VIDS19.SA","name":"FII VIC DES REC","id":218545},{"abbreviation":"RBRL15.SA","name":"FII
+        RBR LOG REC","id":220289},{"abbreviation":"MGCR17.SA","name":"FII MOGNO HGREC","id":220291},{"abbreviation":"FEXC12.SA","name":"FII
+        EXCELLENDM 92,67","id":221929},{"abbreviation":"VXXV14.SA","name":"FII VX
+        XVI REC","id":223627},{"abbreviation":"BFXI39.SA","name":"CHINALARGECADRN","id":223629},{"abbreviation":"OUJP17.SA","name":"FII
+        OURI JPPREC","id":223633},{"abbreviation":"BGWH39.SA","name":"COREDIVGROWTDRN","id":223635},{"abbreviation":"HCHG15.SA","name":"FII
+        HECT CRIREC","id":223639},{"abbreviation":"DVFF11.SA","name":"FII DEVA FOFCI","id":223643},{"abbreviation":"PRZS11.SA","name":"FII
+        PRAZO CI","id":223645},{"abbreviation":"BCWV39.SA","name":"MSCIGLMIVOLFDRN","id":223647},{"abbreviation":"G2DI33.SA","name":"G2D
+        LTD DR3","id":227045},{"abbreviation":"BFAV39.SA","name":"MSCIMINVOL FDRN","id":227047},{"abbreviation":"BVLU39.SA","name":"MSCIUSVALUEFDRN","id":227049},{"abbreviation":"BEMV39.SA","name":"MSCIEMMRKMI
+        DRN","id":227051},{"abbreviation":"BIHI39.SA","name":"USMEDICDEVICDRN","id":227053},{"abbreviation":"BHEF39.SA","name":"CURHEDGEMSCIDRN","id":227055},{"abbreviation":"BIWF39.SA","name":"RUSSEL1000GRDRN","id":227057},{"abbreviation":"BEWA39.SA","name":"MSCIAUSTRALIDRN","id":227059},{"abbreviation":"BGRT39.SA","name":"GLOBAL
+        REIT DRN","id":227061},{"abbreviation":"NEWL14.SA","name":"FII NEWPORT REC","id":227063},{"abbreviation":"BIVW39.SA","name":"SP500GROWTH
+        DRN","id":227065},{"abbreviation":"BIEV39.SA","name":"EUROPE ETF DRN","id":227067},{"abbreviation":"BLMC14.SA","name":"FII
+        BLUE CRIREC","id":227069},{"abbreviation":"BEWC39.SA","name":"MSCI CANADA
+        DRN","id":227071},{"abbreviation":"BSUS39.SA","name":"ESGMSCIUSA LDRN","id":227073},{"abbreviation":"BMTU39.SA","name":"MSCIUSAMOM
+        FDRN","id":227075},{"abbreviation":"BEFG34.SA","name":"MSCIEAFEGROWDRN","id":227077},{"abbreviation":"VIUR11.SA","name":"FII
+        VINCI UBCI","id":227079},{"abbreviation":"BIYG39.SA","name":"USFINANCSERVDRN","id":227081},{"abbreviation":"BIVE39.SA","name":"SP500
+        VALUE DRN","id":227083},{"abbreviation":"BEFV39.SA","name":"MSCIEAFEVALUDRN","id":227085},{"abbreviation":"BSIZ39.SA","name":"MSCIUSASIZF
+        DRN","id":227087},{"abbreviation":"HASH11.SA","name":"HASHDEX NCI CI","id":227089},{"abbreviation":"BQUA39.SA","name":"MSCIUSQUAL
+        FDRN","id":227091},{"abbreviation":"BUSR39.SA","name":"CORE US REITDRN","id":228753},{"abbreviation":"BEWQ39.SA","name":"MSCI
+        FRANCE DRN","id":228755},{"abbreviation":"IBCR11.SA","name":"FII BREI CI","id":228759},{"abbreviation":"ATEA3.SA","name":"ATHENA
+        SAUDEON","id":228763},{"abbreviation":"BEWL39.SA","name":"MSCI SWITZERDRN","id":228765},{"abbreviation":"TECK11.SA","name":"IT
+        NOW TECK CI","id":228767},{"abbreviation":"DOTZ3.SA","name":"DOTZ SA ON","id":228769},{"abbreviation":"MORC14.SA","name":"FII
+        MORE CRIREC","id":228771},{"abbreviation":"CPLE11.SA","name":"COPEL UNT N1","id":230525},{"abbreviation":"NINJ3.SA","name":"GETNINJAS
+        ON","id":230529},{"abbreviation":"MGIM17.SA","name":"FII MOGNO IDREC","id":232355},{"abbreviation":"RBRL16.SA","name":"FII
+        RBR LOG REC","id":232357},{"abbreviation":"RBIV13.SA","name":"FII RBCRI IVREC","id":234161},{"abbreviation":"BLMC15.SA","name":"FII
+        BLUE CRIREC","id":234163}]}'
+  recorded_at: Thu, 29 Apr 2021 17:23:56 GMT
+recorded_with: VCR 6.0.0
