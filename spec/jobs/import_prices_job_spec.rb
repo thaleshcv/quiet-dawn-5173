@@ -9,7 +9,7 @@ RSpec.describe ImportPricesJob, type: :job do
     before { create(:item, id: item_id) }
 
     it "creates price records" do
-      allow(Item).to receive(:for_price_update).and_return([[item_id, Date.new(2021, 4, 1)]])
+      allow(Item).to receive(:for_price_update).and_return([[item_id, 3.days.ago]])
 
       expect(Price).to receive(:upsert_all).with(instance_of(Array), unique_by: :index_prices_on_item_id_and_date)
       expect(CurrentPrice).to receive(:refresh)

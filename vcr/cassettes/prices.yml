@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.cotacoes.uol.com/asset/interday/list/paged?fields=price,high,low,open,volume,close,bid,ask,change,pctChange,date&format=JSON&item=484&size=29
+    uri: https://api.cotacoes.uol.com/asset/interday/list/paged?fields=price,high,low,open,volume,close,bid,ask,change,pctChange,date&format=JSON&item=484&size=3
     body:
       encoding: US-ASCII
       string: ''
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 30 Apr 2021 13:33:17 GMT
+      - Thu, 06 May 2021 21:40:49 GMT
       Content-Type:
       - application/json;charset=utf-8
       Transfer-Encoding:
@@ -31,7 +31,7 @@ http_interactions:
       X-Application-Context:
       - application:prod
       Expires:
-      - Fri, 30 Apr 2021 13:34:17 GMT
+      - Thu, 06 May 2021 21:41:49 GMT
       Cache-Control:
       - max-age=60
       X-Cache:
@@ -46,6 +46,6 @@ http_interactions:
       - 1; mode=block
     body:
       encoding: ASCII-8BIT
-      string: '{"prev":null,"next":"1203160N","docs":[{"price":23.75,"high":24.29,"low":23.42,"open":24.12,"volume":49775900,"close":23.94,"bid":23.74,"ask":23.75,"change":-0.2,"pctChange":-0.79,"date":"20210429000000"},{"price":23.98,"high":24.09,"low":23.36,"open":23.4,"volume":66374200,"close":23.1,"bid":23.96,"ask":23.98,"change":0.86,"pctChange":3.81,"date":"20210428000000"},{"price":23.16,"high":24.17,"low":23.1,"open":23.82,"volume":76684900,"close":23.78,"bid":23.14,"ask":23.16,"change":-0.64,"pctChange":-2.61,"date":"20210427000000"},{"price":23.75,"high":24.05,"low":23.61,"open":23.85,"volume":33281000,"close":23.69,"bid":23.75,"ask":23.76,"change":0.06,"pctChange":0.25,"date":"20210426000000"},{"price":23.78,"high":23.94,"low":23.51,"open":23.88,"volume":60341000,"close":23.71,"bid":23.78,"ask":23.79,"change":0.07,"pctChange":0.3,"date":"20210423000000"},{"price":23.76,"high":24.19,"low":23.65,"open":24.14,"volume":46600100,"close":23.82,"bid":23.76,"ask":23.8,"change":-0.06,"pctChange":-0.25,"date":"20210422000000"},{"price":23.8,"high":24.59,"low":23.76,"open":24.33,"volume":94965400,"close":24.28,"bid":23.8,"ask":23.81,"change":-0.48,"pctChange":-1.98,"date":"20210420000000"},{"price":24.2,"high":24.89,"low":22.77,"open":22.95,"volume":196519100,"close":22.95,"bid":24.19,"ask":24.2,"change":1.24,"pctChange":5.45,"date":"20210419000000"},{"price":22.94,"high":23.24,"low":22.81,"open":23.13,"volume":59567300,"close":23.09,"bid":22.92,"ask":22.94,"change":-0.17,"pctChange":-0.65,"date":"20210416000000"},{"price":23.09,"high":23.83,"low":23.02,"open":23.7,"volume":64193600,"close":23.56,"bid":23.12,"ask":23.13,"change":-0.44,"pctChange":-1.99,"date":"20210415000000"},{"price":24.4,"high":24.58,"low":23.98,"open":24.2,"volume":90836500,"close":23.97,"bid":24.39,"ask":24.4,"change":0.42,"pctChange":1.79,"date":"20210414000000"},{"price":24.02,"high":24.11,"low":23.69,"open":23.98,"volume":53612300,"close":23.89,"bid":24,"ask":24.02,"change":0.11,"pctChange":0.54,"date":"20210413000000"},{"price":23.86,"high":24.37,"low":23.78,"open":23.96,"volume":50592900,"close":23.65,"bid":23.85,"ask":23.86,"change":0.2,"pctChange":0.89,"date":"20210412000000"},{"price":23.66,"high":23.78,"low":23.37,"open":23.5,"volume":47494400,"close":23.7,"bid":23.64,"ask":23.66,"change":-0.06,"pctChange":-0.17,"date":"20210409000000"},{"price":23.69,"high":24.04,"low":23.37,"open":23.98,"volume":63231300,"close":24,"bid":23.7,"ask":23.71,"change":-0.3,"pctChange":-1.29,"date":"20210408000000"},{"price":23.98,"high":24.34,"low":23.93,"open":23.94,"volume":55892200,"close":24.02,"bid":23.97,"ask":23.98,"change":-0.05,"pctChange":-0.17,"date":"20210407000000"},{"price":24.07,"high":24.37,"low":23.97,"open":24.18,"volume":33825900,"close":24.04,"bid":24.07,"ask":24.08,"change":0.03,"pctChange":0.12,"date":"20210406000000"},{"price":24.02,"high":24.2,"low":23.68,"open":24.13,"volume":40454400,"close":23.89,"bid":24.01,"ask":24.02,"change":0.12,"pctChange":0.54,"date":"20210405000000"},{"price":23.91,"high":24.39,"low":23.78,"open":24.29,"volume":47232900,"close":24.1,"bid":23.9,"ask":23.91,"change":-0.2,"pctChange":-0.79,"date":"20210401000000"},{"price":24.15,"high":24.23,"low":23.78,"open":23.8,"volume":68609400,"close":23.83,"bid":24.14,"ask":24.15,"change":0.31,"pctChange":1.34,"date":"20210331000000"},{"price":23.82,"high":23.99,"low":23.57,"open":23.64,"volume":41813300,"close":23.83,"bid":23.77,"ask":23.82,"change":-0.06,"pctChange":-0.04,"date":"20210330000000"},{"price":23.81,"high":23.83,"low":23.28,"open":23.34,"volume":50099700,"close":23.46,"bid":23.81,"ask":23.82,"change":0.35,"pctChange":1.49,"date":"20210329000000"},{"price":23.47,"high":23.88,"low":23.11,"open":23.48,"volume":60918600,"close":23.2,"bid":23.45,"ask":23.47,"change":0.25,"pctChange":1.16,"date":"20210326000000"},{"price":23.16,"high":23.3,"low":22.16,"open":22.7,"volume":79214500,"close":22.82,"bid":23.16,"ask":23.17,"change":0.34,"pctChange":1.49,"date":"20210325000000"},{"price":22.79,"high":23.54,"low":22.75,"open":23.19,"volume":63312000,"close":22.8,"bid":22.79,"ask":22.8,"change":-0.01,"pctChange":-0.04,"date":"20210324000000"},{"price":22.81,"high":23.63,"low":22.8,"open":23.17,"volume":57124700,"close":23.52,"bid":22.81,"ask":22.82,"change":-0.71,"pctChange":-3.02,"date":"20210323000000"},{"price":23.61,"high":23.78,"low":23.23,"open":23.69,"volume":44129300,"close":24,"bid":23.61,"ask":23.62,"change":-0.39,"pctChange":-1.62,"date":"20210322000000"},{"price":23.86,"high":24.04,"low":23.18,"open":23.27,"volume":90244500,"close":23.24,"bid":23.87,"ask":23.88,"change":0.63,"pctChange":2.67,"date":"20210319000000"},{"price":23.22,"high":23.9,"low":23.07,"open":23.88,"volume":77198900,"close":24.08,"bid":23.22,"ask":23.24,"change":-0.86,"pctChange":-3.57,"date":"20210318000000"}]}'
-  recorded_at: Fri, 30 Apr 2021 13:33:17 GMT
+      string: '{"prev":null,"next":"1235074N","docs":[{"price":23.8,"high":23.95,"low":23.12,"open":23.17,"volume":75611900,"close":22.89,"bid":23.81,"ask":23.82,"change":0.92,"pctChange":3.98,"date":"20210505000000"},{"price":22.89,"high":23.64,"low":22.88,"open":23.54,"volume":44765000,"close":23.43,"bid":22.89,"ask":22.9,"change":-0.54,"pctChange":-2.3,"date":"20210504000000"},{"price":23.43,"high":23.81,"low":23.3,"open":23.8,"volume":49039900,"close":23.62,"bid":23.44,"ask":23.47,"change":-0.18,"pctChange":-0.8,"date":"20210503000000"}]}'
+  recorded_at: Thu, 06 May 2021 21:40:49 GMT
 recorded_with: VCR 6.0.0

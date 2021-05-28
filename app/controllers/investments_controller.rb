@@ -28,6 +28,8 @@ class InvestmentsController < ApplicationController
 
   # PATCH/PUT /investments/1
   def update
+    @original_item_id = @investment.item_id
+
     if @investment.update(investment_params)
       redirect_to @investment.item, notice: "Investimento atualizado com sucesso."
     else

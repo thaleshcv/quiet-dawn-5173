@@ -31,6 +31,7 @@ group :test do
   gem "database_cleaner-active_record", "~> 2.0"
   gem "factory_bot_rails", "~> 6.1"
   gem "faker", "~> 2.17"
+  gem "rails-controller-testing", "~> 1.0"
   gem "rspec-rails"
   gem "selenium-webdriver"
   gem "vcr", "~> 6.0"

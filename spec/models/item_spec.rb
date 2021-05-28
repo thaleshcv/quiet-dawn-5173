@@ -10,8 +10,8 @@
 #
 #  index_items_on_abbreviation  (abbreviation) UNIQUE
 #
-require 'rails_helper'
+require "rails_helper"
 
-RSpec.describe Asset, type: :model do
+RSpec.describe Item, type: :model do
   pending "add some examples to (or delete) #{__FILE__}"
 end

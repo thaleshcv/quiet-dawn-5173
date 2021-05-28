@@ -5,6 +5,6 @@
 <div class="compact">
 	<%= render 'form', investment: @investment do |f| %>
 		<%= f.button :submit, class: "button is-primary" %>
-		<%= link_to 'Cancelar', item_path(@investment.item_id), class: "button" %>
+		<%= link_to 'Cancelar', item_path(@investment.item_id_was), class: "button" %>
 	<% end %>
 </div>

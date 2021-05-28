@@ -13,7 +13,7 @@
 FactoryBot.define do
   factory :item do
     id { "" }
-    name { "XXXXXXXX" }
-    abbreviation { "XXXX0.SA" }
+    name { Faker::Company.name }
+    abbreviation { Faker::Finance.ticker }
   end
 end
