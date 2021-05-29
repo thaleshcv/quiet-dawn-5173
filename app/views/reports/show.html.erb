@@ -1,5 +1,6 @@
-<h1 class="title">Relatório de <%= I18n.l(@report.created_at, format: :long) %></h1>
-
+<%= content_for :page_head do %>
+	<h1 class="title">Relatório de <%= I18n.l(@report.created_at.to_date, format: :long) %></h1>
+<% end %>
 <nav class="level">
 	<div class="level-item has-text-right-desktop has-text-centered-mobile">
 		<div>
@@ -25,7 +26,6 @@
 		<tr>
 			<th>Item</th>
 			<th>Investido</th>
-			<th>Data</th>
 			<th>Quantidade</th>
 			<th>Acumulado</th>
 			<th>+/-</th>
@@ -42,9 +42,6 @@
 				</td>
 				<td>
 					<%= number_to_currency(row.item_value_invested) %>
-				</td>
-				<td>
-					<%= I18n.l(row.position_at, format: :long) %>
 				</td>
 				<td>
 					<%= row.item_quantity %>

@@ -1,14 +1,14 @@
-<table id="user-reports" class="table is-hoverable is-fullwidth">
+<table id="user-reports" class="table is-hoverable" style="margin:auto;min-width:600px;">
 	<thead>
 		<th class="has-text-centered">Data</th>
-		<th class="has-text-centered">Enviado em</th>
+		<th class="has-text-centered">Enviado</th>
 		<th></th>
 	</thead>
 	<tbody>
 		<% @reports.each do |item| %>
 			<tr>
 				<td class="has-text-centered">
-					<%= I18n.l(item.created_at, format: :long) %>
+					<%= I18n.l(item.created_at.to_date, format: :long) %>
 				</td>
 				<td class="has-text-centered">
 					<% if item.delivered_at.present? %>
