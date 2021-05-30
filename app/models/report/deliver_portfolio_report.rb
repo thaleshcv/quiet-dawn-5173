@@ -13,6 +13,6 @@ module Report::DeliverPortfolioReport
       .report_email
       .deliver_now
 
-    # report.delivered_now!
+    report.delivered_now!
   end
 end
